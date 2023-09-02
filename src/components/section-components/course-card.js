@@ -33,7 +33,7 @@ const CourseCard = ({ blog }) => {
                 </div>
                 <div className="col-6">
                   <div className="price text-right">
-                    Price: <span>{blog.price}</span>
+                    Price: <span>{blog.price} $</span>
                   </div>
                 </div>
               </div>
