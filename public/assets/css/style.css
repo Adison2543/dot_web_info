@@ -118,7 +118,7 @@ Version: 1.0.3
 
 :root {
   --main-color: pink;
-  --heading-color: #002147;
+  --heading-color: #000b47;
   --paragraph-color: #565872;
   --body-font: "Rubik", sans-serif;
   --body-font-size: 16px;
@@ -2890,6 +2890,17 @@ ul {
 
 .banner-inner .b-animate-1 {
   animation: 1.5s 0.2s fadeInLeft both;
+}
+
+.fadeR {
+  animation: 1s 0.2s fadeInRight both;
+}
+
+.fadeL {
+  animation: 1s 0.2s fadeInLeft both;
+}
+.hideElement {
+  visibility: hidden;
 }
 
 .banner-inner .b-animate-2 {

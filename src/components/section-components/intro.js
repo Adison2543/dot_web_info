@@ -14,7 +14,7 @@ class Intro extends Component {
 			      <div className="row no-gutters">
 			        <div className="col-lg-4 text-lg-left text-center">
 			          <div className="intro-title">
-			            <h3>Vivamus maximus </h3>
+			            <h3 >Vivamus maximus </h3>
 			            <p>Lorem ipsum dolor sadipscing elitr, sed diam nonum</p>
 			            <ul>
 			              <li><i className="fa fa-check" /> Nullam est </li>

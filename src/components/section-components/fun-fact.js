@@ -1,18 +1,47 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React, { useEffect, useRef } from 'react';
 
-class Funfact extends Component {
 
-    render() {
+const Funfact = () => {
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+	const fadeLelement = useRef();
+	const fadeRelement = useRef();
 
-    return <div className="counter-area bg-gray">
+	useEffect(() => {
+		const element = fadeLelement.current;
+		const elementR = fadeRelement.current;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+				// Element is in the viewport, add your animation class here
+				element.classList.add('fadeL');
+				elementR.classList.add('fadeR');
+				element.classList.remove('hideElement');
+				elementR.classList.remove('hideElement');
+				}
+			});
+			},
+			{ threshold: 0.5 } // Adjust the threshold as needed
+		);
+
+		observer.observe(element);
+		observer.observe(elementR);
+
+		// Cleanup observer on component unmount
+		return () => {
+			observer.unobserve(element);
+			observer.unobserve(elementR);
+		};
+	}, []);
+
+    return (
+		<>
+			<div className="counter-area bg-gray">
 			  <div className="container">
-			    <div className="counter-area-inner pd-top-120 pd-bottom-120" style={{backgroundImage: 'url("'+publicUrl+'assets/img/other/1.png")'}}>
+			    <div className="counter-area-inner pd-top-120 pd-bottom-120" style={{backgroundImage: 'url("'+process.env.PUBLIC_URL+'/assets/img/other/1.png")'}}>
 			      <div className="row">
-			        <div className="col-lg-8 mb-5 mb-lg-0">
+			        <div className="col-lg-8 mb-5 mb-lg-0 hideElement" ref={fadeLelement}>
 			          <div className="section-title mb-0">
 			            <h6 className="sub-title right-line">Funfact</h6>
 			            <h2 className="title">Strength in Numbers</h2>
@@ -25,12 +54,12 @@ class Funfact extends Component {
 			            </div>
 			          </div>
 			        </div>
-			        <div className="col-lg-4 align-self-center">
+			        <div className="col-lg-4 align-self-center hideElement" ref={fadeRelement}>
 			          <ul className="single-list-wrap">
 			            <li className="single-list-inner style-box-bg">
 			              <div className="media">
 			                <div className="media-left">
-			                  <img src={publicUrl+"assets/img/icon/1.png"} alt="img" />
+			                  <img src={process.env.PUBLIC_URL + "/assets/img/icon/1.png"} alt="img" />
 			                </div>
 			                <div className="media-body align-self-center">
 			                  <h5><span className="counter">1200</span>+</h5>
@@ -41,7 +70,7 @@ class Funfact extends Component {
 			            <li className="single-list-inner style-box-bg">
 			              <div className="media">
 			                <div className="media-left">
-			                  <img src={publicUrl+"assets/img/icon/2.png"} alt="img" />
+			                  <img src={process.env.PUBLIC_URL + "/assets/img/icon/2.png"} alt="img" />
 			                </div>
 			                <div className="media-body align-self-center">
 			                  <h5><span className="counter">320</span>+</h5>
@@ -52,7 +81,7 @@ class Funfact extends Component {
 			            <li className="single-list-inner style-box-bg">
 			              <div className="media">
 			                <div className="media-left">
-			                  <img src={publicUrl+"assets/img/icon/3.png"} alt="img" />
+			                  <img src={process.env.PUBLIC_URL + "/assets/img/icon/3.png"} alt="img" />
 			                </div>
 			                <div className="media-body align-self-center">
 			                  <h5><span className="counter">1340</span>+</h5>
@@ -66,7 +95,8 @@ class Funfact extends Component {
 			    </div>
 			  </div>
 			</div>
-        }
+		</>
+	);
 }
 
 export default Funfact

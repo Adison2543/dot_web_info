@@ -54,7 +54,7 @@ class Navbar extends Component {
                 <div className="nav-right-part nav-right-part-mobile">
                   <a className="signin-btn" href="signin.html">Sign In</a>
                   <a className="btn btn-base" href="blog.html">Sign Up</a>
-                  <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+                  {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
                 </div>
                 <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
                   <ul className="navbar-nav menu-open">
@@ -100,7 +100,7 @@ class Navbar extends Component {
                 <div className="nav-right-part nav-right-part-desktop">
                   <Link className="signin-btn" to="/sign-in">Sign In</Link>
                   <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-                  <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+                  {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
                 </div>
               </div>
             </nav>

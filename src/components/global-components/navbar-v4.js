@@ -17,7 +17,7 @@ class NavbarV4 extends Component {
         let anchor = '#'
         return (
 			<div className="navbar-area">
-        <div className="navbar-top">
+        {/* <div className="navbar-top">
           <div className="container">
             <div className="row">
               <div className="col-md-8 text-md-left text-center">
@@ -38,7 +38,7 @@ class NavbarV4 extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <nav className="navbar bg-white navbar-area-1 navbar-area navbar-expand-lg go-top">
           <div className="container nav-container">
             <div className="responsive-mobile-menu">
@@ -99,7 +99,7 @@ class NavbarV4 extends Component {
             <div className="nav-right-part nav-right-part-desktop">
               <Link className="signin-btn" to="/sign-in">Sign In</Link>
               <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-              <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
             </div>
           </div>
         </nav>
