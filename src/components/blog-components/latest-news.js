@@ -6,7 +6,7 @@ class LatestNews extends Component {
     let publicUrl = process.env.PUBLIC_URL+'/'
     let imagealt = 'image'
     return (
-    	<div className="blog-area pd-top-80 pd-bottom-90 go-top">
+    	<div className="blog-area pd-top-80 pd-bottom-90 go-top" id="news">
 		  <div className="container">
 		    <div className="row justify-content-center">
 		      <div className="col-xl-6 col-lg-7">

@@ -25,10 +25,10 @@ import BlogDetails from './components/blog-details';
 class Root extends Component {
     render() {
         return(
-                <HashRouter basename="">
+                <HashRouter basename="/">
 	                <div>
 	                <Switch>
-                        <Route exact path="" component={HomeV1} />
+                        <Route exact path="/" component={HomeV1} />
                         <Route path="/home-v2" component={HomeV2} />
                         <Route path="/home-v3" component={HomeV3} />
                         <Route path="/course" component={Course} />

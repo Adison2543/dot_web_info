@@ -33,7 +33,7 @@ const CourseFilter = () => {
 	
     return  (
 		<>
-			<div className="course-area pd-top-100 pd-bottom-90">
+			<div className="course-area pd-top-100 pd-bottom-90" id="course">
 			  <div className="container">
 			    <div className="row justify-content-center">
 			      <div className="col-xl-8 col-lg-10 col-md-11">

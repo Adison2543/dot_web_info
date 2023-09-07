@@ -1,0 +1,38 @@
+#act1 {
+    background-image: url('../../../public/assets/img/ac1');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+#act1 > .details {
+    background-color: rgba(255,255,255,.6);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    scale: 0.5;
+    visibility: hidden;
+    padding: 5px 5px;
+    margin: 0px 15px;
+}
+.thumb {
+    background-color: unset !important;
+}
+.single-intro-inner {
+    padding: unset !important;
+    height: 300px;
+    margin-bottom: 0px !important;
+}
+
+#act1:hover > .details {
+    transition:.5s;
+    transform: scale(2);
+    visibility: visible;
+}
+.bg-img {
+    height: 100%;
+}
+.bg-img > img {
+    height: 100%;
+    object-fit: cover;
+}

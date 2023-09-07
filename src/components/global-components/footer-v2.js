@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link} from 'react-router-hash-link';
 
 class Footer_v2 extends Component {
 
@@ -11,6 +11,7 @@ class Footer_v2 extends Component {
 
 		document.body.appendChild(minscript);
 	}
+	
 
 	render() {
 
@@ -18,12 +19,12 @@ class Footer_v2 extends Component {
 		let imgattr = "Footer logo"
 
 		return (
-			<footer className="footer-area footer-area-2 bg-gray">
+			<footer className="footer-area footer-area-2 bg-gray" id='footer'>
 				<div className="footer-top">
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-3 col-md-6">
-								<div className="widget widget_about text-center">
+								<div className="widget widget_about text-center mt-0">
 									<a href="index.html"><img src={publicUrl + "assets/img/logo-3.png"} alt="img" /></a>
 									<div className="details">
 										<p style={{fontSize:'12px'}}>ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ ຂຽນຫຍໍ້: “ຍ. ທ. ຂ” ຂຽນເປັນພາສາຝຣັ່ງ: Ministère de Travaux Public et de Transports (ຂຽນຫຍໍ້: MTPT) ແມ່ນກົງຈັກຂອງລັດຖະບານ, ມີພາລະບົດບາດ ເປັນເສນາທິການໃຫ້ແກ່ລັດຖະບານ ໃນການຄຸ້ມຄອງມະຫາພາກ ກ່ຽວກັບຂະແໜງການຄົມມະນາຄົມ, ຂົນສົ່ງ ທາງບົກ, ທາງນ້ຳ, ທາງອາກາດ, ທາງລົດໄຟ, ການເຄຫາສະຖານ, ຜັງເມືອງ ແລະ ນ້ຳປະປາ ໃນຂອບເຂດ ທົ່ວປະເທດ.</p>
@@ -86,9 +87,9 @@ class Footer_v2 extends Component {
 								<div className="widget_nav_menu">
 									<ul className="go-top">
 										<li><Link to="/">Home</Link></li>
-										<li><Link to="/about">About Us</Link></li>
-										<li><Link to="/pricing">Our Pricing</Link></li>
-										<li><Link to="/blog">blog</Link></li>
+										<li><Link to="#news" smooth>News</Link></li>
+										<li><Link to="#course" smooth>Course</Link></li>
+										<li><Link to="#activity" smooth>Activity</Link></li>
 									</ul>
 								</div>
 							</div>
