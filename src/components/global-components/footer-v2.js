@@ -26,12 +26,12 @@ class Footer_v2 extends Component {
 								<div className="widget widget_about text-center">
 									<a href="index.html"><img src={publicUrl + "assets/img/logo-3.png"} alt="img" /></a>
 									<div className="details">
-										<p>Edumint tetur sadipscing elitr tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+										<p style={{fontSize:'12px'}}>ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ ຂຽນຫຍໍ້: “ຍ. ທ. ຂ” ຂຽນເປັນພາສາຝຣັ່ງ: Ministère de Travaux Public et de Transports (ຂຽນຫຍໍ້: MTPT) ແມ່ນກົງຈັກຂອງລັດຖະບານ, ມີພາລະບົດບາດ ເປັນເສນາທິການໃຫ້ແກ່ລັດຖະບານ ໃນການຄຸ້ມຄອງມະຫາພາກ ກ່ຽວກັບຂະແໜງການຄົມມະນາຄົມ, ຂົນສົ່ງ ທາງບົກ, ທາງນ້ຳ, ທາງອາກາດ, ທາງລົດໄຟ, ການເຄຫາສະຖານ, ຜັງເມືອງ ແລະ ນ້ຳປະປາ ໃນຂອບເຂດ ທົ່ວປະເທດ.</p>
 										<ul className="social-media">
-											<li><a href="https://www.facebook.com/solverwp/"><i className="fa fa-facebook" /></a></li>
-											<li><a href="https://www.twitter.com/solverwp"><i className="fa fa-twitter" /></a></li>
-											<li><a href="https://www.youtube.com/solverwp/"><i className="fa fa-instagram" /></a></li>
-											<li><a href="https://www.pinterest.com/solverwp/"><i className="fa fa-pinterest" /></a></li>
+											<li><a href="https://www.facebook.com/solverwp/" className='mb-0'><i className="fa fa-facebook" /></a></li>
+											<li><a href="https://www.twitter.com/solverwp" className='mb-0'><i className="fa fa-twitter" /></a></li>
+											<li><a href="https://www.youtube.com/solverwp/" className='mb-0'><i className="fa fa-instagram" /></a></li>
+											<li><a href="https://www.pinterest.com/solverwp/" className='mb-0'><i className="fa fa-pinterest" /></a></li>
 										</ul>
 									</div>
 								</div>
@@ -40,9 +40,9 @@ class Footer_v2 extends Component {
 								<div className="widget widget_contact">
 									<h4 className="widget-title">Contact Us</h4>
 									<ul className="details">
-										<li><i className="fa fa-map-marker" /> 420 Love Sreet 133/2 Street NewYork</li>
-										<li><i className="fa fa-envelope" /> info.contact@gmail.com</li>
-										<li><i className="fa fa-phone" /> 012 345 678 9101</li>
+										<li><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK'><i className="fa fa-map-marker" /> Ministry of Public Works and Transport of Lao PDR</a></li>
+										<li><i className="fa fa-envelope" /> Fax: 856-21 412250</li>
+										<li><i className="fa fa-phone" /> 856-21 412255 , ສາຍດ່ວນ 1518</li>
 									</ul>
 								</div>
 							</div>
@@ -80,7 +80,7 @@ class Footer_v2 extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-md-5 align-self-center">
-								<p>Copyright 2022 by solverwp.com</p>
+								<p>Copyright © Ministry of Public Works and Transport</p>
 							</div>
 							<div className="col-md-7 text-md-right align-self-center mt-md-0 mt-2">
 								<div className="widget_nav_menu">

@@ -1,0 +1,43 @@
+.yeartext{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    
+}
+
+.hr-lines2:before, .hr-lines3:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 35%;
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    background: pink;
+}
+
+.hr-lines4:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 25%;
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    background: pink;
+}
+.hr-lines1:after, .hr-lines2:after, .hr-lines3:after{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 35%;
+    position: absolute;
+    bottom: 12%;
+    right: 0;
+    background: pink;
+}
+.ytext {
+    background-color: pink;
+    padding: 10px 20px;
+    border-radius: 25px;
+}

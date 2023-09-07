@@ -18,8 +18,8 @@ class Banner extends Component {
 			      </div>
 			      <div className="col-lg-7 order-lg-1 align-self-center">
 			        <div className="banner-inner text-center text-lg-left mt-5 mt-lg-0">
-			          <h6 className="b-animate-1 sub-title">DISCOVER RESEARCH</h6>
-			          <h1 className="b-animate-2 title">A better learning future starts here</h1>
+			          <h6 className="b-animate-1 sub-title">Ministry of Public Works and Transport</h6>
+			          <h1 className="b-animate-2 title">ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ</h1>
 			          <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/contact">Get A Quote</Link>
 			          <Link className="btn btn-border-black b-animate-3" to="/blog-details">Read More</Link>
 			        </div>

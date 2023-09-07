@@ -3497,11 +3497,13 @@ ul {
 
 .testimonial-slider-2 .single-testimonial-inner>p {
   background-color: #fff;
-  font-size: 16px;
-  padding: 38px 30px;
+  font-size: 18px;
+  padding: 35px 30px;
+  min-height: 165px;
   position: relative;
   border-radius: 5px;
   margin-bottom: 32px;
+  box-shadow: 1px 1px 5px -4px black;
 }
 
 .testimonial-slider-2 .single-testimonial-inner>p:after {
@@ -3510,7 +3512,8 @@ ul {
   width: 30px;
   height: 18px;
   bottom: -18px;
-  left: 50px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   border-top: solid 18px #fff;
   border-left: solid 18px transparent;
   border-right: solid 18px transparent;
