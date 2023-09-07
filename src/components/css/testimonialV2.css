@@ -13,7 +13,7 @@
     position: absolute;
     bottom: 12%;
     left: 0;
-    background: pink;
+    background: var(--main-color);
 }
 
 .hr-lines4:before{
@@ -24,7 +24,7 @@
     position: absolute;
     bottom: 12%;
     left: 0;
-    background: pink;
+    background: var(--main-color);
 }
 .hr-lines1:after, .hr-lines2:after, .hr-lines3:after{
     content:" ";
@@ -34,10 +34,10 @@
     position: absolute;
     bottom: 12%;
     right: 0;
-    background: pink;
+    background: var(--main-color);
 }
 .ytext {
-    background-color: pink;
+    background-color: var(--main-color);
     padding: 10px 20px;
     border-radius: 25px;
 }

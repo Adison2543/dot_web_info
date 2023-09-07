@@ -117,7 +117,8 @@ Version: 1.0.3
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,600,700i&display=swap");
 
 :root {
-  --main-color: pink;
+  /* color: #fdc800; */
+  --main-color: #fdc800;
   --heading-color: #000b47;
   --paragraph-color: #565872;
   --body-font: "Rubik", sans-serif;
@@ -635,7 +636,7 @@ ul {
 
 .btn:after {
   content: "";
-  background: #F2277E;
+  background: pink;
   position: absolute;
   transition: all 0.3s ease-in;
   z-index: -1;
