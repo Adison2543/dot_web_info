@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class Signin extends Component {
 
     render() {
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        // let publicUrl = process.env.PUBLIC_URL+'/'
 
     return  <div className="signin-page-area pd-top-120 pd-bottom-120">
 			  <div className="container">
@@ -33,7 +31,7 @@ class Signin extends Component {
 			              <button className="btn btn-base w-100">Sign In</button>
 			            </div>
 			            <div className="col-12">
-			              <a href="#">Forgotten Your Password</a>
+			              <a href="/">Forgotten Your Password</a>
 			              <a  className="ml-2" href="signup.html"><strong>Signup</strong></a>
 			            </div>
 			          </div>

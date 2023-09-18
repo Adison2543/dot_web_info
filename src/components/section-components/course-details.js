@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class CourseDetails extends Component {
 
@@ -23,7 +22,7 @@ class CourseDetails extends Component {
 			          <div className="thumb">
 			            <img src={publicUrl+"assets/img/course/9.png"} alt="img" />
 			          </div>
-			          <div className="course-details-nav-tab text-center">
+			          {/* <div className="course-details-nav-tab text-center">
 			            <ul className="nav nav-tabs" id="myTab" role="tablist">
 			              <li className="nav-item">
 			                <a className="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Description</a>
@@ -38,9 +37,9 @@ class CourseDetails extends Component {
 			                <a className="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Review</a>
 			              </li>
 			            </ul>
-			          </div>
+			          </div> */}
 			          <div className="tab-content" id="myTabContent">
-			            <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+			            {/* <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 			              <div className="course-details-content">
 			                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump.</p>
 			                <div className="row pt-4">
@@ -72,8 +71,8 @@ class CourseDetails extends Component {
 			                  </div>
 			                </div>
 			              </div>
-			            </div>
-			            <div className="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+			            </div> */}
+			            <div className="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 			              <div className="course-details-content">
 			                <h4 className="title">Overview</h4>
 			                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab</p>
@@ -141,7 +140,7 @@ class CourseDetails extends Component {
 			                </div>
 			              </div>
 			            </div>
-			            <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+			            {/* <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
 			              <div className="course-details-content">
 			                <h4 className="title">Overview</h4>
 			                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab</p>
@@ -208,8 +207,8 @@ class CourseDetails extends Component {
 			                  </div>
 			                </div>
 			              </div>
-			            </div>
-			            <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+			            </div> */}
+			            {/* <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
 			              <div className="ratings-list-inner mb-4">
 			                <div className="row">
 			                  <div className="col-md-4 align-self-center text-center">
@@ -228,7 +227,7 @@ class CourseDetails extends Component {
 			                  <div className="col-md-8">
 			                    <ul>
 			                      <li>
-			                        <a href="#">
+			                        <a href="/">
 			                          <span className="counter-label"><i className="fa fa-star" />5</span>
 			                          <span className="progress-bar-inner">
 			                            <span className="progress">
@@ -239,7 +238,7 @@ class CourseDetails extends Component {
 			                        </a>
 			                      </li>
 			                      <li>
-			                        <a href="#">
+			                        <a href="/">
 			                          <span className="counter-label"><i className="fa fa-star" />4</span>
 			                          <span className="progress-bar-inner">
 			                            <span className="progress">
@@ -250,7 +249,7 @@ class CourseDetails extends Component {
 			                        </a>
 			                      </li>
 			                      <li>
-			                        <a href="#">
+			                        <a href="/">
 			                          <span className="counter-label"><i className="fa fa-star" />3</span>
 			                          <span className="progress-bar-inner">
 			                            <span className="progress">
@@ -261,7 +260,7 @@ class CourseDetails extends Component {
 			                        </a>
 			                      </li>
 			                      <li>
-			                        <a href="#">
+			                        <a href="/">
 			                          <span className="counter-label"><i className="fa fa-star" />2</span>
 			                          <span className="progress-bar-inner">
 			                            <span className="progress">
@@ -272,7 +271,7 @@ class CourseDetails extends Component {
 			                        </a>
 			                      </li>
 			                      <li>
-			                        <a href="#">
+			                        <a href="/">
 			                          <span className="counter-label"><i className="fa fa-star" />1</span>
 			                          <span className="progress-bar-inner">
 			                            <span className="progress">
@@ -286,7 +285,7 @@ class CourseDetails extends Component {
 			                  </div>
 			                </div>
 			              </div> 
-			            </div>
+			            </div> */}
 			          </div>
 			        </div>
 			      </div>
@@ -304,10 +303,10 @@ class CourseDetails extends Component {
 			            </ul>
 			            <div className="price-wrap text-center">
 			              <h5>Price:<span>$54.00</span></h5>
-			              <a className="btn btn-base btn-radius" to="/course-details">ENROLL COURSE</a>
+			              <Link className="btn btn-base btn-radius" to="/course-details">ENROLL COURSE</Link>
 			            </div>
 			          </div>
-			          <div className="widget widget_catagory">
+			          {/* <div className="widget widget_catagory">
 			            <h4 className="widget-title">Trending Course</h4>                                 
 			            <div className="single-course-inner">
 			              <div className="thumb">
@@ -338,7 +337,7 @@ class CourseDetails extends Component {
 			                </div>
 			              </div>
 			            </div>
-			          </div> 
+			          </div>  */}
 			        </div>
 			      </div>
 			    </div>

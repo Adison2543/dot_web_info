@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class Contact extends Component {
 
@@ -50,7 +48,7 @@ class Contact extends Component {
 			              </div>
 			            </div>
 			            <div className="col-sm-6 text-sm-right">
-			              <a className="btn btn-base" href="#">Send Message</a>
+			              <a className="btn btn-base" href="/">Send Message</a>
 			            </div>
 			          </div>
 			        </form>

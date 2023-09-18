@@ -1,0 +1,7 @@
+.td-sidebar {
+    position: sticky;
+    top: 120px;
+}
+body {
+    overflow-x: unset;
+}

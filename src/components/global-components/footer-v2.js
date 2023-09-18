@@ -16,7 +16,6 @@ class Footer_v2 extends Component {
 	render() {
 
 		let publicUrl = process.env.PUBLIC_URL + '/'
-		let imgattr = "Footer logo"
 
 		return (
 			<footer className="footer-area footer-area-2 bg-gray" id='footer'>
@@ -41,7 +40,7 @@ class Footer_v2 extends Component {
 								<div className="widget widget_contact">
 									<h4 className="widget-title">Contact Us</h4>
 									<ul className="details">
-										<li><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK'><i className="fa fa-map-marker" /> Ministry of Public Works and Transport of Lao PDR</a></li>
+										<li><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK' rel="noopener noreferrer"><i className="fa fa-map-marker" /> Ministry of Public Works and Transport of Lao PDR</a></li>
 										<li><i className="fa fa-envelope" /> Fax: 856-21 412250</li>
 										<li><i className="fa fa-phone" /> 856-21 412255 , ສາຍດ່ວນ 1518</li>
 									</ul>

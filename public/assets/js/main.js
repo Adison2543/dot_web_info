@@ -298,7 +298,7 @@
         $(document).on('click', '.back-to-top', function () {
             $("html,body").animate({
                 scrollTop: 0
-            }, 2000);
+            }, );
         });
 
     });

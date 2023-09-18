@@ -1,77 +1,99 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Sidebar from './sidebar';
-class Blog extends Component {
+import SingleBlog from './single-blog';
+import axios from 'axios';
+import { Pagination } from 'react-bootstrap';
+import ReactLoading from 'react-loading';
 
+const Blog = () => {
 
-  render() {
-    let publicUrl = process.env.PUBLIC_URL+'/'
+		const [news, setNews] = useState([]);
+		const [page, setPage] = useState(1);
+		const [loading, setLoading] = useState(false);
+		const [cata, setCata] = useState(1);
+
+		const setType = (num) => {
+			setCata(num);
+		}
+
+		useEffect(() => {
+
+			let abortController = new AbortController();
+			const fetchCourse = async () => {
+				try {
+					setLoading(true);
+					let fetchNews1 = await axios.post(`https://oasapi.iddriver.com/news/list?news_type=${cata}`, 
+						{
+							signal: abortController.signal,
+							page: page,
+							per_page: 8,
+							search: ""
+
+						}, {
+							headers: { 
+								'Content-Type': 'application/json', 
+								'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
+							}
+					});
+					setNews(fetchNews1.data);
+				} catch (error) {
+					console.error('POST Error:', error);
+				} finally {
+					setLoading(false);
+				}
+			}
+
+			fetchCourse();
+			return () => abortController.abort();
+		}, [page,cata]);
+		// Paginate
+		const prevPage = () => {
+			setPage((page) => page - 1)
+		}
+
+		const nextPage = () => {
+			setPage((page) => page + 1)
+		}
+
+		// Calculate the range of pages to display (e.g., 5 pages before and after the current page).
+		const pageRange = 3;
+		const startPage = Math.max(1, page - pageRange);
+		const endPage = Math.min(news?.total_page, page + pageRange);
+
+		const pageItems = [];
+
+		for (let i = startPage; i <= endPage; i++) {
+			pageItems.push(
+				<Pagination.Item key={i} active={i === page} onClick={() => setPage(i)}>
+					{i}
+				</Pagination.Item>
+			);
+		}
 
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120 go-top">
 		  <div className="container">
-		    <div className="row">
-		      <div className="col-lg-8">
-		        <div className="single-blog-inner style-border">
-		          <div className="thumb">
-		            <img src={publicUrl+"assets/img/blog/4.png"} alt="img" />
-		          </div>
-		          <div className="details">
-		            <ul className="blog-meta">
-		              <li><i className="fa fa-user" /> BY ADMIN</li>
-		              <li><i className="fa fa-calendar-check-o" /> 28 JANUARY, 2020</li>
-		            </ul>
-		            <h3 className="title"><Link to="/blog-details">Flock by when MTV ax quiz prog quiz graced</Link></h3>
-		            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
-		            <a className="read-more-text" to="/blog-details">READ MORE <i className="fa fa-angle-right" /></a>
-		          </div>
-		        </div>
-		        <div className="single-blog-inner style-border">
-		          <div className="thumb">
-		            <img src={publicUrl+"assets/img/blog/5.png"} alt="img" />
-		          </div>
-		          <div className="details">
-		            <ul className="blog-meta">
-		              <li><i className="fa fa-user" /> BY ADMIN</li>
-		              <li><i className="fa fa-calendar-check-o" /> 28 JANUARY, 2020</li>
-		            </ul>
-		            <h3 className="title"><Link to="/blog-details">Quisque suscipit ipsum est, eu venen leo</Link></h3>
-		            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
-		            <a className="read-more-text" to="/blog-details">READ MORE <i className="fa fa-angle-right" /></a>
-		          </div>
-		        </div>
-		        <div className="single-blog-inner style-border">
-		          <div className="thumb">
-		            <img src={publicUrl+"assets/img/blog/6.png"} alt="img" />
-		          </div>
-		          <div className="details">
-		            <ul className="blog-meta">
-		              <li><i className="fa fa-user" /> BY ADMIN</li>
-		              <li><i className="fa fa-calendar-check-o" /> 28 JANUARY, 2020</li>
-		            </ul>
-		            <h3 className="title"><Link to="/blog-details">When MTV ax quiz prog Flock by graced</Link></h3>
-		            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
-		            <a className="read-more-text" to="/blog-details">READ MORE <i className="fa fa-angle-right" /></a>
-		          </div>
-		        </div>
-		        <nav className="td-page-navigation">
-		          <ul className="pagination">
-		            <li className="pagination-arrow"><Link to="#"><i className="fa fa-angle-double-left" /></Link></li>
-		            <li><Link to="#">1</Link></li>
-		            <li><Link className="active" to="#">2</Link></li>
-		            <li><Link to="#">...</Link></li>
-		            <li><Link to="#">3</Link></li>
-		            <li className="pagination-arrow"><Link to="#"><i className="fa fa-angle-double-right" /></Link></li>
-		          </ul>
-		        </nav>
-		      </div>
-		      <Sidebar />
-		    </div>
+		  	{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div> :
+				<div className="row">
+				<div className="col-lg-8">
+					{news?.data?.map((item) => (
+						<SingleBlog key={item.news_id} news={item}/>
+					))}
+					{news?.length > 0 ? 
+					<Pagination>
+						<Pagination.Prev disabled={page === 1 ? true : false} onClick={prevPage}/>
+						{pageItems}
+						<Pagination.Next disabled={page === news?.total_page ? true : false} onClick={nextPage}/>
+					</Pagination>
+					: <></> }
+				</div>
+				<Sidebar setType={setType} type={cata}/>
+				</div>
+			}
 		  </div>
 		</div>
 
     )
   }
-}
 
 export default Blog;

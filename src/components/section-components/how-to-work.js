@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 import '../css/howToWork.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -42,7 +40,7 @@ class HowToWork extends Component {
 							<div className="details">
 								<h5>Sign up</h5>
 								<p>ຊາວໜຸມກະຊວງ ຍທຂ ຈັດການແຂ່ງຂັນກິລາດອກປີກໄກ່ ຊິງຂັນສະຫາຍເລຂາຊາວໜຸ່ມກະຊວງ ຍທຂ</p>
-								<Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+								{/* <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link> */}
 							</div>
 							</div>
 						</div>
@@ -55,7 +53,7 @@ class HowToWork extends Component {
 						<div className="details">
 							<h5>Select course</h5>
 							<p>ກົມຂົນສົ່ງ ກະຊວງ ຍທຂ ລົງໂຄສະນາເຜີຍແຜ່, ປູກຈິດສໍານຶກ ແລະ ການນໍາໃຊ້ກົດໝາຍ ດ້ານຄວາມປອດໄພທາງຫຼວງ ໃຫ້ກັບນ້ອງໆນັກຮຽນ</p>
-							<Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+							{/* <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link> */}
 						</div>
 						</div>
 					</div>
@@ -67,7 +65,7 @@ class HowToWork extends Component {
 						<div className="details">
 							<h5>Start Learning</h5>
 							<p>ຄະນະບໍລິຫານງານຊາວໜຸ່ມກະຊວງ ຍທຂ ເຄື່ອນໄຫວຢ້ຽມຢາມ ອະນຸສອນສະຖານ ປະທານ ສຸພານຸວົງ ຄົບຮອບ114 ປີ</p>
-							<Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+							{/* <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link> */}
 						</div>
 						</div>
 					</div>
@@ -79,7 +77,7 @@ class HowToWork extends Component {
 						<div className="details">
 							<h5>Get Certificate</h5>
 							<p>ແຂ່ງຂັນກິລາມິດຕະພາບ ກົມນິຕິກຳ ລະຫວ່າງ ກົມທາງລົດໄຟ</p>
-							<Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+							{/* <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link> */}
 						</div>
 						</div>
 					</div>

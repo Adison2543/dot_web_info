@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class Pricing extends Component {
 
     render() {
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        // let publicUrl = process.env.PUBLIC_URL+'/'
 
     return  <div className="pricing-area pd-top-120 pd-bottom-90">
 			  <div className="container">

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Comments from './comments';
 import Sidebar from './sidebar';
 class BlogDetails extends Component {
 
@@ -13,7 +11,6 @@ componentDidMount() {
    }
   render() {
     let publicUrl = process.env.PUBLIC_URL+'/'
-    let imagealt = 'image'
 
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
@@ -55,7 +52,7 @@ componentDidMount() {
 		              </ul>
 		            </div>
 		          </div>
-		          <div className="tag-and-share">
+		          {/* <div className="tag-and-share">
 		            <div className="row">
 		              <div className="col-sm-6">
 		                <h6>Related Tags :</h6>
@@ -77,8 +74,8 @@ componentDidMount() {
 		                </div>
 		              </div>  
 		            </div>
-		          </div>
-		          <div className="blog-comment">
+		          </div> */}
+		          {/* <div className="blog-comment">
 		            <div className="section-title style-small">
 		              <h3>Comments</h3>
 		            </div>
@@ -146,7 +143,7 @@ componentDidMount() {
 		                <button className="btn btn-base">Post Comment</button>
 		              </div>
 		            </div>
-		          </form> 
+		          </form>  */}
 		        </div>
 		      </div>
 		       <Sidebar />

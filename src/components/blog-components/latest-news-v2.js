@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 class LatestNewsV2 extends Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL+'/'
-    let imagealt = 'image'
     return (
 		<div className="blog-area pd-top-110 pd-bottom-90 go-top">
 		  <div className="container">

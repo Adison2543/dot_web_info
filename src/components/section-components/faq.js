@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class Faq extends Component {
 
     render() {
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        // let publicUrl = process.env.PUBLIC_URL+'/'
 
     return <div className="faq-area pd-top-120">
 			  <div className="container">

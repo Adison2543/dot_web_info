@@ -759,7 +759,7 @@ ul {
   content: "";
   position: absolute;
   left: -50px;
-  top: 10px;
+  top: 50%;
   height: 1px;
   width: 40px;
   background: var(--heading-color);
@@ -769,7 +769,7 @@ ul {
   content: "";
   position: absolute;
   right: -50px;
-  top: 10px;
+  top: 50%;
   height: 1px;
   width: 40px;
   background: var(--heading-color);

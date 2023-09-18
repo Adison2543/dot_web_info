@@ -13,8 +13,6 @@ class NavbarV2 extends Component {
 
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let imgattr = 'logo'
-        let anchor = '#'
         return (
         	<div className="navbar-area">
 			  <div className="navbar-top">
@@ -29,10 +27,10 @@ class NavbarV2 extends Component {
 			        <div className="col-md-4">
 			          <ul className="topbar-right text-md-right text-center">
 			            <li className="social-area">
-			              <a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a>
-			              <a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a>
-			              <a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a>
-			              <a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a>
+			              <i className="fa fa-facebook" aria-hidden="true" />
+			              <i className="fa fa-twitter" aria-hidden="true" />
+			              <i className="fa fa-instagram" aria-hidden="true" />
+			              <i className="fa fa-pinterest" aria-hidden="true" />
 			            </li>
 			          </ul>
 			        </div>
@@ -42,7 +40,7 @@ class NavbarV2 extends Component {
 			  <nav className="navbar navbar-area-2 navbar-area navbar-expand-lg go-top">
 			    <div className="container nav-container">
 			      <div className="responsive-mobile-menu">
-			        <button className="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+			        <button className="menu toggle-btn d-block d-lg-none" data-target="/edumint_main_menu" aria-expanded="false" aria-label="Toggle navigation">
 			          <span className="icon-left" />
 			          <span className="icon-right" />
 			        </button>
@@ -53,7 +51,7 @@ class NavbarV2 extends Component {
 			      <div className="nav-right-part nav-right-part-mobile">
 			        <Link className="signin-btn" to="/sign-in">Sign In</Link>
 			        <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-			        <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+			        <a className="search-bar" href="/"><i className="fa fa-search" /></a>
 			      </div>
 			      <div className="collapse navbar-collapse" id="edumint_main_menu">
 			        <ul className="navbar-nav menu-open">
@@ -73,7 +71,7 @@ class NavbarV2 extends Component {
 			            </ul>
 			          </li>
 			          <li className="menu-item-has-children">
-			            <a href="#">Pages</a>
+			            <a href="/">Pages</a>
 			            <ul className="sub-menu">
 				            <li><Link to="/about">About Us</Link></li>
 	                        <li><Link to="/event">Event</Link></li>
@@ -99,7 +97,7 @@ class NavbarV2 extends Component {
 			      <div className="nav-right-part nav-right-part-desktop style-black">
 			        <Link className="signin-btn" to="/sign-in">Sign In</Link>
 			        <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-			        <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+			        <a className="search-bar" href="/"><i className="fa fa-search" /></a>
 			      </div>
 			    </div>
 			  </nav>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class TeamV2 extends Component {
 
@@ -25,12 +24,12 @@ class TeamV2 extends Component {
 			            <img src={publicUrl+"assets/img/team/1.png"} alt="img" />
 			            <div className="social-wrap">  
 			              <div className="social-wrap-inner">
-			                <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+			                <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
 			                <ul>
-			                  <li><a href="#"><i className="fa fa-facebook" /></a></li>
-			                  <li><a href="#"><i className="fa fa-twitter" /></a></li>
-			                  <li><a href="#"><i className="fa fa-pinterest" /></a></li>
-			                  <li><a href="#"><i className="fa fa-linkedin" /></a></li>
+			                  <li><a href="/"><i className="fa fa-facebook" /></a></li>
+			                  <li><a href="/"><i className="fa fa-twitter" /></a></li>
+			                  <li><a href="/"><i className="fa fa-pinterest" /></a></li>
+			                  <li><a href="/"><i className="fa fa-linkedin" /></a></li>
 			                </ul>
 			              </div>
 			            </div>
@@ -47,12 +46,12 @@ class TeamV2 extends Component {
 			            <img src={publicUrl+"assets/img/team/2.png"} alt="img" />
 			            <div className="social-wrap">  
 			              <div className="social-wrap-inner">
-			                <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+			                <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
 			                <ul>
-			                  <li><a href="#"><i className="fa fa-facebook" /></a></li>
-			                  <li><a href="#"><i className="fa fa-twitter" /></a></li>
-			                  <li><a href="#"><i className="fa fa-pinterest" /></a></li>
-			                  <li><a href="#"><i className="fa fa-linkedin" /></a></li>
+			                  <li><a href="/"><i className="fa fa-facebook" /></a></li>
+			                  <li><a href="/"><i className="fa fa-twitter" /></a></li>
+			                  <li><a href="/"><i className="fa fa-pinterest" /></a></li>
+			                  <li><a href="/"><i className="fa fa-linkedin" /></a></li>
 			                </ul>
 			              </div>
 			            </div>
@@ -69,12 +68,12 @@ class TeamV2 extends Component {
 			            <img src={publicUrl+"assets/img/team/3.png"} alt="img" />
 			            <div className="social-wrap">  
 			              <div className="social-wrap-inner">
-			                <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+			                <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
 			                <ul>
-			                  <li><a href="#"><i className="fa fa-facebook" /></a></li>
-			                  <li><a href="#"><i className="fa fa-twitter" /></a></li>
-			                  <li><a href="#"><i className="fa fa-pinterest" /></a></li>
-			                  <li><a href="#"><i className="fa fa-linkedin" /></a></li>
+			                  <li><a href="/"><i className="fa fa-facebook" /></a></li>
+			                  <li><a href="/"><i className="fa fa-twitter" /></a></li>
+			                  <li><a href="/"><i className="fa fa-pinterest" /></a></li>
+			                  <li><a href="/"><i className="fa fa-linkedin" /></a></li>
 			                </ul>
 			              </div>
 			            </div>

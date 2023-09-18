@@ -1,0 +1,45 @@
+.details > .newstitle {
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow:ellipsis;
+    height: 55px;
+}
+
+.seemoreBtn {
+    border-radius: 10px;
+    background-color: var(--main-color);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .seemoreBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .seemoreBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .seemoreBtn:hover span {
+    padding-right: 25px;
+  }
+  
+  .seemoreBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .seemoreBtn:hover {
+    box-shadow: 1px 1px 10px .5px rgb(214, 214, 214);
+  }

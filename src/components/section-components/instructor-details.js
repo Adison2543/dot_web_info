@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class InstructorDetails extends Component {
 
@@ -23,19 +22,19 @@ class InstructorDetails extends Component {
 			            <span className="designation">Design Expert</span>
 			            <ul className="social-media style-base pt-2 mb-4">
 			              <li>
-			                <a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a>
+						  	<i className="fa fa-facebook" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a>
+			               <i className="fa fa-twitter" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a>
+			                <i className="fa fa-instagram" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a>
+			              <i className="fa fa-pinterest" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-linkedin" aria-hidden="true" /></a>
+			               <i className="fa fa-linkedin" aria-hidden="true" />
 			              </li>
 			            </ul>
 			            <span>Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt</span>

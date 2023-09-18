@@ -1,31 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/sidebar.css'
 
 
 
-class Sidebar extends Component {
-  render() {
-   let anchor = '#'
-   let imagealt = 'image'
+const Sidebar = ({setType, type}) => {
+
    let publicUrl = process.env.PUBLIC_URL+'/'
     return (
-          <div className="col-lg-4 col-12">
+          <div className="col-lg-4 col-12" >
             <div className="td-sidebar">
-              <div className="widget widget_search">                                
+              {/* <div className="widget widget_search">                                
                 <form className="search-form">
                   <div className="form-group">
                     <input type="text" placeholder="Search" />
                   </div>
                   <button className="submit-btn" type="submit"><i className="fa fa-search" /></button>
                 </form>
-              </div> 
-              <div className="widget widget_catagory">
+              </div>  */}
+              <div className="widget widget_catagory" >
                 <h4 className="widget-title">Catagory</h4>                                 
                 <ul className="catagory-items go-top">
-                  <li><Link to="/blog">Tempor lorem interdum <i className="fa fa-caret-right" /></Link></li>
-                  <li><Link to="/blog">Auctor mattis lacus  <i className="fa fa-caret-right" /></Link></li>
-                  <li><Link to="/blog">Dolor proin  <i className="fa fa-caret-right" /></Link></li>
-                  <li><Link to="/blog">Pharetra amet <i className="fa fa-caret-right" /></Link></li>
+                  <li style={ type === 1 ? {backgroundColor: 'var(--main-color)'} : {}}><Link to="#" onClick={() => setType(1)}>กรมขนส่ง <i className="fa fa-caret-right" /></Link></li>
+                  <li style={ type === 2 ? {backgroundColor: 'var(--main-color)'} : {}}><Link to="#" onClick={() => setType(2)}>กรมโยธา<i className="fa fa-caret-right" /></Link></li>
                 </ul>
               </div>                  
               <div className="widget widget-recent-post">                            
@@ -66,7 +63,7 @@ class Sidebar extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="widget widget_price">
+              {/* <div className="widget widget_price">
                 <h4 className="widget-title">Price</h4> 
                 <label className="single-checkbox">
                   <input type="checkbox" defaultChecked="checked" />
@@ -83,8 +80,8 @@ class Sidebar extends Component {
                   <span className="checkmark" />
                   Only Subscription
                 </label>  
-              </div> 
-              <div className="widget widget_level">
+              </div>  */}
+              {/* <div className="widget widget_level">
                 <h4 className="widget-title">Level</h4> 
                 <label className="single-checkbox">
                   <input type="checkbox" defaultChecked="checked" />
@@ -101,8 +98,8 @@ class Sidebar extends Component {
                   <span className="checkmark" />
                   Advanced
                 </label>  
-              </div> 
-              <div className="widget widget_tags mb-0">
+              </div>  */}
+              {/* <div className="widget widget_tags mb-0">
                 <h4 className="widget-title">Tags</h4>
                 <div className="tagcloud go-top">
                   <Link to="/blog">Art</Link>
@@ -114,11 +111,10 @@ class Sidebar extends Component {
                   <Link to="/blog">Personal</Link>
                   <Link to="/blog">Landing</Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
     )
   }
-}
 
 export default Sidebar;

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class ContactPage extends Component {
 
@@ -65,19 +63,19 @@ class ContactPage extends Component {
 			            <p className="content pb-3">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, </p>
 			            <ul className="social-media style-base pt-3">
 			              <li>
-			                <a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a>
+			                <i className="fa fa-facebook" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a>
+			                <i className="fa fa-twitter" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a>
+			                <i className="fa fa-instagram" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a>
+			                <i className="fa fa-pinterest" aria-hidden="true" />
 			              </li>
 			              <li>
-			                <a href="#"><i className="fa fa-linkedin" aria-hidden="true" /></a>
+			                <i className="fa fa-linkedin" aria-hidden="true" />
 			              </li>
 			            </ul>
 			          </div>
@@ -122,7 +120,7 @@ class ContactPage extends Component {
 			  {/* counter area end */}
 			  {/* contact area start */}
 			  <div className="contact-g-map">
-			    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd" />
+			    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd" /> */}
 			  </div>
 			</div>
 

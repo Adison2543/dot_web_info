@@ -12,8 +12,6 @@ class NavbarV3 extends Component {
  }
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let imgattr = 'logo'
-        let anchor = '#'
         return (
 			<div className="navbar-area">
 			  <nav className="navbar navbar-area-3 navbar-area navbar-expand-lg">
@@ -48,7 +46,7 @@ class NavbarV3 extends Component {
 			            </ul>
 			          </li>
 			          <li className="menu-item-has-children">
-			            <a href="#">Pages</a>
+			            <a href="/">Pages</a>
 			            <ul className="sub-menu">
 				            <li><Link to="/about">About Us</Link></li>
 	                        <li><Link to="/event">Event</Link></li>

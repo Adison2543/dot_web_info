@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import parse from 'html-react-parser';
 import { Link } from 'react-router-dom';
 
 class TeamV3 extends Component {
@@ -27,7 +26,7 @@ class TeamV3 extends Component {
                       <img src={publicUrl+"assets/img/team/1.png"} alt="img" />
                       <div className="social-wrap">  
                         <div className="social-wrap-inner">
-                          <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+                          <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
                         </div>
                       </div>
                     </div>
@@ -43,7 +42,7 @@ class TeamV3 extends Component {
                       <img src={publicUrl+"assets/img/team/2.png"} alt="img" />
                       <div className="social-wrap">  
                         <div className="social-wrap-inner">
-                          <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+                          <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
                         </div>
                       </div>
                     </div>
@@ -59,7 +58,7 @@ class TeamV3 extends Component {
                       <img src={publicUrl+"assets/img/team/3.png"} alt="img" />
                       <div className="social-wrap">  
                         <div className="social-wrap-inner">
-                          <a className="social-share" href="#"><i className="fa fa-share-alt" /></a>
+                          <a className="social-share" href="/"><i className="fa fa-share-alt" /></a>
                         </div>
                       </div>
                     </div>

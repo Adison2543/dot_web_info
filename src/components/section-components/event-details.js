@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 class EventDetails extends Component {
 
@@ -54,7 +52,7 @@ class EventDetails extends Component {
 		          <div className="widget widget_catagory">
 		            <h4 className="widget-title">Location</h4>                                 
 		            <div className="widget-g-map">
-		              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd" />
+		              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd" /> */}
 		            </div>
 		          </div> 
 		          <div className="widget widget-contact">
@@ -71,7 +69,7 @@ class EventDetails extends Component {
 		              <textarea placeholder="Your Message" defaultValue={""} />
 		              <img src={publicUrl+"assets/img/icon/27.png"} alt="img" />
 		            </div>
-		            <a className="btn btn-base" href="#">Send Message</a>
+		            <a className="btn btn-base" href="/">Send Message</a>
 		          </div>
 		        </div>
 		      </div>

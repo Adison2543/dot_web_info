@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 import HomeV1 from './components/home-v1';
@@ -22,8 +22,7 @@ import BlogDetails from './components/blog-details';
 
 
 
-class Root extends Component {
-    render() {
+const Root = () => {
         return(
                 <HashRouter basename="/">
 	                <div>
@@ -49,7 +48,6 @@ class Root extends Component {
 	                </div>
                 </HashRouter>
         )
-    }
 }
 
 export default Root;

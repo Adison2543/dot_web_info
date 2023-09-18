@@ -18,7 +18,7 @@ class Footer_v1 extends Component {
 
 		return (
 			<footer className="footer-area bg-gray">
-				<div className="footer-subscribe">
+				{/* <div className="footer-subscribe">
 					<div className="container">
 						<form className="footer-subscribe-inner">
 							<div className="row">
@@ -38,7 +38,7 @@ class Footer_v1 extends Component {
 							</div>
 						</form>
 					</div>
-				</div>
+				</div> */}
 				<div className="footer-top">
 					<div className="container">
 						<div className="row">
@@ -46,9 +46,9 @@ class Footer_v1 extends Component {
 								<div className="widget widget_contact">
 									<h4 className="widget-title">Contact Us</h4>
 									<ul className="details">
-										<li><i className="fa fa-map-marker" /> 420 Love Sreet 133/2 Street NewYork</li>
-										<li><i className="fa fa-envelope" /> info.contact@gmail.com</li>
-										<li><i className="fa fa-phone" /> 012 345 678 9101</li>
+										<li><i className="fa fa-map-marker" /><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK' rel="noopener noreferrer"><i className="fa fa-map-marker" /> Ministry of Public Works and Transport of Lao PDR</a></li>
+										<li><i className="fa fa-envelope" /> Fax: 856-21 412250</li>
+										<li><i className="fa fa-phone" /> 856-21 412255 , ສາຍດ່ວນ 1518</li>
 									</ul>
 								</div>
 							</div>
@@ -85,12 +85,12 @@ class Footer_v1 extends Component {
 									<ul className="details">
 										<li>
 											<i className="fa fa-twitter" />
-											Simply dummy brand  <a href="#">https//tweets/c3l.com</a>
+											Simply dummy brand  <a href="/">https//tweets/c3l.com</a>
 											<div className="time">9 Hours ago</div>
 										</li>
 										<li>
 											<i className="fa fa-twitter" />
-											Simply dummy brand  <a href="#">https//tweets/c7l.com</a>
+											Simply dummy brand  <a href="/">https//tweets/c7l.com</a>
 											<div className="time">9 Hours ago</div>
 										</li>
 									</ul>
@@ -103,7 +103,7 @@ class Footer_v1 extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-4 col-md-6 align-self-center">
-								<a href="index.html"><img src={publicUrl + "assets/img/footer-logo.png"} alt="img" /></a>
+								<a href="index.html"><img src={publicUrl + "assets/img/LogoPWT.png"} width={'130px'} alt="img" /></a>
 							</div>
 							<div className="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
 								<ul className="social-media mt-md-0 mt-3">
@@ -115,7 +115,7 @@ class Footer_v1 extends Component {
 								</ul>
 							</div>
 							<div className="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3">
-								<p>copyright 2022 by solverwp.com</p>
+								<p>Copyright © Ministry of Public Works and Transport</p>
 							</div>
 						</div>
 					</div>

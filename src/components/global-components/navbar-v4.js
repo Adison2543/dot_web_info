@@ -13,8 +13,6 @@ class NavbarV4 extends Component {
    
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let imgattr = 'logo'
-        let anchor = '#'
         return (
 			<div className="navbar-area">
         {/* <div className="navbar-top">
@@ -53,7 +51,7 @@ class NavbarV4 extends Component {
             <div className="nav-right-part nav-right-part-mobile">
               <Link className="signin-btn" to="/sign-in">Sign In</Link>
               <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-              <a className="search-bar" href="#"><i className="fa fa-search" /></a>
+              <a className="search-bar" href="/"><i className="fa fa-search" /></a>
             </div>
             <div className="collapse navbar-collapse" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
@@ -73,7 +71,7 @@ class NavbarV4 extends Component {
                   </ul>
                 </li>
                 <li className="menu-item-has-children">
-                  <a href="#">Pages</a>
+                  <a href="/">Pages</a>
                   <ul className="sub-menu">
                     <li><Link to="/about">About Us</Link></li>
                     <li><Link to="/event">Event</Link></li>

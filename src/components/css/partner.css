@@ -1,0 +1,8 @@
+.partn-container > img:hover {
+    transform: scale(1.4);
+    
+}
+.partn-container > img {
+    transition: .5s;
+    cursor: pointer;
+}
