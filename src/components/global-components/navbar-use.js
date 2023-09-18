@@ -18,7 +18,7 @@ class Navbar extends Component {
             <nav className="navbar navbar-area-1 navbar-area navbar-expand-lg">
               <div className="container nav-container">
                 <div className="responsive-mobile-menu">
-                  <button className="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                  <button className="menu toggle-btn d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#edumint_main_menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="icon-left" />
                     <span className="icon-right" />
                   </button>
