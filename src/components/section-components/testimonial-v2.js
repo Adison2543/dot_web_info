@@ -26,10 +26,11 @@ class TestimonialV2 extends Component {
 			<div className="row justify-content-center">
 				<div className="col-xl-8 col-lg-9 col-md-12">
 					<OwlCarousel 
-						className='testimonial-slider-2 owl-theme'
+						className='testimonial-slider-2'
 						items={1}  
 						autoplay
 						loop
+						touchDrag
 						autoplaySpeed={1000}
 						autoplayTimeout={5000}
 						margin={0} > 

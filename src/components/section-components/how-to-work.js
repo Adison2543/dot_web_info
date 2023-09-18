@@ -6,9 +6,39 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class HowToWork extends Component {
 
-    render() {
+	constructor(props) {
+		super(props);
+	
+		this.state = {
+		  items: 4, // Default number of items
+		};
+	  }
+	
+	  componentDidMount() {
+		// Add a listener for window resize events
+		window.addEventListener('resize', this.handleResize);
+		this.handleResize(); // Call the function once to set the initial state
+	  }
+	
+	  componentWillUnmount() {
+		// Remove the resize event listener when the component unmounts
+		window.removeEventListener('resize', this.handleResize);
+	  }
+	
+	  handleResize = () => {
+		// Check the screen width and set the number of items accordingly
+		if (window.innerWidth < 768 && window.innerWidth > 400) {
+		  	this.setState({ items: 2 });
+		} else if (window.innerWidth < 400) {
+			this.setState({ items: 1 });
+		} else {
+		  	this.setState({ items: 4 });
+		}
+	  };
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+    render() {
+		const { items } = this.state;
+        let publicUrl = process.env.PUBLIC_URL+'/';
 
     return <div className="work-area pd-top-110 go-top" id='activity'>
 			  <div className="container">
@@ -25,7 +55,7 @@ class HowToWork extends Component {
 			    </div>
 				<OwlCarousel 
 					className='testimonial-slider-2'
-					items={4}  
+					items={items}  
 					autoplay
 					loop
 					autoplaySpeed={2000}

@@ -79,7 +79,7 @@ const Blog = () => {
 					{news?.data?.map((item) => (
 						<SingleBlog key={item.news_id} news={item}/>
 					))}
-					{news?.length > 0 ? 
+					{news?.data?.length > 0 ? 
 					<Pagination>
 						<Pagination.Prev disabled={page === 1 ? true : false} onClick={prevPage}/>
 						{pageItems}

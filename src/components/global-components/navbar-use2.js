@@ -27,8 +27,8 @@ class NavbarV4 extends Component {
               <Link to="/"><img src={publicUrl+"assets/img/LogoPWT.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
-              <Link className="signin-btn" to="/sign-in">Sign In</Link>
-              <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
+              <Link className="signin-btn" to="/">Sign In</Link>
+              <Link className="btn btn-base" to="/">Sign Up</Link>
               <a className="search-bar" href="/"><i className="fa fa-search" /></a>
             </div>
             <div className="collapse navbar-collapse" id="edumint_main_menu">
@@ -42,12 +42,11 @@ class NavbarV4 extends Component {
                 <li className="menu-item-has-children">
                   <Link to={"/course"}>Course</Link>
                 </li>
-                <li><Link to="/contact">Contact Us</Link></li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <Link className="signin-btn" to="/sign-in">Sign In</Link>
-              <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
+              <Link className="signin-btn" to="/">Sign In</Link>
+              <Link className="btn btn-base" to="/">Sign Up</Link>
             </div>
           </div>
         </nav>

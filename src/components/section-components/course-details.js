@@ -80,13 +80,13 @@ class CourseDetails extends Component {
 			                  <div className="card single-faq-inner style-no-border">
 			                    <div className="card-header" id="ff-one">
 			                      <h5 className="mb-0">
-			                        <button className="btn-link" data-toggle="collapse" data-target="#f-one" aria-expanded="true" aria-controls="f-one">
+			                        <button className="btn-link collapsed" data-toggle="collapse" data-target="#f-one" aria-expanded="true" aria-controls="f-one">
 			                          01.  What does you simply dummy in do ?
 			                          <i className="fa fa-eye" />
 			                        </button>
 			                      </h5>
 			                    </div>
-			                    <div id="f-one" className="show collapse" aria-labelledby="ff-one" data-parent="#accordion">
+			                    <div id="f-one" className="collapse" aria-labelledby="ff-one" data-parent="#accordion">
 			                      <div className="card-body">
 			                        What does you dummy text of free available in market printing has industry been industry's standard dummy text ever.
 			                      </div>

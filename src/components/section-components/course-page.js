@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CourseCard from './course-card2';
 import { Pagination } from 'react-bootstrap';
-// import FadeIn from 'react-fade-in/lib/FadeIn';
 import ReactLoading from 'react-loading';
 
 

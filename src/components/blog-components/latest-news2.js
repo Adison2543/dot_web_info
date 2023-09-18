@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
 
 const LatestNews = () => {
-	const [allNews, setAllnews] = useState([])
 	const [news, setNews] = useState([])
 
 	var myHeaders = new Headers();
@@ -61,7 +60,6 @@ const LatestNews = () => {
 		// }
 		res.json()
 			.then(res => {
-				setAllnews(res);
 				setNews(res.data);
 			})
 			.catch(err => console.log("error!!!"));
@@ -94,7 +92,7 @@ const LatestNews = () => {
                                 <div className="details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news[0]?.user_update ? news[0].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news[0]?.news_type == 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
                                     <h5 ><Link to="/blog-details">{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
                                     <Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
@@ -110,7 +108,7 @@ const LatestNews = () => {
                                 <div className="details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news[1]?.user_update ? news[1].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news[1]?.news_type == 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
                                     <h5><Link to="/blog-details">{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
                                     <Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
@@ -130,7 +128,7 @@ const LatestNews = () => {
                                 <div className="media-body details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news[2]?.user_update ? news[2].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news[2]?.news_type == 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
                                     <h5><Link to="/blog-details">{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
                                 </div>
@@ -145,7 +143,7 @@ const LatestNews = () => {
                                 <div className="media-body details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news[3]?.user_update ? news[3].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news[3]?.news_type == 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
                                     <h5><Link to="/blog-details">{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
                                 </div>
@@ -160,7 +158,7 @@ const LatestNews = () => {
                                 <div className="media-body details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news[4]?.user_update ? news[4].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news[4]?.news_type == 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
                                     <h5><Link to="/blog-details">{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
                                 </div>

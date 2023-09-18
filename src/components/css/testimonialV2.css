@@ -1,41 +1,47 @@
 .yeartext{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); 
+}
+@media screen and (min-width: 768px) {
+    .hr-lines2:before, .hr-lines3:before{
+        content:" ";
+        display: block;
+        height: 2px;
+        width: 35%;
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        background: var(--main-color);
+    }
     
+    .hr-lines4:before{
+        content:" ";
+        display: block;
+        height: 2px;
+        width: 25%;
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        background: var(--main-color);
+    }
+    .hr-lines1:after, .hr-lines2:after, .hr-lines3:after{
+        content:" ";
+        display: block;
+        height: 2px;
+        width: 35%;
+        position: absolute;
+        bottom: 12%;
+        right: 0;
+        background: var(--main-color);
+    }
+    .yeartext{
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255); 
+    }
 }
 
-.hr-lines2:before, .hr-lines3:before{
-    content:" ";
-    display: block;
-    height: 2px;
-    width: 35%;
-    position: absolute;
-    bottom: 12%;
-    left: 0;
-    background: var(--main-color);
-}
-
-.hr-lines4:before{
-    content:" ";
-    display: block;
-    height: 2px;
-    width: 25%;
-    position: absolute;
-    bottom: 12%;
-    left: 0;
-    background: var(--main-color);
-}
-.hr-lines1:after, .hr-lines2:after, .hr-lines3:after{
-    content:" ";
-    display: block;
-    height: 2px;
-    width: 35%;
-    position: absolute;
-    bottom: 12%;
-    right: 0;
-    background: var(--main-color);
-}
 .ytext {
     background-color: var(--main-color);
     padding: 10px 20px;
