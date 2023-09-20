@@ -72,7 +72,7 @@ const CourseFilter = () => {
 				{courses ? 
 				<div className='row'>
 					<div className='d-flex justify-content-end'>
-						<Link to={"/course"}><button className='btn seemoreBtn'><span>See more</span></button></Link>
+						<Link to={"/course"}><button className='seemoreBtn'><span>See more</span></button></Link>
 					</div>
 				</div>
 				: <><div className='text-center'><span className="badge text-bg-warning">ไม่พบข้อมูลบทเรียน</span></div></>}
