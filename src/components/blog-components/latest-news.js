@@ -38,7 +38,7 @@ const LatestNews = () => {
 		const year = date.getFullYear();
 		return `${day} ${month}, ${year}`;
 	};
-
+	
 
 	useEffect(() => {
 		async function fetchData() {
@@ -145,7 +145,7 @@ const LatestNews = () => {
 								<div className="col-md-6">
 									<div className="single-blog-inner">
 									<div className="thumb">
-										<img src={process.env.PUBLIC_URL+"/assets/img/blog/1.png"} alt="img" />
+										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0].news_cover} alt="img" />
 										<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -161,7 +161,7 @@ const LatestNews = () => {
 								<div className="col-md-6">
 									<div className="single-blog-inner">
 									<div className="thumb">
-										<img src={process.env.PUBLIC_URL+"/assets/img/blog/2.png"} alt="img" />
+										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1].news_cover} alt="img" />
 										<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -187,7 +187,7 @@ const LatestNews = () => {
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={process.env.PUBLIC_URL+"/assets/img/blog/1.png"} alt="img" />
+                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[0].news_cover} alt="img" />
                                     <span className="date">{gatFDate(news2[0]?.udp_date ? news2[0].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
@@ -203,7 +203,7 @@ const LatestNews = () => {
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={process.env.PUBLIC_URL+"/assets/img/blog/2.png"} alt="img" />
+                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[1].news_cover} alt="img" />
                                     <span className="date">{gatFDate(news2[1]?.udp_date ? news2[1].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
