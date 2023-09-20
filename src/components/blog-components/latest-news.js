@@ -15,7 +15,7 @@ var myHeaders = new Headers();
 const LatestNews = () => {
 	const [news, setNews] = useState([]);
 	const [news2, setNews2] = useState([]);
-
+ 
 	const gatDay = (dateData) => {
 		const date = new Date(dateData);
 		return date.getUTCDate();
@@ -38,7 +38,6 @@ const LatestNews = () => {
 		const year = date.getFullYear();
 		return `${day} ${month}, ${year}`;
 	};
-	
 
 	useEffect(() => {
 		async function fetchData() {
@@ -104,7 +103,7 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> BY {news[2]?.user_update ? news[2].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
 										</ul>
-										<h5 className='newstitle'><Link to="/blog-details">{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[2].news_id}/${news[2]?.news_title}`}>{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
 									</div>
 									</div>
 								</li>
@@ -119,7 +118,7 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> BY {news[3]?.user_update ? news[3].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
 										</ul>
-										<h5 className='newstitle'><Link to="/blog-details">{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[3].news_id}/${news[3].news_title}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
 									</div>
 									</div>
 								</li>
@@ -134,7 +133,7 @@ const LatestNews = () => {
 											<li><i className="fa fa-user" /> BY {news[4]?.user_update ? news[4].user_update : "-"}</li>
 											<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
 											</ul>
-											<h5 className='newstitle'><Link to="/blog-details">{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
+											<h5 className='newstitle'><Link to={`/blog-details/${news[4].news_id}/${news[4].news_title}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
 										</div>
 									</div>
 								</li>
@@ -145,7 +144,7 @@ const LatestNews = () => {
 								<div className="col-md-6">
 									<div className="single-blog-inner">
 									<div className="thumb">
-										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0].news_cover} alt="img" />
+										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
 										<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -153,15 +152,15 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> BY {news[0]?.user_update ? news[0].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
 										</ul>
-										<h5 className='newstitle' ><Link to="/blog-details">{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle' ><Link to={`/blog-details/${news[0].news_id}/${news[0].news_title}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[0].news_id}/${news[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
 								</div>
 								<div className="col-md-6">
 									<div className="single-blog-inner">
 									<div className="thumb">
-										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1].news_cover} alt="img" />
+										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
 										<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -169,8 +168,8 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> BY {news[1]?.user_update ? news[1].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
 										</ul>
-										<h5 className='newstitle'><Link to="/blog-details">{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[1].news_id}/${news[1].news_title}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[1].news_id}/${news[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
 								</div>
@@ -187,7 +186,7 @@ const LatestNews = () => {
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[0].news_cover} alt="img" />
+                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
                                     <span className="date">{gatFDate(news2[0]?.udp_date ? news2[0].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
@@ -195,15 +194,15 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[0]?.user_update ? news2[0].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle' ><Link to="/blog-details">{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle' ><Link to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}>{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text" to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[1].news_cover} alt="img" />
+                                    <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
                                     <span className="date">{gatFDate(news2[1]?.udp_date ? news2[1].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
@@ -211,8 +210,8 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[1]?.user_update ? news2[1].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to="/blog-details">{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text" to="/blog-details"><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}>{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text" to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
@@ -231,7 +230,7 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[2]?.user_update ? news2[2].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to="/blog-details">{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[2].news_id}/${news2[2].news_title}`}>{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
@@ -246,7 +245,7 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[3]?.user_update ? news2[3].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to="/blog-details">{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[3].news_id}/${news2[3].news_title}`}>{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
@@ -261,7 +260,7 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[4]?.user_update ? news2[4].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to="/blog-details">{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[4].news_id}/${news2[4].news_title}`}>{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>

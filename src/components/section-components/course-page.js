@@ -57,7 +57,6 @@ const CoursePage = () => {
 
 
 		const totalPages = courses?.total_page;
-		// Calculate the range of pages to display (e.g., 5 pages before and after the current page).
 		const pageRange = 3;
 		const startPage = Math.max(1, page - pageRange);
 		const endPage = Math.min(totalPages, page + pageRange);
@@ -99,64 +98,6 @@ const CoursePage = () => {
 							<button className="btn btn-base w-100 mt-3" type="submit"><i className="fa fa-search" /> SEARCH</button>
 							</form>
 						</div> 
-						<div className="widget widget_catagory">
-							<h4 className="widget-title">Catagory</h4>                                 
-							<ul className="catagory-items go-top">
-							<li><Link to="/blog-details">Tempor lorem interdum <i className="fa fa-caret-right" /></Link></li>
-							<li><Link to="/blog-details">Auctor mattis lacus  <i className="fa fa-caret-right" /></Link></li>
-							{/* <li><Link to="/blog-details">Dolor proin  <i className="fa fa-caret-right" /></Link></li>
-							<li><Link to="/blog-details">Pharetra amet <i className="fa fa-caret-right" /></Link></li> */}
-							</ul>
-						</div>  
-						{/* <div className="widget widget_checkbox_list">
-							<h4 className="widget-title">Price</h4> 
-							<label className="single-checkbox">
-							<input type="checkbox" defaultChecked="checked" />
-							<span className="checkmark" />
-							Free Courses
-							</label> 
-							<label className="single-checkbox">
-							<input type="checkbox" />
-							<span className="checkmark" />
-							Paid Courses
-							</label> 
-							<label className="single-checkbox">
-							<input type="checkbox" />
-							<span className="checkmark" />
-							Only Subscription
-							</label>  
-						</div>  */}
-						<div className="widget widget_checkbox_list">
-							<h4 className="widget-title">Level</h4> 
-							<label className="single-checkbox">
-							<input type="checkbox" defaultChecked="checked" />
-							<span className="checkmark" />
-							Beginner
-							</label> 
-							<label className="single-checkbox">
-							<input type="checkbox" />
-							<span className="checkmark" />
-							Intermediate
-							</label> 
-							<label className="single-checkbox">
-							<input type="checkbox" />
-							<span className="checkmark" />
-							Advanced
-							</label>  
-						</div> 
-						<div className="widget widget_tags mb-0">
-							<h4 className="widget-title">Tags</h4>
-							<div className="tagcloud go-top">
-							<Link to="blog-details">Art</Link>
-							<Link to="blog-details">Creative</Link>
-							<Link to="blog-details">Article</Link>
-							<Link to="blog-details">Designer</Link>
-							<Link to="blog-details">Portfolio</Link>
-							<Link to="blog-details">Project</Link>
-							<Link to="blog-details">Personal</Link>
-							<Link to="blog-details">Landing</Link>
-							</div>
-						</div>
 						</div>
 					</div>
 					</div>	

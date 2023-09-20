@@ -9,9 +9,11 @@ import Testimonial from './section-components/testimonial-v2';
 import LatestPost from './blog-components/latest-news';
 import Footer from './global-components/footer-v2';
 import Client from './section-components/client-v2';
+import { Suspense } from 'react';
+import Loading from 'react-loading';
 
 const Home_V1 = () => {
-    return <div>
+    return <Suspense fallback={<Loading />}>
             <Navbar />
             <Banner />
             <Intro  />
@@ -22,7 +24,7 @@ const Home_V1 = () => {
             <Client />
             <HowToWork />
             <Footer />
-    </div>
+    </Suspense>
 }
 
 export default Home_V1

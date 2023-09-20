@@ -16,21 +16,16 @@ const CourseCard = ({ course }) => {
         <div className="single-course-inner">
           <div className="thumb text-center">
             {/* <img src={course.course_cover} alt="img" height="200px" /> */}
-            <img src={process.env.PUBLIC_URL+"/assets/img/blog/1.png"} alt="img" />
+            <img src={`https://oasapi.iddriver.com/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
           </div>
           <div className="details">
             <div className="details-inner">
               <div className="emt-user">
-                <span className="u-thumb">
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/author/1.png"}
-                    alt="img"
-                  />
-                </span>
+                <i className="fa fa-user me-2" />
                 <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
               </div>
               <h6>
-                <Link to="/course-details">{course.course_name}</Link>
+                <Link to={`/course-details/${course.course_id}/${course.course_name}`}>{course.course_name}</Link>
               </h6>
             </div>
             <div className="emt-course-meta">

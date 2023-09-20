@@ -1,0 +1,8 @@
+#lang_select {
+    background-color: unset;
+    border: 0px;
+    text-align: center;
+}
+#lang_select:focus {
+    border-left: 0px solid white;
+}

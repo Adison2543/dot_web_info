@@ -18,9 +18,34 @@ import SignUp from './components/sign-up';
 import Contact from './components/contact';
 import Blog from './components/blog';
 import BlogDetails from './components/blog-details';
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import menu_en from './trans/en/trans.json'
+import menu_th from './trans/th/trans.json'
+import menu_lo from './trans/lo/trans.json'
 
 
-
+i18n
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      en: {
+        translation: menu_en,
+      },
+      th: {
+        translation: menu_th,
+      },
+      lo: {
+        translation: menu_lo,
+      },
+    },
+    fallbackLng: 'lo', // Default language
+    debug: true, // Set to true for debugging
+    interpolation: {
+      escapeValue: false, // React already does escaping
+    },
+  });
 
 const Root = () => {
         return(
@@ -31,7 +56,7 @@ const Root = () => {
                         <Route path="/home-v2" component={HomeV2} />
                         <Route path="/home-v3" component={HomeV3} />
                         <Route path="/course" component={Course} />
-                        <Route path="/course-details" component={CourseDetails} />
+                        <Route path="/course-details/:course_id/:course_name" component={CourseDetails} />
                         <Route path="/about" component={About} />
                         <Route path="/event" component={Event} />
                         <Route path="/event-details" component={EventDetails} />
@@ -43,7 +68,7 @@ const Root = () => {
                         <Route path="/sign-up" component={SignUp} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/blog" component={Blog} />
-                        <Route path="/blog-details" component={BlogDetails} />
+                        <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
 	                </Switch>
 	                </div>
                 </HashRouter>
@@ -52,4 +77,8 @@ const Root = () => {
 
 export default Root;
 
-ReactDOM.render(<Root />, document.getElementById('edumint'));
+ReactDOM.render(
+<I18nextProvider i18n={i18n}>
+<Root />
+</I18nextProvider>,
+document.getElementById('edumint'));

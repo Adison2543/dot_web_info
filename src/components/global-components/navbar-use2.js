@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-class NavbarV4 extends Component {
+const Navbaruse2 = () => {
 
-    componentDidMount() {
-
-     const $ = window.$;
-
-     $( 'body' ).removeClass( 'home-3' );
-
-   }
+      useEffect ( () => {
+        const $ = window.$;
+        $( 'body' ).removeClass( 'home-3' );
+      },[])
    
-    render() {
+
         let publicUrl = process.env.PUBLIC_URL+'/'
+        const {t} = useTranslation();
         return (
 			<div className="navbar-area">
         <nav className="navbar bg-white navbar-area-1 navbar-area navbar-expand-lg go-top">
@@ -27,26 +26,26 @@ class NavbarV4 extends Component {
               <Link to="/"><img src={publicUrl+"assets/img/LogoPWT.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
-              <Link className="signin-btn" to="/">Sign In</Link>
-              <Link className="btn btn-base" to="/">Sign Up</Link>
+              <Link className="signin-btn" to="/">{t('signin')}</Link>
+              <Link className="btn btn-base" to="/">{t('signup')}</Link>
               <a className="search-bar" href="/"><i className="fa fa-search" /></a>
             </div>
             <div className="collapse navbar-collapse" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
                 <li className="menu-item-has-children current-menu-item">
-                  <Link to="/">Home</Link>
+                  <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link to={"/blog"}>News</Link>
+                  <Link to={"/blog"}>{t('news')}</Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link to={"/course"}>Course</Link>
+                  <Link to={"/course"}>{t('course')}</Link>
                 </li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <Link className="signin-btn" to="/">Sign In</Link>
-              <Link className="btn btn-base" to="/">Sign Up</Link>
+              <Link className="signin-btn" to="/">{t('signin')}</Link>
+              <Link className="btn btn-base" to="/">{t('signup')}</Link>
             </div>
           </div>
         </nav>
@@ -54,7 +53,5 @@ class NavbarV4 extends Component {
 
         )
     }
-}
 
-
-export default NavbarV4
+export default Navbaruse2
