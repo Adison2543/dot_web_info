@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/testimonialV2.css'
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
+import { useTranslation } from 'react-i18next';
 
-class TestimonialV2 extends Component {
+const TestimonialV2 = () => {
 
-    render() {
-
-        let publicUrl = process.env.PUBLIC_URL+'/'
+	let publicUrl = process.env.PUBLIC_URL+'/'
+	const {t} = useTranslation();
 
     return <div className="testimonial-area pd-top-110 pd-bottom-120" style={{backgroundImage: 'url('+publicUrl+'assets/img/testimonial/bg.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
 	  <div className="container">
@@ -16,7 +16,7 @@ class TestimonialV2 extends Component {
 	      <div className="col-xl-6 col-lg-7 col-md-11">
 	        <div className="section-title text-center">
 	          <h6 className="sub-title double-line">Our History</h6>
-	          <h2 className="title">ປະຫວັດສາດ</h2>
+	          <h2 className="title">{t('history')}</h2>
 	        </div>
 	      </div>
 	    </div>
@@ -88,6 +88,5 @@ class TestimonialV2 extends Component {
 	</div>
 
   }
-}
 
 export default TestimonialV2

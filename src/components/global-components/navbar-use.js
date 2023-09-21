@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { HashLink as Link} from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 import '../css/navbar.css'
@@ -67,12 +67,12 @@ const Navbar = () => {
             </div>
             <div className="nav-right-part nav-right-part-desktop">
               <div style={{display: "inline-block"}}>
-                <i class="bi bi-globe"></i>
+                <i className="bi bi-globe"></i>
               </div>
               <div style={{display: "inline-block"}}>
                 <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
                   <option value="lo" >ລາວ</option>
-                  <option value="th">ไทย</option>
+                  <option value="th" >ไทย </option>
                   <option value="en">English</option>
                 </select>
               </div>

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 
-const CourseDetails = () => {
+const CourseDetails = ({tran}) => {
 	const {course_id} = useParams();
 	const [course, setCourse] = useState({})
 	const [loading, setLoading] = useState(false);
@@ -85,7 +85,7 @@ const CourseDetails = () => {
 						<div className="tab-content" id="myTabContent">
 							<div className="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 							<div className="course-details-content">
-								<h4 className="title">Overview</h4>
+								<h4 className="title">{tran('overview')}</h4>
 								<p>{course?.course_description}</p>
 								<div id="accordion" className="accordion-area mt-4">
 								{Array.isArray(lesson) && lesson.map((item, index) => (
@@ -114,13 +114,13 @@ const CourseDetails = () => {
 					<div className="col-lg-4">
 						<div className="td-sidebar">
 						<div className="widget widget_feature">
-							<h4 className="widget-title">Course Features</h4>                                 
+							<h4 className="widget-title">{tran('coursefeature')}</h4>                                 
 							<ul>
-								<li><i className="fa fa-tags" /><span>Code:</span>{course?.course_code}</li>
-							<li><i className="fa fa-user" /><span>Lecturer :</span>{course?.user_update ? course.user_update : course.user_create}</li>
-							<li><i className="fa fa-clock-o" /><span>Create :</span>{course?.crt_date && gatFDate(course?.crt_date)}</li>
-							<li><i className="fa fa-clock-o" /><span>Update :</span>{course?.udp_date && gatFDate(course?.udp_date)}</li>
-							<li><i className="fa fa-clipboard" /><span>Lectures :</span>{Array.isArray(lesson) && lesson.length}</li>
+								<li><i className="fa fa-tags" /><span>{tran('coursecode')}:</span>{course?.course_code}</li>
+							<li><i className="fa fa-user" /><span>{tran('lecturer')} :</span>{course?.user_update ? course.user_update : course.user_create}</li>
+							<li><i className="fa fa-clock-o" /><span>{tran('create')} :</span>{course?.crt_date && gatFDate(course?.crt_date)}</li>
+							<li><i className="fa fa-clock-o" /><span>{tran('lastupdate')} :</span>{course?.udp_date && gatFDate(course?.udp_date)}</li>
+							<li><i className="fa fa-clipboard" /><span>{tran('lesson')} :</span>{Array.isArray(lesson) && lesson.length}</li>
 							{/* <li><i className="fa fa-clone" /><span>Categories:</span> Technology</li>
 							<li><i className="fa fa-clipboard" /><span>Instructor:</span> Ethan Dean</li> */}
 							</ul>

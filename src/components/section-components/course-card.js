@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course, tran }) => {
 
   const gatFDate = (dateData) => {
 		const date = new Date(dateData);
@@ -32,12 +32,12 @@ const CourseCard = ({ course }) => {
               <div className="row">
                 <div className="col-6">
                   <div className="rating">
-                    update: {gatFDate(course.udp_date)}
+                    {tran('lastupdate')}: {gatFDate(course.udp_date)}
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="price text-right">
-                    Code: <span>{course.course_code}</span>
+                  {tran('coursecode')}: <span>{course.course_code}</span>
                   </div>
                 </div>
               </div>

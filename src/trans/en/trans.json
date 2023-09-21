@@ -5,5 +5,35 @@
     "activity": "Activity",
     "contact": "Contact",
     "signin": "Sign In",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+
+    "contactus": "Contact Us",
+    "pwt": "Ministry of Public Works and Transport of Lao PDR",
+    "fax": "Fax",
+    "hotline": "hotline",
+
+
+    "topcourse": "Top Featured Courses",
+    "partner": "Partnerships",
+    "allnews": "All News",
+    "allcourse": "All Course",
+    "search": "Search",
+    "coursedetail": "Course Detail",
+    "coursefeature": "Course Feature",
+    "lecturer": "Lecturer",
+    "create": "Create",
+    "lesson": "Lesson",
+    "overview": "Overview",
+    "mpw": "MPW",
+    "dot": "DoT",
+    "history": "History",
+    "by": "By",
+    "catagory": "Catagory",
+
+
+    "lastestnews": "Lastest news",
+    "readmore": "Read more",
+    "seemore": "See more",
+    "lastupdate": "Update",
+    "coursecode": "Code"
 }

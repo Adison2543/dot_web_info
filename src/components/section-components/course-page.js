@@ -8,7 +8,7 @@ import ReactLoading from 'react-loading';
 
 
 
-const CoursePage = () => {
+const CoursePage = ({tran}) => {
 
 		const [courses, setCourse] = useState([]);
 		const [page, setPage] = useState(1);
@@ -78,7 +78,7 @@ const CoursePage = () => {
 						<div className="col-lg-8 order-lg-12">
 							<div className="row go-top">
 								{courses?.data?.map((item) => (
-									<CourseCard key={item.course_id} course={item}></CourseCard>
+									<CourseCard key={item.course_id} course={item} tran={tran}></CourseCard>
 								))}
 							</div>
 							<Pagination>
@@ -92,10 +92,10 @@ const CoursePage = () => {
 					<div className="col-lg-4 order-lg-1 col-12">
 						<div className="td-sidebar mt-5 mt-lg-0">
 						<div className="widget widget_search_course">    
-							<h4 className="widget-title">Search</h4>                               
+							<h4 className="widget-title">{tran('search')}</h4>                               
 							<form className="search-form single-input-inner">
-							<input type="text" placeholder="Search here" />
-							<button className="btn btn-base w-100 mt-3" type="submit"><i className="fa fa-search" /> SEARCH</button>
+							<input type="text" placeholder={`${tran('search')}`} />
+							<button className="btn btn-base w-100 mt-3" type="submit"><i className="fa fa-search" />{tran('search')}</button>
 							</form>
 						</div> 
 						</div>

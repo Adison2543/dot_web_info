@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-class Page_header extends Component {
+const Page_header = ({headertitle, subheader}) => {
 
-    render() {
-
-        let HeaderTitle = this.props.headertitle;
+		const {t} = useTranslation();
+        let HeaderTitle = headertitle;
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
+        let Subheader = subheader ? subheader : HeaderTitle
 
         return (
 
@@ -18,7 +18,7 @@ class Page_header extends Component {
 	      <div className="section-title mb-0 text-center">
 	        <h2 className="page-title">{ HeaderTitle }</h2>
 	        <ul className="page-list">
-	          <li><Link to="/">Home</Link></li>
+	          <li><Link to="/">{t('home')}</Link></li>
 	          <li>{ Subheader }</li>
 	        </ul>
 	      </div>
@@ -30,7 +30,6 @@ class Page_header extends Component {
 
         )
     }
-}
 
 
 export default Page_header

@@ -1,44 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/howToWork.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useTranslation } from 'react-i18next';
 
-class HowToWork extends Component {
+const HowToWork = () => {
+	const {t} = useTranslation();
+	const [items, setItems] = useState(4);
 
-	constructor(props) {
-		super(props);
-	
-		this.state = {
-		  items: 4, // Default number of items
-		};
-	  }
-	
-	  componentDidMount() {
-		// Add a listener for window resize events
-		window.addEventListener('resize', this.handleResize);
-		this.handleResize(); // Call the function once to set the initial state
-	  }
-	
-	  componentWillUnmount() {
-		// Remove the resize event listener when the component unmounts
-		window.removeEventListener('resize', this.handleResize);
-	  }
-	
-	  handleResize = () => {
+	const handleResize = () => {
 		// Check the screen width and set the number of items accordingly
 		if (window.innerWidth < 768 && window.innerWidth > 400) {
-		  	this.setState({ items: 2 });
+		setItems(2);
 		} else if (window.innerWidth < 400) {
-			this.setState({ items: 1 });
+		setItems(1);
 		} else {
-		  	this.setState({ items: 4 });
+		setItems(4);
 		}
-	  };
+	};
 
-    render() {
-		const { items } = this.state;
-        let publicUrl = process.env.PUBLIC_URL+'/';
+	useEffect(() => {
+		// Add a listener for window resize events
+		window.addEventListener('resize', handleResize);
+		// Call the function once to set the initial state
+		handleResize();
+
+		// Remove the resize event listener when the component unmounts
+		return () => {
+		window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+  	let publicUrl = process.env.PUBLIC_URL + '/';
 
     return <div className="work-area pd-top-110 go-top" id='activity'>
 			  <div className="container">
@@ -46,7 +40,7 @@ class HowToWork extends Component {
 			      <div className="row">
 			        <div className="col-lg-6 align-self-center">
 			          <h6 className="sub-title right-line">Activity</h6>
-			          <h2 className="title">ກິດ​ຈະ​ກໍາ​</h2>
+			          <h2 className="title">{t('activity')}</h2>
 			        </div>
 			        <div className="col-lg-6 align-self-center">
 			          <p className="content mt-lg-0">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs when MTV ax quiz</p>
@@ -115,6 +109,5 @@ class HowToWork extends Component {
 			  </div>
 			</div>
         }
-}
 
 export default HowToWork

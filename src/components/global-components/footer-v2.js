@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { HashLink as Link} from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 
-class Footer_v2 extends Component {
+const Footer_v2 = () => {
+	const {t} = useTranslation();
 
-	componentDidMount() {
+	useEffect (() => {
 		let publicUrl = process.env.PUBLIC_URL + '/'
 		const minscript = document.createElement("script");
 		minscript.async = true;
 		minscript.src = publicUrl + "assets/js/main.js";
 
 		document.body.appendChild(minscript);
-	}
+	}, [])
 	
-
-	render() {
 
 		let publicUrl = process.env.PUBLIC_URL + '/'
 
@@ -28,27 +28,27 @@ class Footer_v2 extends Component {
 									<div className="details">
 										<p style={{fontSize:'12px'}}>ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ ຂຽນຫຍໍ້: “ຍ. ທ. ຂ” ຂຽນເປັນພາສາຝຣັ່ງ: Ministère de Travaux Public et de Transports (ຂຽນຫຍໍ້: MTPT) ແມ່ນກົງຈັກຂອງລັດຖະບານ, ມີພາລະບົດບາດ ເປັນເສນາທິການໃຫ້ແກ່ລັດຖະບານ ໃນການຄຸ້ມຄອງມະຫາພາກ ກ່ຽວກັບຂະແໜງການຄົມມະນາຄົມ, ຂົນສົ່ງ ທາງບົກ, ທາງນ້ຳ, ທາງອາກາດ, ທາງລົດໄຟ, ການເຄຫາສະຖານ, ຜັງເມືອງ ແລະ ນ້ຳປະປາ ໃນຂອບເຂດ ທົ່ວປະເທດ.</p>
 										<ul className="social-media">
-											<li><a href="https://www.facebook.com/solverwp/" className='mb-0'><i className="fa fa-facebook" /></a></li>
-											<li><a href="https://www.twitter.com/solverwp" className='mb-0'><i className="fa fa-twitter" /></a></li>
-											<li><a href="https://www.youtube.com/solverwp/" className='mb-0'><i className="fa fa-instagram" /></a></li>
-											<li><a href="https://www.pinterest.com/solverwp/" className='mb-0'><i className="fa fa-pinterest" /></a></li>
+											<li><a href="https://www.facebook.com/" target='BLANK' className='mb-0'><i className="fa fa-facebook" /></a></li>
+											<li><a href="https://www.twitter.com/" target='BLANK' className='mb-0'><i className="fa fa-twitter" /></a></li>
+											<li><a href="https://www.youtube.com/" target='BLANK' className='mb-0'><i className="fa fa-instagram" /></a></li>
+											<li><a href="https://www.pinterest.com/" target='BLANK' className='mb-0'><i className="fa fa-pinterest" /></a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_contact">
-									<h4 className="widget-title">Contact Us</h4>
+									<h4 className="widget-title">{t('contactus')}</h4>
 									<ul className="details">
-										<li><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK' rel="noopener noreferrer"><i className="fa fa-map-marker" /> Ministry of Public Works and Transport of Lao PDR</a></li>
-										<li><i className="fa fa-envelope" /> Fax: 856-21 412250</li>
-										<li><i className="fa fa-phone" /> 856-21 412255 , ສາຍດ່ວນ 1518</li>
+										<li><a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK' rel="noopener noreferrer"><i className="fa fa-map-marker" />{t('pwt')}</a></li>
+										<li><i className="fa fa-envelope" /> {t('fax')}: 856-21 412250</li>
+										<li><i className="fa fa-phone" /> 856-21 412255 , {t('hotline')} 1518</li>
 									</ul>
 								</div>
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_blog_list">
-									<h4 className="widget-title">News &amp; Blog</h4>
+									<h4 className="widget-title">{t('lastestnews')}</h4>
 									<ul>
 										<li>
 											<h6><Link to="/blog-details">Big Ideas Of Business Branding Info.</Link></h6>
@@ -63,7 +63,7 @@ class Footer_v2 extends Component {
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_nav_menu">
-									<h4 className="widget-title">Course</h4>
+									<h4 className="widget-title">{t('course')}</h4>
 									<ul className="go-top">
 										<li><Link to="/blog">Branding design</Link></li>
 										<li><Link to="/blog">Ui/Ux designing </Link></li>
@@ -85,10 +85,10 @@ class Footer_v2 extends Component {
 							<div className="col-md-7 text-md-right align-self-center mt-md-0 mt-2">
 								<div className="widget_nav_menu">
 									<ul className="go-top">
-										<li><Link to="/">Home</Link></li>
-										<li><Link to="#news" smooth>News</Link></li>
-										<li><Link to="#course" smooth>Course</Link></li>
-										<li><Link to="#activity" smooth>Activity</Link></li>
+										<li><Link to="/">{t('home')}</Link></li>
+										<li><Link to="#news" smooth>{t('news')}</Link></li>
+										<li><Link to="#course" smooth>{t('course')}</Link></li>
+										<li><Link to="#activity" smooth>{t('activity')}</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -99,7 +99,6 @@ class Footer_v2 extends Component {
 
 		)
 	}
-}
 
 
 export default Footer_v2

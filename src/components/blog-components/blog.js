@@ -4,9 +4,10 @@ import SingleBlog from './single-blog';
 import axios from 'axios';
 import { Pagination } from 'react-bootstrap';
 import ReactLoading from 'react-loading';
+import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
-
+		const {t} = useTranslation();
 		const [news, setNews] = useState([]);
 		const [page, setPage] = useState(1);
 		const [loading, setLoading] = useState(false);
@@ -77,7 +78,7 @@ const Blog = () => {
 				<div className="row">
 				<div className="col-lg-8">
 					{news?.data?.map((item) => (
-						<SingleBlog key={item.news_id} news={item}/>
+						<SingleBlog key={item.news_id} news={item} tran={t}/>
 					))}
 					{news?.data?.length > 0 ? 
 					<Pagination>
@@ -87,7 +88,7 @@ const Blog = () => {
 					</Pagination>
 					: <></> }
 				</div>
-				<Sidebar setType={setType} type={cata}/>
+				<Sidebar setType={setType} type={cata} tran={t}/>
 				</div>
 			}
 		  </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import ptn from '../data/partner_data.js'
 import '../css/partner.css'
+import { useTranslation } from 'react-i18next';
 
 
 const ClientV2 = () => {
+	const {t} = useTranslation();
 
 	const showPtn = (key) => {
 		// You can use SweetAlert in your React component
@@ -15,7 +17,7 @@ const ClientV2 = () => {
 			  <div className="container">
 				<div className='row text-center'>
 					<div className="section-title">
-						<h6 className="sub-title double-line fs-2">Partnerships</h6>
+						<h6 className="sub-title double-line fs-2">{t('partner')}</h6>
 					</div>
 				</div>
 			    <div className="row">

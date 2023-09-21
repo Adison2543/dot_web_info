@@ -4,9 +4,11 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
+import { useTranslation } from 'react-i18next';
 
 
 const BlogDetails = () => {
+	const {t} = useTranslation();
 	const { news_id } = useParams();
 	console.log("id" , news_id)
 	const [news, setNews] = useState({})
@@ -64,7 +66,7 @@ const BlogDetails = () => {
 		            </div>
 		            <div className="details">
 		              <ul className="blog-meta">
-		                <li><i className="fa fa-user" /> BY {news?.user_update? news?.user_update : news?.user_create}</li>
+		                <li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li>
 		                <li><i className="fa fa-calendar-check-o" />{gatFDate(news?.udp_date ? news.udp_date : news.crt_date)}</li>
 		              </ul>
 		              <h3 className="title">{news?.news_title}</h3>
@@ -73,7 +75,7 @@ const BlogDetails = () => {
 		          </div>
 		        </div>
 		      </div>
-		       <Sidebar id={news?.news_type? news.news_type : 0}/>
+		       <Sidebar id={news?.news_type? news.news_type : 0} tran={t}/>
 		    </div>
 			}
 		  </div>

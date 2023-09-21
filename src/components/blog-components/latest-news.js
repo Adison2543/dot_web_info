@@ -1,6 +1,7 @@
 import React, { cloneElement, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
+import { useTranslation } from 'react-i18next';
 
 var myHeaders = new Headers();
 		myHeaders.append("Content-Type", "application/json");
@@ -15,6 +16,7 @@ var myHeaders = new Headers();
 const LatestNews = () => {
 	const [news, setNews] = useState([]);
 	const [news2, setNews2] = useState([]);
+	const {t} = useTranslation();
  
 	const gatDay = (dateData) => {
 		const date = new Date(dateData);
@@ -81,8 +83,8 @@ const LatestNews = () => {
 					<div className="row justify-content-center">
 						<div className="col-xl-6 col-lg-7">
 							<div className="section-title text-center">
-								<h6 className="sub-title double-line">Latest News</h6>
-								<h2 className="title">กรมโยธา &amp; กรมขนส่ง</h2>
+								<h6 className="sub-title double-line">{t('lastestnews')}</h6>
+								<h2 className="title">{t('mpw')} &amp; {t('dot')}</h2>
 							</div>
 						</div>
 					</div>
@@ -100,10 +102,10 @@ const LatestNews = () => {
 									</div>
 									<div className="media-body details">
 										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> BY {news[2]?.user_update ? news[2].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+										<li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2].user_update : "-"}</li>
+										<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[2].news_id}/${news[2]?.news_title}`}>{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[2].news_id}/${news[2]?.news_friendly}`}>{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
 									</div>
 									</div>
 								</li>
@@ -115,10 +117,10 @@ const LatestNews = () => {
 									</div>
 									<div className="media-body details">
 										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> BY {news[3]?.user_update ? news[3].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+										<li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li>
+										<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[3].news_id}/${news[3].news_title}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[3].news_id}/${news[3].news_friendly}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
 									</div>
 									</div>
 								</li>
@@ -130,10 +132,10 @@ const LatestNews = () => {
 										</div>
 										<div className="media-body details">
 											<ul className="blog-meta">
-											<li><i className="fa fa-user" /> BY {news[4]?.user_update ? news[4].user_update : "-"}</li>
-											<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+											<li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li>
+											<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[4].news_id}/${news[4].news_title}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
+											<h5 className='newstitle'><Link to={`/blog-details/${news[4].news_id}/${news[4].news_friendly}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
 										</div>
 									</div>
 								</li>
@@ -149,11 +151,11 @@ const LatestNews = () => {
 									</div>
 									<div className="details">
 										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> BY {news[0]?.user_update ? news[0].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+										<li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li>
+										<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle' ><Link to={`/blog-details/${news[0].news_id}/${news[0].news_title}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[0].news_id}/${news[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle' ><Link to={`/blog-details/${news[0].news_id}/${news[0].news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[0].news_id}/${news[0].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
 								</div>
@@ -165,11 +167,11 @@ const LatestNews = () => {
 									</div>
 									<div className="details">
 										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> BY {news[1]?.user_update ? news[1].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+										<li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li>
+										<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[1].news_id}/${news[1].news_title}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[1].news_id}/${news[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[1].news_id}/${news[1].news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[1].news_id}/${news[1].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
 								</div>
@@ -191,11 +193,11 @@ const LatestNews = () => {
                                 </div>
                                 <div className="details">
                                     <ul className="blog-meta">
-                                    <li><i className="fa fa-user" /> BY {news2[0]?.user_update ? news2[0].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news2[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-user" /> {t('by')} {news2[0]?.user_update ? news2[0].user_update : "-"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news2[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
                                     </ul>
-                                    <h5 className='newstitle' ><Link className='readmore2' to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}>{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle' ><Link className='readmore2' to={`/blog-details/${news2[0].news_id}/${news2[0].news_friendly}`}>{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[0].news_id}/${news2[0].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
@@ -207,11 +209,11 @@ const LatestNews = () => {
                                 </div>
                                 <div className="details">
                                     <ul className="blog-meta">
-                                    <li><i className="fa fa-user" /> BY {news2[1]?.user_update ? news2[1].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news2[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-user" /> {t('by')} {news2[1]?.user_update ? news2[1].user_update : "-"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news2[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}>{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[1].news_id}/${news2[1].news_friendly}`}>{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[1].news_id}/${news2[1].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
@@ -227,10 +229,10 @@ const LatestNews = () => {
                                 </div>
                                 <div className="media-body details">
                                     <ul className="blog-meta">
-                                    <li><i className="fa fa-user" /> BY {news2[2]?.user_update ? news2[2].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news2[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-user" /> {t('by')} {news2[2]?.user_update ? news2[2].user_update : "-"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news2[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[2].news_id}/${news2[2].news_title}`}>{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[2].news_id}/${news2[2].news_friendly}`}>{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
@@ -242,10 +244,10 @@ const LatestNews = () => {
                                 </div>
                                 <div className="media-body details">
                                     <ul className="blog-meta">
-                                    <li><i className="fa fa-user" /> BY {news2[3]?.user_update ? news2[3].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news2[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-user" /> {t('by')} {news2[3]?.user_update ? news2[3].user_update : "-"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news2[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[3].news_id}/${news2[3].news_title}`}>{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[3].news_id}/${news2[3].news_friendly}`}>{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
@@ -257,10 +259,10 @@ const LatestNews = () => {
                                 </div>
                                 <div className="media-body details">
                                     <ul className="blog-meta">
-                                    <li><i className="fa fa-user" /> BY {news2[4]?.user_update ? news2[4].user_update : "-"}</li>
-                                    <li><i className="fa fa-folder-open-o" />{news2[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
+                                    <li><i className="fa fa-user" /> {t('by')} {news2[4]?.user_update ? news2[4].user_update : "-"}</li>
+                                    <li><i className="fa fa-folder-open-o" />{news2[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[4].news_id}/${news2[4].news_title}`}>{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[4].news_id}/${news2[4].news_friendly}`}>{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
@@ -273,10 +275,10 @@ const LatestNews = () => {
 					{news ||  news2 ?
 					<div className='row'>
 						<div className='d-flex justify-content-end'>
-							<Link to={"/blog"} ><button className='seemoreBtn'><span>See more</span></button></Link>
+							<Link to={"/blog"} ><button className='seemoreBtn'><span>{t('seemore')}</span></button></Link>
 						</div>
 					</div>
-					: <><div className='text-center'><span className="badge text-bg-warning">ไม่พบข้อมูลข่าวสาร</span></div></>}
+					: <><div className='text-center'><span className="badge text-bg-warning">ບໍ່ພົບຂ່າວ</span></div></>}
 				</div>
 			</div>
 		</>
