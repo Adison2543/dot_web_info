@@ -43,3 +43,12 @@
   .seemoreBtn:hover {
     box-shadow: 1px 1px 10px .5px rgb(214, 214, 214);
   }
+  .type-1 {
+    
+  }
+  .type-2{
+      background-color: pink !important;
+  }
+  .readmore2:hover {
+    color: pink !important;
+  }

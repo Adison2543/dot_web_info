@@ -91,7 +91,7 @@ const LatestNews = () => {
 					{news?.length > 0 ?  
 					<div className="row">
 						<div className="col-lg-4">
-							<ul className="single-blog-list-wrap mb-5 mb-lg-0">
+							<ul className="single-blog-list-wrap mb-5 mb-lg-0 type-1">
 								<li>
 									<div className="media single-blog-list-inner">
 									<div className="media-left date">
@@ -142,7 +142,7 @@ const LatestNews = () => {
 						<div className="col-lg-8">
 							<div className="row justify-content-center">
 								<div className="col-md-6">
-									<div className="single-blog-inner">
+									<div className="single-blog-inner type-1">
 									<div className="thumb">
 										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
 										<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
@@ -158,7 +158,7 @@ const LatestNews = () => {
 									</div>
 								</div>
 								<div className="col-md-6">
-									<div className="single-blog-inner">
+									<div className="single-blog-inner type-1">
 									<div className="thumb">
 										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
 										<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
@@ -187,15 +187,15 @@ const LatestNews = () => {
                                 <div className="single-blog-inner">
                                 <div className="thumb">
                                     <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
-                                    <span className="date">{gatFDate(news2[0]?.udp_date ? news2[0].udp_date : Date())}</span>
+                                    <span className="date type-2">{gatFDate(news2[0]?.udp_date ? news2[0].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news2[0]?.user_update ? news2[0].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[0]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle' ><Link to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}>{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text" to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle' ><Link className='readmore2' to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}>{news2[0]?.news_title ? news2[0].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[0].news_id}/${news2[0].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
@@ -203,15 +203,15 @@ const LatestNews = () => {
                                 <div className="single-blog-inner">
                                 <div className="thumb">
                                     <img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news2[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
-                                    <span className="date">{gatFDate(news2[1]?.udp_date ? news2[1].udp_date : Date())}</span>
+                                    <span className="date type-2">{gatFDate(news2[1]?.udp_date ? news2[1].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
                                     <ul className="blog-meta">
                                     <li><i className="fa fa-user" /> BY {news2[1]?.user_update ? news2[1].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[1]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}>{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
-                                    <Link className="read-more-text" to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}>{news2[1]?.news_title ? news2[1].news_title : "-"}</Link></h5>
+                                    <Link className="read-more-text readmore2" to={`/blog-details/${news2[1].news_id}/${news2[1].news_title}`}><b className='fs-5'>ອ່ານ​ຕື່ມ</b> <i className="fa fa-angle-right" /></Link>
                                 </div>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@ const LatestNews = () => {
                             <ul className="single-blog-list-wrap mb-5 mb-lg-0">
                             <li>
                                 <div className="media single-blog-list-inner">
-                                <div className="media-left date">
+                                <div className="media-left date type-2">
                                     <span>{gatMonth(news2[2]?.udp_date ? news2[2].udp_date : Date())}</span><br/>
                                     {gatDay(news2[2]?.udp_date ? news2[2].udp_date : Date())}
                                 </div>
@@ -230,13 +230,13 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[2]?.user_update ? news2[2].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[2]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[2].news_id}/${news2[2].news_title}`}>{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[2].news_id}/${news2[2].news_title}`}>{news2[2]?.news_title ? news2[2].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="media single-blog-list-inner">
-                                <div className="media-left date">
+                                <div className="media-left date type-2">
                                     <span>{gatMonth(news2[3]?.udp_date ? news2[3].udp_date : Date())}</span><br/>
                                     {gatDay(news2[3]?.udp_date ? news2[3].udp_date : Date())}
                                 </div>
@@ -245,13 +245,13 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[3]?.user_update ? news2[3].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[3]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[3].news_id}/${news2[3].news_title}`}>{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[3].news_id}/${news2[3].news_title}`}>{news2[3]?.news_title ? news2[3].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="media single-blog-list-inner">
-                                <div className="media-left date">
+                                <div className="media-left date type-2">
                                     <span>{gatMonth(news2[4]?.udp_date ? news2[4].udp_date : Date())}</span><br/>
                                     {gatDay(news2[4]?.udp_date ? news2[4].udp_date : Date())}
                                 </div>
@@ -260,7 +260,7 @@ const LatestNews = () => {
                                     <li><i className="fa fa-user" /> BY {news2[4]?.user_update ? news2[4].user_update : "-"}</li>
                                     <li><i className="fa fa-folder-open-o" />{news2[4]?.news_type === 1 ? "กรมขนส่ง" : "กรมโยธา"}</li>
                                     </ul>
-                                    <h5 className='newstitle'><Link to={`/blog-details/${news2[4].news_id}/${news2[4].news_title}`}>{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
+                                    <h5 className='newstitle'><Link className='readmore2' to={`/blog-details/${news2[4].news_id}/${news2[4].news_title}`}>{news2[4]?.news_title ? news2[4].news_title : "-"}</Link></h5>
                                 </div>
                                 </div>
                             </li>
