@@ -1,4 +1,4 @@
-import React, { cloneElement, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
 import { useTranslation } from 'react-i18next';
@@ -278,7 +278,7 @@ const LatestNews = () => {
 							<Link to={"/blog"} ><button className='seemoreBtn'><span>{t('seemore')}</span></button></Link>
 						</div>
 					</div>
-					: <><div className='text-center'><span className="badge text-bg-warning">ບໍ່ພົບຂ່າວ</span></div></>}
+					: <><div className='text-center'><span className="badge text-bg-warning">{t('notfound')}</span></div></>}
 				</div>
 			</div>
 		</>

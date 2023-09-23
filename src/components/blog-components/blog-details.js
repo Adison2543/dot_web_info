@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 const BlogDetails = () => {
 	const {t} = useTranslation();
 	const { news_id } = useParams();
-	console.log("id" , news_id)
 	const [news, setNews] = useState({})
 	const [loading, setLoading] = useState(false);
 

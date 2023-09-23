@@ -24,7 +24,7 @@ const Footer_v2 = () => {
 						<div className="row">
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_about text-center" style={{marginTop: '-140px'}}>
-									<a href="index.html" ><img src={publicUrl+"assets/img/LogoPWT.png"} width={'150px'} alt="img" /></a>
+									<a href="index.html" ><img src={publicUrl+"assets/img/LogoPWT02.png"} width={'150px'} alt="img" /></a>
 									<div className="details">
 										<p style={{fontSize:'12px'}}>ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ ຂຽນຫຍໍ້: “ຍ. ທ. ຂ” ຂຽນເປັນພາສາຝຣັ່ງ: Ministère de Travaux Public et de Transports (ຂຽນຫຍໍ້: MTPT) ແມ່ນກົງຈັກຂອງລັດຖະບານ, ມີພາລະບົດບາດ ເປັນເສນາທິການໃຫ້ແກ່ລັດຖະບານ ໃນການຄຸ້ມຄອງມະຫາພາກ ກ່ຽວກັບຂະແໜງການຄົມມະນາຄົມ, ຂົນສົ່ງ ທາງບົກ, ທາງນ້ຳ, ທາງອາກາດ, ທາງລົດໄຟ, ການເຄຫາສະຖານ, ຜັງເມືອງ ແລະ ນ້ຳປະປາ ໃນຂອບເຂດ ທົ່ວປະເທດ.</p>
 										<ul className="social-media">

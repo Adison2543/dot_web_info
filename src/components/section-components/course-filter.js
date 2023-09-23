@@ -61,7 +61,7 @@ const CourseFilter = () => {
 						<Link to={"/course"}><button className='seemoreBtn'><span>{t('seemore')}</span></button></Link>
 					</div>
 				</div>
-				: <><div className='text-center'><span className="badge text-bg-warning">ບໍ່ພົບຂໍ້ມູນບົດຮຽນ</span></div></>}
+				: <><div className='text-center'><span className="badge text-bg-warning">{t('notfound')}</span></div></>}
 			  </div>
 			</div>
 		</>
