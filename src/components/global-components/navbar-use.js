@@ -32,7 +32,7 @@ const Navbar = () => {
               </button>
             </div>
             <div className="logo">
-              <Link to="/"><img src={publicUrl+"assets/img/LogoPWT02.png"} alt="img" width={'140px'} /></Link>
+              <Link to="/"><img src={publicUrl+"assets/img/logoPWT02.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
               <a className="btn btn-base" href="/">{t('signup')}</a>
