@@ -2,16 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
 import { useTranslation } from 'react-i18next';
-
-var myHeaders = new Headers();
-		myHeaders.append("Content-Type", "application/json");
-		myHeaders.append("Authorization", "ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p");
-
-	var raw = JSON.stringify({
-		"page": 1,
-		"per_page": 5,
-		"search": ""
-	});
+import axios from 'axios';
 
 const LatestNews = () => {
 	const [news, setNews] = useState([]);
@@ -42,31 +33,24 @@ const LatestNews = () => {
 	};
 
 	useEffect(() => {
+		let isMounted = true;
 		async function fetchData() {
 			try {
-				const res = await fetch("https://oasapi.iddriver.com/news/list?news_type=1", {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				}).catch(err => console.log("Fetch1 error!!!"));
-				// const res2 = await fetch("https://oasapi.iddriver.com/news/list?news_type=2", {
-				// 	method: 'POST',
-				// 	headers: myHeaders,
-				// 	body: raw,
-				// 	redirect: 'follow'
-				// }).catch(err => console.log("Fetch2 error!!!"));
-	
-				res.json()
-				.then(res => {
-					setNews(res.data);
-				})
-				.catch(err => console.log("error1!!!"));
-				// res2.json()
-				// .then(res2 => {
-				// 	setNews2(res2.data);
-				// })
-				// .catch(err => console.log("error2!!!"));
+				let fetchNews1 = await axios.post(`https://oasapi.iddriver.com/news/list?news_type=1`, 
+					{
+						page: 1,
+						per_page: 5,
+						search: ''
+
+					}, {
+						headers: { 
+							'Content-Type': 'application/json', 
+							'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
+						}
+				});
+				if (isMounted) {
+					setNews(fetchNews1.data.data);
+				}	
 			} catch (error) {
 				console.log("Fetch error: ", error)
 			}
@@ -74,8 +58,17 @@ const LatestNews = () => {
 		}
 
 		fetchData();
-	}, [])
-	console.log("news: " + JSON.stringify(news))
+
+		return () => {
+			isMounted = false; // Mark the component as unmounted
+			// Cancel any ongoing tasks or subscriptions here
+		};
+	}, []);
+	if (news && news.length > 0) {
+		console.log("newsData: " + JSON.stringify(news[0]));
+	  } else {
+		console.log("news.data is undefined or empty.");
+	  }
     return (
     	<>
 			<div className="blog-area pd-top-80 pd-bottom-90 go-top" id="news">
@@ -92,8 +85,10 @@ const LatestNews = () => {
 					{/* กรมขนส่ง */}
 					{news?.length > 0 ?  
 					<div className="row">
+						{news?.length > 2 &&
 						<div className="col-lg-4">
 							<ul className="single-blog-list-wrap mb-5 mb-lg-0 type-1">
+								{news[2] && 
 								<li>
 									<div className="media single-blog-list-inner">
 									<div className="media-left date">
@@ -102,13 +97,14 @@ const LatestNews = () => {
 									</div>
 									<div className="media-body details">
 										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2].user_update : "-"}</li>
+										<li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[2].news_id}/${news[2]?.news_friendly}`}>{news[2]?.news_title ? news[2].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[2]?.news_id}/${news[2]?.news_friendly}`}>{news[2]?.news_title ? news[2]?.news_title : "-"}</Link></h5>
 									</div>
 									</div>
-								</li>
+								</li> }
+								{news[3] &&
 								<li>
 									<div className="media single-blog-list-inner">
 									<div className="media-left date">
@@ -120,10 +116,11 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[3].news_id}/${news[3].news_friendly}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[3]?.news_id}/${news[3]?.news_friendly}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
 									</div>
 									</div>
-								</li>
+								</li>  }
+								{news[4] &&
 								<li>
 									<div className="media single-blog-list-inner">
 										<div className="media-left date">
@@ -135,14 +132,15 @@ const LatestNews = () => {
 											<li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li>
 											<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[4].news_id}/${news[4].news_friendly}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
+											<h5 className='newstitle'><Link to={`/blog-details/${news[4]?.news_id}/${news[4]?.news_friendly}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
 										</div>
 									</div>
-								</li>
+								</li> }
 							</ul>
-						</div>
+						</div> }
 						<div className="col-lg-8">
 							<div className="row justify-content-center">
+								{news[0] && 
 								<div className="col-md-6">
 									<div className="single-blog-inner type-1">
 									<div className="thumb">
@@ -154,11 +152,12 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle' ><Link to={`/blog-details/${news[0].news_id}/${news[0].news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[0].news_id}/${news[0].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle' ><Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
-								</div>
+								</div> }
+								{news[1] &&
 								<div className="col-md-6">
 									<div className="single-blog-inner type-1">
 									<div className="thumb">
@@ -170,11 +169,11 @@ const LatestNews = () => {
 										<li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li>
 										<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[1].news_id}/${news[1].news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[1].news_id}/${news[1].news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+										<h5 className='newstitle'><Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
+										<Link className="read-more-text" to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
 									</div>
 									</div>
-								</div>
+								</div> }
 							</div>
 						</div>
 					</div>

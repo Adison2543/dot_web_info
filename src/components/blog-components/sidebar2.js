@@ -14,7 +14,7 @@ const Sidebar = ({id, tran}) => {
                 <h4 className="widget-title">{tran('catagory')}</h4>                                 
                 <ul className="catagory-items go-top">
                   <li style={ id === 1 ? {backgroundColor: 'var(--main-color)'} : {}}><Link to={"/blog"} >{tran('dot')} <i className="fa fa-caret-right" /></Link></li>
-                  <li style={ id === 2 ? {backgroundColor: 'var(--main-color)'} : {}}><Link to={"/blog"} >{tran('mpw')}<i className="fa fa-caret-right" /></Link></li>
+                  {/* <li style={ id === 2 ? {backgroundColor: 'var(--main-color)'} : {}}><Link to={"/blog"} >{tran('mpw')}<i className="fa fa-caret-right" /></Link></li> */}
                 </ul>
               </div>                  
             </div>
