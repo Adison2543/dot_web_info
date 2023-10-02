@@ -51,13 +51,13 @@ const Footer_v2 = () => {
 									<h4 className="widget-title">{t('lastestnews')}</h4>
 									<ul>
 										<li>
-											<h6><Link to="/blog-details">Big Ideas Of Business Branding Info.</Link></h6>
-											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
+											<Link to={"/blog"}>{t('allnews')}</Link>
+											{/* <span className="date"><i className="fa fa-calendar" />December 7, 2021</span> */}
 										</li>
-										<li>
+										{/* <li>
 											<h6><Link to="/blog-details">Ui/Ux Ideas Of Business Branding Info.</Link></h6>
 											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
-										</li>
+										</li> */}
 									</ul>
 								</div>
 							</div>
@@ -65,11 +65,11 @@ const Footer_v2 = () => {
 								<div className="widget widget_nav_menu">
 									<h4 className="widget-title">{t('course')}</h4>
 									<ul className="go-top">
-										<li><Link to="/blog">Branding design</Link></li>
-										<li><Link to="/blog">Ui/Ux designing </Link></li>
+										<li><Link to={"/course"}>{t('allcourse')}</Link></li>
+										{/* <li><Link to="/blog">Ui/Ux designing </Link></li>
 										<li><Link to="/blog">Make Elements</Link></li>
 										<li><Link to="/blog">Business</Link></li>
-										<li><Link to="/blog">Graphics design</Link></li>
+										<li><Link to="/blog">Graphics design</Link></li> */}
 									</ul>
 								</div>
 							</div>

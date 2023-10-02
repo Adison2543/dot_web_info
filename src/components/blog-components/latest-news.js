@@ -15,7 +15,7 @@ var myHeaders = new Headers();
 
 const LatestNews = () => {
 	const [news, setNews] = useState([]);
-	const [news2, setNews2] = useState([]);
+	// const [news2, setNews2] = useState([]);
 	const {t} = useTranslation();
  
 	const gatDay = (dateData) => {
@@ -50,23 +50,23 @@ const LatestNews = () => {
 					body: raw,
 					redirect: 'follow'
 				}).catch(err => console.log("Fetch1 error!!!"));
-				const res2 = await fetch("https://oasapi.iddriver.com/news/list?news_type=2", {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				}).catch(err => console.log("Fetch2 error!!!"));
+				// const res2 = await fetch("https://oasapi.iddriver.com/news/list?news_type=2", {
+				// 	method: 'POST',
+				// 	headers: myHeaders,
+				// 	body: raw,
+				// 	redirect: 'follow'
+				// }).catch(err => console.log("Fetch2 error!!!"));
 	
 				res.json()
 				.then(res => {
 					setNews(res.data);
 				})
 				.catch(err => console.log("error1!!!"));
-				res2.json()
-				.then(res2 => {
-					setNews2(res2.data);
-				})
-				.catch(err => console.log("error2!!!"));
+				// res2.json()
+				// .then(res2 => {
+				// 	setNews2(res2.data);
+				// })
+				// .catch(err => console.log("error2!!!"));
 			} catch (error) {
 				console.log("Fetch error: ", error)
 			}
@@ -84,7 +84,7 @@ const LatestNews = () => {
 						<div className="col-xl-6 col-lg-7">
 							<div className="section-title text-center">
 								<h6 className="sub-title double-line">{t('lastestnews')}</h6>
-								<h2 className="title">{t('mpw')} &amp; {t('dot')}</h2>
+								<h2 className="title">{t('fnews')}</h2>
 							</div>
 						</div>
 					</div>
@@ -181,7 +181,7 @@ const LatestNews = () => {
 					: <></>}
 
 					{/* กรมโยธา */}
-					{news2?.length > 0 ?
+					{/* {news2?.length > 0 ?
 					<div className="row">
                         <div className="col-lg-8">
                             <div className="row justify-content-center">
@@ -269,10 +269,10 @@ const LatestNews = () => {
                             </ul>
                         </div>
 					</div>
-					: <></>}
+					: <></>} */}
 
 
-					{news ||  news2 ?
+					{news ?
 					<div className='row'>
 						<div className='d-flex justify-content-end'>
 							<Link to={"/blog"} ><button className='seemoreBtn'><span>{t('seemore')}</span></button></Link>

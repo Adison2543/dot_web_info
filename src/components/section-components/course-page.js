@@ -12,6 +12,7 @@ const CoursePage = ({tran}) => {
 		const [courses, setCourse] = useState([]);
 		const [page, setPage] = useState(1);
 		const [loading, setLoading] = useState(false);
+		const [searchdata, setSearch] = useState("");
 
 		useEffect(() => {
 
@@ -24,7 +25,7 @@ const CoursePage = ({tran}) => {
 							signal: abortController.signal,
 							page: page,
 							per_page: 8,
-							search: ""
+							search: searchdata
 
 						}, {
 							headers: { 
@@ -42,7 +43,7 @@ const CoursePage = ({tran}) => {
 
 			fetchCourse();
 			return () => abortController.abort();
-		}, [page]);
+		}, [page, searchdata]);
 		console.log("courses: ", courses);
 		console.log("Data: ", courses.data);
 
@@ -52,6 +53,12 @@ const CoursePage = ({tran}) => {
 
 		const nextPage = () => {
 			setPage((page) => page + 1)
+		}
+		
+		const letSearch = (e) => {
+			e.preventDefault();
+			const inputValue = e.target.elements.searchWord.value;
+			setSearch(inputValue);
 		}
 
 
@@ -92,8 +99,8 @@ const CoursePage = ({tran}) => {
 						<div className="td-sidebar mt-5 mt-lg-0">
 						<div className="widget widget_search_course">    
 							<h4 className="widget-title">{tran('search')}</h4>                               
-							<form className="search-form single-input-inner">
-							<input type="text" placeholder={`${tran('search')}`} />
+							<form className="search-form single-input-inner" onSubmit={letSearch}>
+							<input type="text" placeholder={`${tran('search')}`} maxLength={100}  name="searchWord"/>
 							<button className="btn btn-base w-100 mt-3" type="submit"><i className="fa fa-search" />{tran('search')}</button>
 							</form>
 						</div> 

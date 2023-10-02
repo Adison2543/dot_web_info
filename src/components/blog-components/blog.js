@@ -12,6 +12,7 @@ const Blog = () => {
 		const [page, setPage] = useState(1);
 		const [loading, setLoading] = useState(false);
 		const [cata, setCata] = useState(1);
+		const [searchdata, setSearch] = useState("");
 
 		const setType = (num) => {
 			setCata(num);
@@ -28,7 +29,7 @@ const Blog = () => {
 							signal: abortController.signal,
 							page: page,
 							per_page: 8,
-							search: ""
+							search: searchdata
 
 						}, {
 							headers: { 
@@ -46,7 +47,7 @@ const Blog = () => {
 
 			fetchCourse();
 			return () => abortController.abort();
-		}, [page,cata]);
+		}, [page,cata, searchdata]);
 		// Paginate
 		const prevPage = () => {
 			setPage((page) => page - 1)
@@ -71,24 +72,30 @@ const Blog = () => {
 			);
 		}
 
+		const letSearch = (e) => {
+			e.preventDefault();
+			const inputValue = e.target.elements.searchWord.value;
+			setSearch(inputValue);
+		}
+
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120 go-top">
 		  <div className="container">
 		  	{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div> :
 				<div className="row">
-				<div className="col-lg-8">
-					{news?.data?.map((item) => (
-						<SingleBlog key={item.news_id} news={item} tran={t}/>
-					))}
-					{news?.data?.length > 0 ? 
-					<Pagination>
-						<Pagination.Prev disabled={page === 1 ? true : false} onClick={prevPage}/>
-						{pageItems}
-						<Pagination.Next disabled={page === news?.total_page ? true : false} onClick={nextPage}/>
-					</Pagination>
-					: <></> }
-				</div>
-				<Sidebar setType={setType} type={cata} tran={t}/>
+					<div className="col-lg-8">
+						{news?.data?.map((item) => (
+							<SingleBlog key={item.news_id} news={item} tran={t}/>
+						))}
+						{news?.data?.length > 0 ? 
+						<Pagination>
+							<Pagination.Prev disabled={page === 1 ? true : false} onClick={prevPage}/>
+							{pageItems}
+							<Pagination.Next disabled={page === news?.total_page ? true : false} onClick={nextPage}/>
+						</Pagination>
+						: <></> }
+					</div>
+					<Sidebar setType={setType} type={cata} tran={t} letSearch={letSearch}/>
 				</div>
 			}
 		  </div>
