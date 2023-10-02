@@ -6,7 +6,7 @@ const Banner = ({tran}) => {
 
     let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return  <div className="banner-area banner-area-1 bg-gray go-top" style={{backgroundImage: 'url("'+publicUrl+'assets/img/banner/b4.jpg")'}}>
+    return  <div className="banner-area banner-area-1 bg-gray go-top" style={{backgroundImage: 'url("'+publicUrl+'assets/img/banner/b4.jpg")', backgroundSize: 'cover'}}>
 			  <div className="container">
 			    <div className="row justify-content-center">
 			      <div className="col-lg-5 col-md-8 order-lg-12 align-self-center">
