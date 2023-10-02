@@ -11,17 +11,20 @@ import Footer from './global-components/footer-v2';
 import Client from './section-components/client-v2';
 import { Suspense } from 'react';
 import Loading from 'react-loading';
+import { useTranslation } from 'react-i18next';
 
 const Home_V1 = () => {
+    const {t} = useTranslation();
+
     return <Suspense fallback={<Loading />}>
             <Navbar />
-            <Banner />
-            <Intro  />
+            <Banner tran={t}/>
+            <Intro  tran={t}/>
             <LatestPost/>
             <FunFact />
             <CourseFilter />
             <Testimonial />
-            <Client />
+            {/* <Client /> */}
             <HowToWork />
             <Footer />
     </Suspense>

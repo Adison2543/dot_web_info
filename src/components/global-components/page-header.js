@@ -12,7 +12,7 @@ const Page_header = ({headertitle, subheader}) => {
         return (
 
 
-	<div className="breadcrumb-area bg-overlay" style={{backgroundImage: 'url("'+publicUrl+'assets/img/bg/3.png")'}}>
+	<div className="breadcrumb-area bg-overlay">
 	  <div className="container">
 	    <div className="breadcrumb-inner">
 	      <div className="section-title mb-0 text-center">

@@ -23,8 +23,8 @@ const LatestNews = () => {
 	const gatFDate = (dateData) => {
 		const date = new Date(dateData);
 		const monthNames = [
-			"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
-			"JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+			t('january'), t('february'), t('march'), t('april'), t('may'), t('june'),
+			t('july'), t('august'), t('september'), t('october'), t('november'), t('december')
 		];
 		const day = date.getDate();
 		const month = monthNames[date.getMonth()];

@@ -43,7 +43,7 @@ const HowToWork = () => {
 			          <h2 className="title">{t('activity')}</h2>
 			        </div>
 			        <div className="col-lg-6 align-self-center">
-			          <p className="content mt-lg-0">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs when MTV ax quiz</p>
+			          {/* <p className="content mt-lg-0">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs when MTV ax quiz</p> */}
 			        </div>
 			      </div>
 			    </div>

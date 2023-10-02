@@ -998,7 +998,7 @@ ul {
     ## Breadcumb 
 ------------------------------------------*/
 .breadcrumb-area {
-  padding: 282px 0 125px;
+  padding: 120px 0 10px;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
@@ -1014,13 +1014,13 @@ ul {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--heading-color);
 }
 
 .breadcrumb-area .page-list {
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--heading-color);
 }
 
 .breadcrumb-area .page-list li {
@@ -1203,6 +1203,7 @@ ul {
 .bg-overlay {
   position: relative;
   background-size: cover !important;
+  background-color: var(--main-color);
 }
 
 .bg-overlay:after {
@@ -1212,7 +1213,7 @@ ul {
   width: 100%;
   left: 0;
   top: 0;
-  background: rgba(0, 33, 71, 0.9);
+  background: var(--main-color);
 }
 
 .bg-overlay .container {

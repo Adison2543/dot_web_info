@@ -8,10 +8,15 @@
     "signup": "Sign Up",
 
     "contactus": "Contact Us",
-    "pwt": "Ministry of Public Works and Transport of Lao PDR",
+    "pwt": "Ministry of Public Works and Transport",
     "fax": "Fax",
     "hotline": "hotline",
-
+    "bya": "Build your abilities beyond your limits",
+    "app": "make an appointment",
+    "ieu": "Increase efficiency in use",
+    "ikp": "Increase knowledge and promote",
+    "urr": "until receiving a real driver's license",
+    "test": "Take the test",
 
     "topcourse": "Top Featured Courses",
     "partner": "Partnerships",
@@ -37,5 +42,18 @@
     "readmore": "Read more",
     "seemore": "See more",
     "lastupdate": "Update",
-    "coursecode": "Code"
+    "coursecode": "Code",
+
+    "january" : "JANUARY",
+    "february": "FEBRUARY",
+    "march": "MARCH",
+    "april": "APRIL",
+    "may": "MAY",
+    "june": "JUNE",
+    "july": "JULY",
+    "august": "AUGUST",
+    "september": "SEPTEMBER",
+    "october": "OCTOBER",
+    "november": "NOVEMBER",
+    "december": "DECEMBER"
 }

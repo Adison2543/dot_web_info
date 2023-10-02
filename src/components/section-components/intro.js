@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-class Intro extends Component {
+const Intro = ({tran}) => {
 
-    render() {
-
-        let publicUrl = process.env.PUBLIC_URL+'/'
+    let publicUrl = process.env.PUBLIC_URL+'/'
 
     return  <div className="intro-area intro-area--top">
 			  <div className="container">
@@ -12,11 +10,12 @@ class Intro extends Component {
 			      <div className="row no-gutters">
 			        <div className="col-lg-4 text-lg-left text-center">
 			          <div className="intro-title">
-			            <h3 >Vivamus maximus </h3>
-			            <p>Lorem ipsum dolor sadipscing elitr, sed diam nonum</p>
+			            <h3 >{tran('bya')}</h3>
 			            <ul>
-			              <li><i className="fa fa-check" /> Nullam est </li>
-			              <li><i className="fa fa-check" /> Mattis dictum nunc</li>
+			              <li><i className="fa fa-check" /> {tran('course')} </li>
+			              <li><i className="fa fa-check" /> {tran('news')}</li>
+						  <li><i className="fa fa-check" /> {tran('lesson')} </li>
+			              <li><i className="fa fa-check" /> {tran('app')}</li>
 			            </ul>
 			          </div>
 			        </div>
@@ -28,8 +27,7 @@ class Intro extends Component {
 			                  <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <h5>Postgraduate</h5>
-			                  <p>Lorem ipsum dolor</p>
+			                  <h5 className='px-2'>{tran('ieu')}</h5>
 			                </div>
 			              </div>
 			            </li>
@@ -39,8 +37,7 @@ class Intro extends Component {
 			                  <img src={publicUrl+"assets/img/intro/2.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <h5>Engineering</h5>
-			                  <p>Lorem ipsum dolor</p>
+			                  <h5 className='px-2'>{tran('ikp')}</h5>
 			                </div>
 			              </div>
 			            </li>
@@ -50,8 +47,7 @@ class Intro extends Component {
 			                  <img src={publicUrl+"assets/img/intro/3.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <h5>Accounting</h5>
-			                  <p>Lorem ipsum dolor</p>
+			                  <h5 className='px-2'>{tran('urr')}</h5>
 			                </div>
 			              </div>
 			            </li>
@@ -62,6 +58,5 @@ class Intro extends Component {
 			  </div>
 			</div>
         }
-}
 
 export default Intro
