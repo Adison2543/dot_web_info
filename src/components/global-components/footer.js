@@ -55,11 +55,7 @@ const Footer_v1 = () => {
 								<div className="widget widget_nav_menu">
 									<h4 className="widget-title">{t('course')}</h4>
 									<ul className="go-top">
-										<li><Link to="/blog">Branding design</Link></li>
-										<li><Link to="/blog">Ui/Ux designing </Link></li>
-										<li><Link to="/blog">Make Elements</Link></li>
-										<li><Link to="/blog">Business</Link></li>
-										<li><Link to="/blog">Graphics design</Link></li>
+										<li><Link to={"/course"}>{t('allcourse')}</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -68,31 +64,24 @@ const Footer_v1 = () => {
 									<h4 className="widget-title">{t('lastestnews')}</h4>
 									<ul>
 										<li>
-											<h6><Link to="/blog-details">Big Ideas Of Business Branding Info.</Link></h6>
-											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
-										</li>
-										<li>
-											<h6><Link to="/blog-details">Ui/Ux Ideas Of Business Branding Info.</Link></h6>
-											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
+											<Link to={"/blog"}>{t('allnews')}</Link>
+											{/* <span className="date"><i className="fa fa-calendar" />December 7, 2021</span> */}
 										</li>
 									</ul>
 								</div>
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_contact">
-									<h4 className="widget-title">Twitter Feed</h4>
-									<ul className="details">
-										<li>
-											<i className="fa fa-twitter" />
-											Simply dummy brand  <a href="/">https//tweets/c3l.com</a>
-											<div className="time">9 Hours ago</div>
-										</li>
-										<li>
-											<i className="fa fa-twitter" />
-											Simply dummy brand  <a href="/">https//tweets/c7l.com</a>
-											<div className="time">9 Hours ago</div>
-										</li>
-									</ul>
+									<h4 className="widget-title">{t('maps')}</h4>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15180.631023576447!2d102.620475!3d17.971396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31246878b7435caf%3A0x215a427216976433!2sMinistry%20of%20Public%20Travel%20and%20Transport!5e0!3m2!1slo!2sla!4v1696299481356!5m2!1slo!2sla" 
+										width="600" 
+										height="150" 
+										style={{border: 0}}
+										allowfullscreen="" 
+										loading="lazy" 
+										referrerpolicy="no-referrer-when-downgrade"
+										title="Ministry of Public Travel and Transport Map"
+										></iframe>
 								</div>
 							</div>
 						</div>
