@@ -90,10 +90,10 @@ const Footer_v1 = () => {
 				<div className="footer-bottom">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-4 col-md-6 align-self-center">
+							<div className="col-lg-4 col-sm-2 col-md-4 align-self-center">
 								<a href="index.html"><img src={publicUrl + "assets/img/LogoPWT.png"} width={'130px'} alt="img" /></a>
 							</div>
-							<div className="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
+							{/* <div className="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
 								<ul className="social-media mt-md-0 mt-3">
 									<li><a className="facebook" href="https://www.facebook.com/"><i className="fa fa-facebook" /></a></li>
 									<li><a className="twitter" href="https://www.twitter.com/"><i className="fa fa-twitter" /></a></li>
@@ -101,8 +101,8 @@ const Footer_v1 = () => {
 									<li><a className="youtube" href="https://www.youtube.com/"><i className="fa fa-youtube" /></a></li>
 									<li><a className="pinterest" href="https://www.pinterest.com/"><i className="fa fa-pinterest" /></a></li>
 								</ul>
-							</div>
-							<div className="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3">
+							</div> */}
+							<div className="col-sm-8 col-lg-6 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3">
 								<p>Copyright © Ministry of Public Works and Transport</p>
 							</div>
 						</div>
