@@ -57,7 +57,7 @@ const Navbar = () => {
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
                       <option value="lo" >ລາວ</option>
-                      <option value="th">ไทย</option>
+                      {/* <option value="th">ไทย</option> */}
                       <option value="en">English</option>
                     </select>
                   </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <div style={{display: "inline-block"}}>
                 <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
                   <option value="lo" >ລາວ</option>
-                  <option value="th" >ไทย </option>
+                  {/* <option value="th" >ไทย </option> */}
                   <option value="en">English</option>
                 </select>
               </div>

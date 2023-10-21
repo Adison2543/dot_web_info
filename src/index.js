@@ -33,9 +33,9 @@ i18n
       en: {
         translation: menu_en,
       },
-      th: {
-        translation: menu_th,
-      },
+      // th: {
+      //   translation: menu_th,
+      // },
       lo: {
         translation: menu_lo,
       },
