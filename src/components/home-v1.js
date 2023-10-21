@@ -21,7 +21,7 @@ const Home_V1 = () => {
             <Banner tran={t}/>
             <Intro  tran={t}/>
             <LatestPost/>
-            <FunFact />
+            <FunFact tran={t}/>
             <CourseFilter />
             <Testimonial />
             {/* <Client /> */}

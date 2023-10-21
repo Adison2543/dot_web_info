@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 
-const Funfact = () => {
+const Funfact = ({tran}) => {
 
 	const fadeLelement = useRef();
 	const fadeRelement = useRef();
@@ -43,20 +43,50 @@ const Funfact = () => {
 			      <div className="row">
 			        <div className="col-lg-8 mb-5 mb-lg-0 hideElement" ref={fadeLelement}>
 			          <div className="section-title mb-0">
-			            <h6 className="sub-title right-line">Funfact</h6>
-			            <h2 className="title">Strength in Numbers</h2>
-			            <p className="content pb-3">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy</p>
-			            <div className="btn-counter bg-base mt-4">
+			            <h6 className="sub-title right-line">OAS</h6>
+			            <h2 className="title">{tran('oas')}</h2>
+			            <p className="content pb-3">{tran('oas-detail')}</p>
+			            {/* <div className="btn-counter bg-base mt-4">
 			              <h3 className="left-val align-self-center"><span className="counter">2.4</span>k+</h3>
 			              <div className="right-val align-self-center">
 			                Successful <br /> students
 			              </div>
-			            </div>
+			            </div> */}
 			          </div>
 			        </div>
 			        <div className="col-lg-4 align-self-center hideElement" ref={fadeRelement}>
 			          <ul className="single-list-wrap">
-			            <li className="single-list-inner style-box-bg">
+						<li className="single-list-inner style-box-bg">
+							<div className="media">
+								<div className="media-left">
+									<img src={process.env.PUBLIC_URL + "/assets/img/icon/1.png"} alt="img" />
+								</div>
+								<div className="media-body align-self-center">
+									<h5>{tran('oas1')}</h5>
+								</div>
+							</div>
+							</li>
+							<li className="single-list-inner style-box-bg">
+							<div className="media">
+								<div className="media-left">
+									<img src={process.env.PUBLIC_URL + "/assets/img/icon/2.png"} alt="img" />
+								</div>
+								<div className="media-body align-self-center">
+									<h5>{tran('oas2')}</h5>
+								</div>
+							</div>
+							</li>
+							<li className="single-list-inner style-box-bg">
+							<div className="media">
+								<div className="media-left">
+									<img src={process.env.PUBLIC_URL + "/assets/img/icon/3.png"} alt="img" />
+								</div>
+								<div className="media-body align-self-center">
+									<h5>{tran('oas3')}</h5>
+								</div>
+							</div>
+							</li>
+			            {/* <li className="single-list-inner style-box-bg">
 			              <div className="media">
 			                <div className="media-left">
 			                  <img src={process.env.PUBLIC_URL + "/assets/img/icon/1.png"} alt="img" />
@@ -88,7 +118,7 @@ const Funfact = () => {
 			                  <p>Successful students</p>
 			                </div>
 			              </div>
-			            </li>
+			            </li> */}
 			          </ul>
 			        </div>
 			      </div>

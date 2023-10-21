@@ -5,7 +5,7 @@
     "activity": "Activity",
     "contact": "Contact",
     "signin": "Sign In",
-    "signup": "Login to tutoring",
+    "signup": "Login",
     "addr": "Department of Transport, Ministry of Public Works and Transport MPWT Lane Xang Avenue, Vientiane Capital, Lao PDR",
 
     "contactus": "Contact Us",
@@ -38,6 +38,11 @@
     "by": "By",
     "catagory": "Catagory",
     "notfound": "Not Found",
+    "oas": "Online Application System",
+    "oas-detail": "The OAS system was developed to promote Discipline in driving and safety on the road of the public that through the said system will be open to use for free, there is no cost, there is no need to have a driver's license to be able to use the system.",
+    "oas1": "Online learning",
+    "oas2": "Check exam results",
+    "oas3": "Get driving license online",
 
 
     "lastestnews": "Lastest news",
