@@ -16,7 +16,7 @@ const CourseCard = ({ course, tran }) => {
         <div className="single-course-inner">
           <div className="thumb text-center">
             {/* <img src={course.course_cover} alt="img" height="200px" /> */}
-            <img src={`https://oasapi.iddriver.com/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} alt="img" />
+            <img src={`https://oasbe.sky.mpwt.link/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} alt="img" />
           </div>
           <div className="details">
             <div className="details-inner">

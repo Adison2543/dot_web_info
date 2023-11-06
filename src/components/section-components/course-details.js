@@ -15,7 +15,7 @@ const CourseDetails = ({tran}) => {
 		const fetchCourse = async () => {
 			try {
 				setLoading(true);
-				let fetchCourses = await axios.post(`https://oasapi.iddriver.com/course/list`, 
+				let fetchCourses = await axios.post(`https://oasbe.sky.mpwt.link/course/list`, 
 					{
 						signal: abortController.signal,
 						page: 1,
@@ -30,7 +30,7 @@ const CourseDetails = ({tran}) => {
 				})
 				const courseData = fetchCourses.data.data
 				setCourse(courseData.filter(item => item.course_id === parseInt(course_id, 10))[0]);
-				let fetchLesson = await axios.post(`https://oasapi.iddriver.com/course/lesson/list/${courseData.filter(item => item.course_id === parseInt(course_id, 10))[0].course_id}`, 
+				let fetchLesson = await axios.post(`https://oasbe.sky.mpwt.link/course/lesson/list/${courseData.filter(item => item.course_id === parseInt(course_id, 10))[0].course_id}`, 
 					{
 						page: 1,
 						per_page: 50,
@@ -79,7 +79,7 @@ const CourseDetails = ({tran}) => {
 							<h3 className="title"><a href="course-details.html">{course?.course_name}</a></h3>
 						</div>
 						<div className="thumb">
-							<img src={`https://oasapi.iddriver.com/media_file/file/?f=${course?.course_cover}`} alt="img" />
+							<img src={`https://oasbe.sky.mpwt.link/media_file/file/?f=${course?.course_cover}`} alt="img" />
 						</div>
 						<div className="tab-content" id="myTabContent">
 							<div className="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">

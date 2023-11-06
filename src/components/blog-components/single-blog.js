@@ -19,7 +19,7 @@ const singleblog = ({news, tran}) => {
     <>
         <div className="single-blog-inner style-border">
             <div className="thumb" >
-                <img src={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/blog/4.png"} alt="img" />
+                <img src={news?.news_cover ? `https://oasbe.sky.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/blog/4.png"} alt="img" />
                 {/* src={process.env.PUBLIC_URL +"/assets/img/blog/4.png"} */}
             </div>
             <div className="details">

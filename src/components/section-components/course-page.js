@@ -20,7 +20,7 @@ const CoursePage = ({tran}) => {
 			const fetchCourse = async () => {
 				try {
 					setLoading(true);
-					let fetchCourses = await axios.post(`https://oasapi.iddriver.com/course/list`, 
+					let fetchCourses = await axios.post(`https://oasbe.sky.mpwt.link/course/list`, 
 						{
 							signal: abortController.signal,
 							page: page,

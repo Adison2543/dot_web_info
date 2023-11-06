@@ -40,7 +40,7 @@ const LatestNews = () => {
 
 
 	async function fetchData() {
-		const res = await fetch("https://oasapi.iddriver.com/news/list?news_type=2", {
+		const res = await fetch("https://oasbe.sky.mpwt.link/news/list?news_type=2", {
 			method: 'POST',
 			headers: myHeaders,
 			body: raw,
