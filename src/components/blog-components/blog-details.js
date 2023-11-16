@@ -32,7 +32,7 @@ const BlogDetails = () => {
 		const fetchNews = async () => {
 			try {
 				setLoading(true);
-				let fetchNews1 = await axios.get(`https://oasbe.sky.mpwt.link/news/get/${news_id}`, 
+				let fetchNews1 = await axios.get(`https://dot-api.mpwt.link/news/get/${news_id}`, 
 					{
 						headers: { 
 							'Content-Type': 'application/json', 
@@ -61,7 +61,7 @@ const BlogDetails = () => {
 		        <div className="blog-details-page-content">
 		          <div className="single-blog-inner">
 		            <div className="thumb">
-		              <img src={`https://oasbe.sky.mpwt.link/media_file/file/?f=${news?.news_cover}`} alt="img" />
+		              <img src={`https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}`} alt="img" />
 		            </div>
 		            <div className="details">
 		              <ul className="blog-meta">

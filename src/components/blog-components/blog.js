@@ -24,7 +24,7 @@ const Blog = () => {
 			const fetchCourse = async () => {
 				try {
 					setLoading(true);
-					let fetchNews1 = await axios.post(`https://oasbe.sky.mpwt.link/news/list?news_type=${cata}`, 
+					let fetchNews1 = await axios.post(`https://dot-api.mpwt.link/news/list?news_type=${cata}`, 
 						{
 							signal: abortController.signal,
 							page: page,

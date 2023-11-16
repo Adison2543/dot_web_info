@@ -36,7 +36,7 @@ const LatestNews = () => {
 		let isMounted = true;
 		async function fetchData() {
 			try {
-				let fetchNews1 = await axios.post(`https://oasbe.sky.mpwt.link/news/list?news_type=1`, 
+				let fetchNews1 = await axios.post(`https://dot-api.mpwt.link/news/list?news_type=1`, 
 					{
 						page: 1,
 						per_page: 5,
@@ -144,7 +144,7 @@ const LatestNews = () => {
 								<div className="col-md-6">
 									<div className="single-blog-inner type-1">
 									<div className="thumb">
-										<img src={"https://oasbe.sky.mpwt.link/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
+										<img src={"https://dot-api.mpwt.link/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
 										<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -161,7 +161,7 @@ const LatestNews = () => {
 								<div className="col-md-6">
 									<div className="single-blog-inner type-1">
 									<div className="thumb">
-										<img src={"https://oasbe.sky.mpwt.link/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
+										<img src={"https://dot-api.mpwt.link/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
 										<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
 									</div>
 									<div className="details">
@@ -187,7 +187,7 @@ const LatestNews = () => {
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={"https://oasbe.sky.mpwt.link/media_file/file/?f=" + news2[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
+                                    <img src={"https://dot-api.mpwt.link/media_file/file/?f=" + news2[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
                                     <span className="date type-2">{gatFDate(news2[0]?.udp_date ? news2[0].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
@@ -203,7 +203,7 @@ const LatestNews = () => {
                             <div className="col-md-6">
                                 <div className="single-blog-inner">
                                 <div className="thumb">
-                                    <img src={"https://oasbe.sky.mpwt.link/media_file/file/?f=" + news2[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
+                                    <img src={"https://dot-api.mpwt.link/media_file/file/?f=" + news2[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
                                     <span className="date type-2">{gatFDate(news2[1]?.udp_date ? news2[1].udp_date : Date())}</span>
                                 </div>
                                 <div className="details">
