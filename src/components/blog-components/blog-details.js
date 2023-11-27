@@ -60,8 +60,13 @@ const BlogDetails = () => {
 		      <div className="col-lg-8">
 		        <div className="blog-details-page-content">
 		          <div className="single-blog-inner">
-		            <div className="thumb">
-		              <img src={`https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}`} alt="img" />
+		            <div className="thumb"
+						style={{
+							maxHeight: '450px',
+							overflow: 'hidden'
+						}}
+					>
+		              <img src={`https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}`} className='w-100' alt="img" />
 		            </div>
 		            <div className="details">
 		              <ul className="blog-meta">

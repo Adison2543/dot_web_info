@@ -78,7 +78,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <a className="btn btn-base" href="http://course.iddriver.com/" target='_blank'>{t('signup')}</a>
+              <a className="btn btn-base" href="https://dot-learning.mpwt.link/" target='_blank'>{t('signup')}</a>
 
               {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
             </div>

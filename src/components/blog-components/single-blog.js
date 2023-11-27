@@ -18,8 +18,14 @@ const singleblog = ({news, tran}) => {
   return (
     <>
         <div className="single-blog-inner style-border">
-            <div className="thumb" >
-                <img src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/blog/4.png"} alt="img" />
+            <div className="thumb" 
+                style={{
+                    maxHeight: '450px',
+                    overflow: 'hidden'
+                }}
+            >
+                <img className='w-100' src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/blog/4.png"} 
+                alt="img"/>
                 {/* src={process.env.PUBLIC_URL +"/assets/img/blog/4.png"} */}
             </div>
             <div className="details">

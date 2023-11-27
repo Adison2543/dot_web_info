@@ -21,9 +21,9 @@ const Banner = ({tran}) => {
 			          <h1 className="b-animate-2 title">ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ</h1>
 			          <div className='btnContainer'>
 						{/* <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/">Get A Quote</Link> */}
-						<a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="http://course.iddriver.com/course" target='_blank'>{tran('lesson')}</a>
+						<a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="https://dot-learning.mpwt.link/course" target='_blank'>{tran('lesson')}</a>
 						{/* <Link className="btn btn-border-black b-animate-3" to="/">Read More</Link> */}
-						<a className="btn btn-border-black b-animate-3" href="http://course.iddriver.com/exam" target='_blank'>{tran('test')}</a>
+						<a className="btn btn-border-black b-animate-3" href="https://dot-learning.mpwt.link/exam" target='_blank'>{tran('test')}</a>
 					  </div>
 			        </div>
 			      </div>
