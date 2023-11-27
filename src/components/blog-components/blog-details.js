@@ -66,7 +66,8 @@ const BlogDetails = () => {
 							overflow: 'hidden'
 						}}
 					>
-		              <img src={`https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}`} className='w-100' alt="img" />
+		              <img src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+					  	className='w-100' alt="img" />
 		            </div>
 		            <div className="details">
 		              <ul className="blog-meta">

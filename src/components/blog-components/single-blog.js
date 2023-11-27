@@ -20,13 +20,12 @@ const singleblog = ({news, tran}) => {
         <div className="single-blog-inner style-border">
             <div className="thumb" 
                 style={{
-                    maxHeight: '450px',
+                    maxHeight: '400px',
                     overflow: 'hidden'
                 }}
             >
-                <img className='w-100' src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/blog/4.png"} 
+                <img className='w-100' src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
                 alt="img"/>
-                {/* src={process.env.PUBLIC_URL +"/assets/img/blog/4.png"} */}
             </div>
             <div className="details">
                 <ul className="blog-meta">
