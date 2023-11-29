@@ -24,7 +24,7 @@ const singleblog = ({news, tran}) => {
                     overflow: 'hidden'
                 }}
             >
-                <img className='w-100' src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+                <img className='w-100' src={news?.news_cover ? `https://dot-api.mpwt.gov.la/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
                 alt="img"/>
             </div>
             <div className="details">

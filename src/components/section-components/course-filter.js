@@ -13,7 +13,7 @@ const CourseFilter = () => {
 		myHeaders.append("Authorization", "ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p");
 
 		try {
-			const data = fetch("https://dot-api.mpwt.link/course/list", {
+			const data = fetch("https://dot-api.mpwt.gov.la/course/list", {
 				method: 'POST',
 				headers: myHeaders,
 				body: JSON.stringify({

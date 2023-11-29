@@ -20,7 +20,7 @@ const CoursePage = ({tran}) => {
 			const fetchCourse = async () => {
 				try {
 					setLoading(true);
-					let fetchCourses = await axios.post(`https://dot-api.mpwt.link/course/list`, 
+					let fetchCourses = await axios.post(`https://dot-api.mpwt.gov.la/course/list`, 
 						{
 							signal: abortController.signal,
 							page: page,

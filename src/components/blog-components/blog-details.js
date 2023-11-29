@@ -32,7 +32,7 @@ const BlogDetails = () => {
 		const fetchNews = async () => {
 			try {
 				setLoading(true);
-				let fetchNews1 = await axios.get(`https://dot-api.mpwt.link/news/get/${news_id}`, 
+				let fetchNews1 = await axios.get(`https://dot-api.mpwt.gov.la/news/get/${news_id}`, 
 					{
 						headers: { 
 							'Content-Type': 'application/json', 
@@ -66,7 +66,7 @@ const BlogDetails = () => {
 							overflow: 'hidden'
 						}}
 					>
-		              <img src={news?.news_cover ? `https://dot-api.mpwt.link/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+		              <img src={news?.news_cover ? `https://dot-api.mpwt.gov.la/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
 					  	className='w-100' alt="img" />
 		            </div>
 		            <div className="details">
