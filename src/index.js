@@ -18,6 +18,7 @@ import SignUp from './components/sign-up';
 import Contact from './components/contact';
 import Blog from './components/blog';
 import BlogDetails from './components/blog-details';
+import Policy from './components/policy';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -69,6 +70,7 @@ const Root = () => {
                         <Route path="/contact" component={Contact} />
                         <Route path="/blog" component={Blog} />
                         <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
+                        <Route path="/policy" component={Policy} />
 	                </Switch>
 	                </div>
                 </HashRouter>
