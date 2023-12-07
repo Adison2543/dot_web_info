@@ -81,7 +81,7 @@ const Footer_v2 = () => {
 						<div className="row">
 							<div className="col-md-5 align-self-center d-flex">
 								<p>Copyright © Ministry of Public Works and Transport</p>
-								<Link to="/policy" className='ms-2'>Policy</Link>
+								<Link to="/policy" className='ms-2 text-primary'>Policy</Link>
 							</div>
 							<div className="col-md-7 text-md-right align-self-center mt-md-0 mt-2">
 								<div className="widget_nav_menu">
