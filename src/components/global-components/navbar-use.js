@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li className="">
                   <Link to="#activity" smooth>{t('activity')}</Link>
                 </li>
-                <li><Link to="/contact" smooth>{t('contact')}</Link></li>
+                <li><Link to="/contact-us" smooth>{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
