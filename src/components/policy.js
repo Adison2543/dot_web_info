@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Policy = () => {
-    return <div>
+    return <div className='p-4'>
         <strong>Privacy Policy</strong> <p>
                   Department of Transport, Lao PDR built the DoT Smart App app as
                   a Free app. This SERVICE is provided by
