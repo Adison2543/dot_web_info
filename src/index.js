@@ -67,7 +67,7 @@ const Root = () => {
                         <Route path="/gallery" component={Gallery} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/contact-us" component={Contact} />
                         <Route path="/blog" component={Blog} />
                         <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
                         <Route path="/policy" component={Policy} />
