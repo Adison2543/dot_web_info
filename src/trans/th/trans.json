@@ -63,5 +63,9 @@
     "september": "กันยายน",
     "october": "ตุลาคม",
     "november": "พฤศจิกายน",
-    "december": "ธันวาคม"
+    "december": "ธันวาคม",
+    "phone" : "โทรศัพท์", 
+    "email" : "อีเมล",
+    "address" : "ที่อยู่",
+    "writeus": "เขียนข้อความถึงเรา"
 }

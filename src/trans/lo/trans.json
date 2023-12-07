@@ -64,5 +64,9 @@
     "september": "ກັນຍາ",
     "october": "ຕຸລາ",
     "november": "ພະຈິກ",
-    "december": "ທັນວາ"
+    "december": "ທັນວາ",
+    "phone" : "ໂທລະສັບ", 
+    "email" : "ອີເມວ",
+    "address" : "ທີ່ຢູ່",
+    "writeus": "ຂຽນຂໍ້ຄວາມໃຫ້ພວກເຮົາ"
 }

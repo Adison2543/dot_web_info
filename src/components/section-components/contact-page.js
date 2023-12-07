@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ContactPage extends Component {
-
-    render() {
+const ContactPage = ({tran}) => {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
@@ -17,8 +15,8 @@ class ContactPage extends Component {
 			                <img src={publicUrl+"assets/img/icon/17.png"} alt="img" />
 			              </div>
 			              <div className="media-body align-self-center">
-			                <h5>Our Phone</h5>
-			                <p>000 2324 39493</p>
+			                <h5>{tran('phone')}</h5>
+			                <p>856-21 412255 <br/> ສາຍດ່ວນ 1518</p>
 			              </div>
 			            </div>
 			          </div>
@@ -30,8 +28,8 @@ class ContactPage extends Component {
 			                <img src={publicUrl+"assets/img/icon/18.png"} alt="img" />
 			              </div>
 			              <div className="media-body align-self-center">
-			                <h5>Our Email</h5>
-			                <p>name@website.com</p>
+			                <h5>{tran('email')}</h5>
+			                <p>name@website.com</p><br/>
 			              </div>
 			            </div>
 			          </div>
@@ -43,8 +41,8 @@ class ContactPage extends Component {
 			                <img src={publicUrl+"assets/img/icon/16.png"} alt="img" />
 			              </div>
 			              <div className="media-body align-self-center">
-			                <h5>Our Address</h5>
-			                <p>2 St, Loskia, amukara.</p>
+			                <h5>{tran('address')}</h5>
+			                <p>Lanxang Avenue, Vientiane Capital , Lao PDR</p>
 			              </div>
 			            </div>
 			          </div>
@@ -59,8 +57,8 @@ class ContactPage extends Component {
 			        <div className="col-lg-4">
 			          <div className="section-title mb-0">
 			            <h6 className="sub-title right-line">Get in touch</h6>
-			            <h2 className="title">Write Us a Message</h2>
-			            <p className="content pb-3">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, </p>
+			            <h2 className="title">{tran('writeus')}</h2>
+			            {/* <p className="content pb-3">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, </p> */}
 			            <ul className="social-media style-base pt-3">
 			              <li>
 			                <i className="fa fa-facebook" aria-hidden="true" />
@@ -83,7 +81,7 @@ class ContactPage extends Component {
 			        <div className="col-lg-8 mt-5 mt-lg-0">
 			          <form className="contact-form-inner  mt-5 mt-md-0">
 			            <div className="row">
-			              <div className="col-lg-6">
+			              {/* <div className="col-lg-6">
 			                <div className="single-input-inner style-bg-border">
 			                  <input type="text" placeholder="First Name" />
 			                </div>
@@ -92,7 +90,7 @@ class ContactPage extends Component {
 			                <div className="single-input-inner style-bg-border">
 			                  <input type="text" placeholder="Last Name" />
 			                </div>
-			              </div>
+			              </div> */}
 			              <div className="col-6">
 			                <div className="single-input-inner style-bg-border">
 			                  <input type="text" placeholder="Email" />
@@ -123,8 +121,6 @@ class ContactPage extends Component {
 			    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd" /> */}
 			  </div>
 			</div>
-
-        }
 }
 
 export default ContactPage

@@ -62,5 +62,9 @@
     "september": "SEPTEMBER",
     "october": "OCTOBER",
     "november": "NOVEMBER",
-    "december": "DECEMBER"
+    "december": "DECEMBER",
+    "phone" : "Our Phone", 
+    "email" : "Our Email",
+    "address" : "Our Address",
+    "writeus": "Write Us a Message"
 }
