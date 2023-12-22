@@ -18,7 +18,7 @@ const Banner = ({tran}) => {
 			        <div className="fadeL banner-inner text-center text-lg-left mt-5 mt-lg-0 p-4 banner-title" >
 						<img src={publicUrl+"assets/img/banner/1.png"} alt="img" className='shape-backg'></img>
 			          <h6 className="b-animate-1 ">Ministry of Public Works and Transport</h6>
-			          <h1 className="b-animate-2 title">ກະຊວງໂຍທາທິການ ແລະ ຂົນສົ່ງ</h1>
+			          <h1 className="b-animate-2 title">ກະຊວງໂຍທາທິການ <br/> ແລະ ຂົນສົ່ງ</h1>
 			          <div className='btnContainer'>
 						{/* <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/">Get A Quote</Link> */}
 						<a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="https://dot-learning.mpwt.link/course" target='_blank'>{tran('lesson')}</a>

@@ -115,13 +115,15 @@ Version: 1.0.3
 */
 
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,600,700i&display=swap");
+@import url(https://db.onlinewebfonts.com/c/938a9833b7244d806eca3349487c68ba?family=Phetsarath+OT);
 
 :root {
   /* color: #fdc800; */
   --main-color: #fdc800;
   --heading-color: #000b47;
   --paragraph-color: #565872;
-  --body-font: "Rubik", sans-serif;
+  /* --body-font: "Rubik", sans-serif; */
+  --body-font: "Phetsarath OT";
   --body-font-size: 16px;
   --line-height30: 1.7;
 }
