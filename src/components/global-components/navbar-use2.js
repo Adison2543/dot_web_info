@@ -35,7 +35,7 @@ const Navbaruse2 = () => {
             </div>
             <div className="nav-right-part nav-right-part-mobile">
               <a className="btn btn-base" href="/">{t('signup')}</a>
-              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
@@ -74,7 +74,7 @@ const Navbaruse2 = () => {
             </div>
             <div className="nav-right-part nav-right-part-desktop">
               <Link className="btn btn-base" to="/">{t('signup')}</Link>
-              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
           </div>
         </nav>

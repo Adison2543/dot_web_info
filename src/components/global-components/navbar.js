@@ -30,10 +30,10 @@ class Navbar extends Component {
                   <div className="col-md-4">
                     <ul className="topbar-right text-md-right text-center">
                       <li className="social-area">
-                        <a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a>
-                        <a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a>
-                        <a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a>
-                        <a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a>
+                        <a href=""><i className="fa fa-facebook" aria-hidden="true" /></a>
+                        <a href=""><i className="fa fa-twitter" aria-hidden="true" /></a>
+                        <a href=""><i className="fa fa-instagram" aria-hidden="true" /></a>
+                        <a href=""><i className="fa fa-pinterest" aria-hidden="true" /></a>
                       </li>
                     </ul>
                   </div>
@@ -54,7 +54,7 @@ class Navbar extends Component {
                 <div className="nav-right-part nav-right-part-mobile">
                   <a className="signin-btn" href="signin.html">Sign In</a>
                   <a className="btn btn-base" href="blog.html">Sign Up</a>
-                  {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+                  {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
                 </div>
                 <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
                   <ul className="navbar-nav menu-open">
@@ -74,7 +74,7 @@ class Navbar extends Component {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#">Pages</a>
+                      <a href="">Pages</a>
                       <ul className="sub-menu">
                         <li><Link to="/about">About Us</Link></li>
                         <li><Link to="/event">Event</Link></li>
@@ -100,7 +100,7 @@ class Navbar extends Component {
                 <div className="nav-right-part nav-right-part-desktop">
                   <Link className="signin-btn" to="/sign-in">Sign In</Link>
                   <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-                  {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+                  {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
                 </div>
               </div>
             </nav>

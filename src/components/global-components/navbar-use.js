@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <div className="nav-right-part nav-right-part-mobile">
               <a className="btn btn-base" href="/">{t('signup')}</a>
-              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
@@ -80,7 +80,7 @@ const Navbar = () => {
             <div className="nav-right-part nav-right-part-desktop">
               <a className="btn btn-base" href="http://course.iddriver.com/" target='_blank'>{t('signup')}</a>
 
-              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
           </div>
         </nav>

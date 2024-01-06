@@ -32,7 +32,7 @@ const Footer_v1 = () => {
 									</div>
 								</div>
 								<div className="col-lg-2">
-									<a className="btn btn-base" href="#">Subscribe</a>
+									<a className="btn btn-base" href="">Subscribe</a>
 								</div>
 							</div>
 						</form>

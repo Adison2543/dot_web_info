@@ -27,10 +27,10 @@ class NavbarV4 extends Component {
               <div className="col-md-4">
                 <ul className="topbar-right text-md-right text-center">
                   <li className="social-area">
-                    <a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a>
-                    <a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a>
-                    <a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a>
-                    <a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a>
+                    <a href=""><i className="fa fa-facebook" aria-hidden="true" /></a>
+                    <a href=""><i className="fa fa-twitter" aria-hidden="true" /></a>
+                    <a href=""><i className="fa fa-instagram" aria-hidden="true" /></a>
+                    <a href=""><i className="fa fa-pinterest" aria-hidden="true" /></a>
                   </li>
                 </ul>
               </div>
@@ -97,7 +97,7 @@ class NavbarV4 extends Component {
             <div className="nav-right-part nav-right-part-desktop">
               <Link className="signin-btn" to="/sign-in">Sign In</Link>
               <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-              {/* <a className="search-bar" href="#"><i className="fa fa-search" /></a> */}
+              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
           </div>
         </nav>
