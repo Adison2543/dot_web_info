@@ -57,7 +57,7 @@ const BlogDetails = () => {
 		<div className="blog-area pd-top-120 pd-bottom-120">
 			{/* Add dynamic Open Graph meta tags */}
 			<Helmet>
-				<meta property="og:title" content={news?.news_title} />
+				<meta property="og:title" content='testttttttt' />
 				<meta property="og:description" content={news?.news_description} />
 				<meta property="og:image" content={news?.news_cover} />
 				<meta property="og:url" content={currentUrl} />
