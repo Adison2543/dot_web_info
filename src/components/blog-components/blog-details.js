@@ -8,8 +8,6 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
 import { FacebookProvider, Like, Comments  } from 'react-facebook';
-import MetaTags from 'react-meta-tags';
-import DocumentMeta from 'react-document-meta';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -55,39 +53,8 @@ const BlogDetails = () => {
 		return () => abortController.abort();
 	}, []);
 
-	const meta = {
-		title: 'Some Meta Title',
-		description: 'I am a description, and I can create multiple tags',
-		canonical: 'http://example.com/path/to/page',
-		meta: {
-			charset: 'utf-8',
-			name: {
-				keywords: 'react,meta,document,html,tags'
-			}
-		}
-	}
-
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
-			<MetaTags>
-				<title>Department of Transport (DoT)</title>
-				<meta property="og:title" content='testttttttt' />
-				<meta property="og:description" content="Some description." />
-				<meta property="og:image" content="https://oasapi.iddriver.com/media_file/file/?f=static/upload/2023/10/files-Ela9PQNDiq.png" />
-				<meta property="og:url" content='{currentUrl}' />
-			</MetaTags>
-			{/* <DocumentMeta {...meta} /> */}
-			{/* Add dynamic Open Graph meta tags */}
-			{/* <Helmet>
-				<meta property="og:title" content='testttttttt' />
-				<meta property="og:description" content={news?.news_description} />
-				<meta property="og:image" content={news?.news_cover} />
-				<meta property="og:url" content={currentUrl} />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content={news?.news_title} />
-				<meta name="twitter:description" content={news?.news_description} />
-				<meta name="twitter:image" content={news?.news_cover} />
-			</Helmet> */}
 			<div className="container">
 				{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 				:
