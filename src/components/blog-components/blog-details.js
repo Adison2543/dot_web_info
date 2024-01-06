@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
 import { FacebookProvider, Like, Comments  } from 'react-facebook';
 import MetaTags from 'react-meta-tags';
+import DocumentMeta from 'react-document-meta';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();

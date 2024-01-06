@@ -17,6 +17,7 @@
     "owl.carousel": "^2.3.4",
     "react": "^16.12.0",
     "react-bootstrap": "^2.8.0",
+    "react-document-meta": "^3.0.0-beta.2",
     "react-dom": "^16.12.0",
     "react-facebook": "^9.0.12",
     "react-fade-in": "^2.0.1",
