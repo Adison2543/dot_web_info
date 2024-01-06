@@ -87,9 +87,9 @@ const Footer_v2 = () => {
 								<div className="widget_nav_menu">
 									<ul className="go-top">
 										<li><Link to="/">{t('home')}</Link></li>
-										<li><Link to="#news" smooth>{t('news')}</Link></li>
-										<li><Link to="#course" smooth>{t('course')}</Link></li>
-										<li><Link to="#activity" smooth>{t('activity')}</Link></li>
+										<li><Link to="#news" smooth="true">{t('news')}</Link></li>
+										<li><Link to="#course" smooth="true">{t('course')}</Link></li>
+										<li><Link to="#activity" smooth="true">{t('activity')}</Link></li>
 									</ul>
 								</div>
 							</div>
