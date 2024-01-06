@@ -53,6 +53,55 @@ const BlogDetails = () => {
 		return () => abortController.abort();
 	}, []);
 
+	// Dynamically set OG tags in the document head
+	useEffect(() => {
+		const ogTitle = news?.news_title || 'Default Title';
+		const ogDescription = news?.news_description || 'Default Description';
+		const ogImage = news?.news_cover || 'default-image-url';
+	
+		document.title = ogTitle;
+	
+		// Create meta elements for OG tags
+		const metaOgTitle = document.createElement('meta');
+		metaOgTitle.setAttribute('property', 'og:title');
+		metaOgTitle.content = ogTitle;
+	
+		const metaOgDescription = document.createElement('meta');
+		metaOgDescription.setAttribute('property', 'og:description');
+		metaOgDescription.content = ogDescription;
+	
+		const metaOgImage = document.createElement('meta');
+		metaOgImage.setAttribute('property', 'og:image');
+		metaOgImage.content = ogImage;
+
+		// Create meta elements for X tags
+		const metaXImage = document.createElement('meta');
+		metaXImage.setAttribute('name', 'twitter:image');
+		metaXImage.content = ogImage;
+
+		const metaXTitle = document.createElement('meta');
+		metaXTitle.setAttribute('name', 'twitter:title');
+		metaXTitle.content = ogTitle;
+	
+		// Append meta elements to the head
+		document.head.appendChild(metaOgTitle);
+		document.head.appendChild(metaOgDescription);
+		document.head.appendChild(metaOgImage);
+
+		document.head.appendChild(metaXImage);
+		document.head.appendChild(metaXTitle);
+	
+		// Clean up by removing added meta elements on component unmount
+		return () => {
+		  document.head.removeChild(metaOgTitle);
+		  document.head.removeChild(metaOgDescription);
+		  document.head.removeChild(metaOgImage);
+
+		  document.head.removeChild(metaXImage);
+		  document.head.removeChild(metaXTitle);
+		};
+	}, [news]);
+
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
 			<div className="container">
@@ -107,7 +156,7 @@ const BlogDetails = () => {
 			</div>
 
 			{/* Add dynamic Open Graph meta tags */}
-			<Helmet>
+			{/* <Helmet>
 				<meta property="og:title" content={news?.news_title} />
 				<meta property="og:description" content={news?.news_description} />
 				<meta property="og:image" content={news?.news_cover} />
@@ -116,7 +165,7 @@ const BlogDetails = () => {
 				<meta name="twitter:title" content={news?.news_title} />
 				<meta name="twitter:description" content={news?.news_description} />
 				<meta name="twitter:image" content={news?.news_cover} />
-			</Helmet>
+			</Helmet> */}
 		</div>
     )
   }
