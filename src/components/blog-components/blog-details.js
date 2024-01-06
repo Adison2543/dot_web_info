@@ -69,13 +69,13 @@ const BlogDetails = () => {
 
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
-			{/* <MetaTags>
-				<title>Page 1</title>
-				<meta name="description" content="Some description." />
-				<meta property="og:title" content="MyApp" />
+			<MetaTags>
+				<meta property="og:title" content='testttttttt' />
+				<meta property="og:description" content="Some description." />
 				<meta property="og:image" content="https://oasapi.iddriver.com/media_file/file/?f=static/upload/2023/10/files-Ela9PQNDiq.png" />
-			</MetaTags> */}
-			<DocumentMeta {...meta} />
+				<meta property="og:url" content='{currentUrl}' />
+			</MetaTags>
+			{/* <DocumentMeta {...meta} /> */}
 			{/* Add dynamic Open Graph meta tags */}
 			{/* <Helmet>
 				<meta property="og:title" content='testttttttt' />
