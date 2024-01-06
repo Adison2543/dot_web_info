@@ -55,6 +55,17 @@ const BlogDetails = () => {
 
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
+			{/* Add dynamic Open Graph meta tags */}
+			<Helmet>
+				<meta property="og:title" content={news?.news_title} />
+				<meta property="og:description" content={news?.news_description} />
+				<meta property="og:image" content={news?.news_cover} />
+				<meta property="og:url" content={currentUrl} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:title" content={news?.news_title} />
+				<meta name="twitter:description" content={news?.news_description} />
+				<meta name="twitter:image" content={news?.news_cover} />
+			</Helmet>
 			<div className="container">
 				{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 				:
@@ -105,18 +116,6 @@ const BlogDetails = () => {
 				</div>
 				}
 			</div>
-
-			{/* Add dynamic Open Graph meta tags */}
-			<Helmet>
-				<meta property="og:title" content={news?.news_title} />
-				<meta property="og:description" content={news?.news_description} />
-				<meta property="og:image" content={news?.news_cover} />
-				<meta property="og:url" content={currentUrl} />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content={news?.news_title} />
-				<meta name="twitter:description" content={news?.news_description} />
-				<meta name="twitter:image" content={news?.news_cover} />
-			</Helmet>
 		</div>
     )
   }
