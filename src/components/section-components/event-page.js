@@ -109,12 +109,12 @@ class EventPage extends Component {
 			      <div className="col-12">
 			        <nav className="td-page-navigation text-center">
 			          <ul className="pagination">
-			            <li className="pagination-arrow"><Link to="#"><i className="fa fa-angle-double-left" /></Link></li>
-			            <li><Link to="#">1</Link></li>
-			            <li><Link className="active" to="#">2</Link></li>
-			            <li><Link to="#">...</Link></li>
-			            <li><Link to="#">3</Link></li>
-			            <li className="pagination-arrow"><Link to="#"><i className="fa fa-angle-double-right" /></Link></li>
+			            <li className="pagination-arrow"><Link to=""><i className="fa fa-angle-double-left" /></Link></li>
+			            <li><Link to="">1</Link></li>
+			            <li><Link className="active" to="">2</Link></li>
+			            <li><Link to="">...</Link></li>
+			            <li><Link to="">3</Link></li>
+			            <li className="pagination-arrow"><Link to=""><i className="fa fa-angle-double-right" /></Link></li>
 			          </ul>
 			        </nav>
 			      </div>

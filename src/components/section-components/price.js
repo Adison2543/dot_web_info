@@ -34,7 +34,7 @@ class Price extends Component {
 			              <li className="unable"><i className="fa fa-times" />Lifetime devolopment</li>
 			              <li className="unable"><i className="fa fa-times" />Unlimited free revision </li>
 			            </ul>
-			            <Link className="btn btn-base btn-radius w-100" to="#">GET STARTED</Link>
+			            <Link className="btn btn-base btn-radius w-100" to="">GET STARTED</Link>
 			          </div>
 			        </div>
 			      </div>
@@ -54,7 +54,7 @@ class Price extends Component {
 			              <li className="unable"><i className="fa fa-times" />Lifetime devolopment</li>
 			              <li className="unable"><i className="fa fa-times" />Unlimited free revision </li>
 			            </ul>
-			            <Link className="btn btn-base btn-radius w-100" to="#">GET STARTED</Link>
+			            <Link className="btn btn-base btn-radius w-100" to="">GET STARTED</Link>
 			          </div>
 			        </div>
 			      </div>
@@ -74,7 +74,7 @@ class Price extends Component {
 			              <li className="unable"><i className="fa fa-times" />Lifetime devolopment</li>
 			              <li className="unable"><i className="fa fa-times" />Unlimited free revision </li>
 			            </ul>
-			            <Link className="btn btn-base btn-radius w-100" to="#">GET STARTED</Link>
+			            <Link className="btn btn-base btn-radius w-100" to="">GET STARTED</Link>
 			          </div>
 			        </div>
 			      </div>

@@ -77,9 +77,9 @@ const Footer_v1 = () => {
 										width="600" 
 										height="150" 
 										style={{border: 0}}
-										allowfullscreen="" 
+										allowFullScreen="" 
 										loading="lazy" 
-										referrerpolicy="no-referrer-when-downgrade"
+										referrerPolicy="no-referrer-when-downgrade"
 										title="Ministry of Public Travel and Transport Map"
 										></iframe>
 								</div>

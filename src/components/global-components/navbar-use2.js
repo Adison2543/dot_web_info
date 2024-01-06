@@ -43,10 +43,10 @@ const Navbaruse2 = () => {
                     <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="">
-                    <Link to="/blog" smooth>{t('news')}</Link>
+                    <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
-                    <Link to="/course" smooth>{t('course')}</Link>
+                    <Link to="/course" smooth="true">{t('course')}</Link>
                 </li>
                 <li>
                   <div className="nav-right-part-mobile">

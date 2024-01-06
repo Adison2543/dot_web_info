@@ -44,15 +44,15 @@ const Navbar = () => {
                   <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="">
-                    <Link to="#news" smooth>{t('news')}</Link>
+                    <Link to="#news" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
-                  <Link to="#course" smooth>{t('course')}</Link>
+                  <Link to="#course" smooth="true">{t('course')}</Link>
                 </li>
                 <li className="">
-                  <Link to="#activity" smooth>{t('activity')}</Link>
+                  <Link to="#activity" smooth="true">{t('activity')}</Link>
                 </li>
-                <li><Link to="#footer" smooth>{t('contact')}</Link></li>
+                <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
