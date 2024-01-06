@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
 import { FacebookProvider, Like, Comments  } from 'react-facebook';
+import MetaTags from 'react-meta-tags';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -55,8 +56,14 @@ const BlogDetails = () => {
 
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
+			<MetaTags>
+				<title>Page 1</title>
+				<meta name="description" content="Some description." />
+				<meta property="og:title" content="MyApp" />
+				<meta property="og:image" content="https://oasapi.iddriver.com/media_file/file/?f=static/upload/2023/10/files-Ela9PQNDiq.png" />
+			</MetaTags>
 			{/* Add dynamic Open Graph meta tags */}
-			<Helmet>
+			{/* <Helmet>
 				<meta property="og:title" content='testttttttt' />
 				<meta property="og:description" content={news?.news_description} />
 				<meta property="og:image" content={news?.news_cover} />
@@ -65,7 +72,7 @@ const BlogDetails = () => {
 				<meta name="twitter:title" content={news?.news_title} />
 				<meta name="twitter:description" content={news?.news_description} />
 				<meta name="twitter:image" content={news?.news_cover} />
-			</Helmet>
+			</Helmet> */}
 			<div className="container">
 				{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 				:
