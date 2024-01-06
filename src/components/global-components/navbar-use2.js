@@ -48,6 +48,9 @@ const Navbaruse2 = () => {
                 <li className="">
                     <Link to="/course" smooth="true">{t('course')}</Link>
                 </li>
+                <li className="">
+                    <Link to="/contact-us" smooth="true">{t('contact')}</Link>
+                </li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
