@@ -54,6 +54,40 @@ const BlogDetails = () => {
 		return () => abortController.abort();
 	}, []);
 
+	// Dynamically set OG tags in the document head
+	useEffect(() => {
+		const ogTitle = news?.news_title || 'Default Title';
+		const ogDescription = news?.news_description || 'Default Description';
+		const ogImage = news?.news_cover || 'default-image-url';
+	
+		document.title = ogTitle;
+	
+		// Create meta elements for OG tags
+		const metaOgTitle = document.createElement('meta');
+		metaOgTitle.setAttribute('property', 'og:title');
+		metaOgTitle.content = ogTitle;
+	
+		const metaOgDescription = document.createElement('meta');
+		metaOgDescription.setAttribute('property', 'og:description');
+		metaOgDescription.content = ogDescription;
+	
+		const metaOgImage = document.createElement('meta');
+		metaOgImage.setAttribute('property', 'og:image');
+		metaOgImage.content = ogImage;
+	
+		// Append meta elements to the head
+		document.head.appendChild(metaOgTitle);
+		document.head.appendChild(metaOgDescription);
+		document.head.appendChild(metaOgImage);
+	
+		// Clean up by removing added meta elements on component unmount
+		return () => {
+		  document.head.removeChild(metaOgTitle);
+		  document.head.removeChild(metaOgDescription);
+		  document.head.removeChild(metaOgImage);
+		};
+	}, [news]);
+
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
 		  <div className="container">
@@ -106,18 +140,6 @@ const BlogDetails = () => {
 		    </div>
 			}
 		  </div>
-
-		  {/* Add dynamic Open Graph meta tags */}
-			<Helmet>
-				<meta property="og:title" content={news?.news_title} />
-				<meta property="og:description" content={news?.news_description} />
-				<meta property="og:image" content={news?.news_cover} />
-				<meta property="og:url" content={currentUrl} />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content={news?.news_title} />
-				<meta name="twitter:description" content={news?.news_description} />
-				<meta name="twitter:image" content={news?.news_cover} />
-			</Helmet>
 		</div>
     )
   }
