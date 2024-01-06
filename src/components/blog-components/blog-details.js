@@ -87,7 +87,7 @@ const BlogDetails = () => {
 										overflow: 'hidden'
 									}}
 								>
-									<img src={news?.news_cover ? `https://dot-api.mpwt.gov.la/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+									<img src={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
 										className='w-100' alt="img" />
 								</div>
 								<div className="details">
