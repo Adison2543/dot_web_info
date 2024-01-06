@@ -74,17 +74,32 @@ const BlogDetails = () => {
 		const metaOgImage = document.createElement('meta');
 		metaOgImage.setAttribute('property', 'og:image');
 		metaOgImage.content = ogImage;
+
+		// Create meta elements for X tags
+		const metaXImage = document.createElement('meta');
+		metaXImage.setAttribute('name', 'twitter:image');
+		metaXImage.content = ogImage;
+
+		const metaXTitle = document.createElement('meta');
+		metaXTitle.setAttribute('name', 'twitter:title');
+		metaXTitle.content = ogTitle;
 	
 		// Append meta elements to the head
 		document.head.appendChild(metaOgTitle);
 		document.head.appendChild(metaOgDescription);
 		document.head.appendChild(metaOgImage);
+
+		document.head.appendChild(metaXImage);
+		document.head.appendChild(metaXTitle);
 	
 		// Clean up by removing added meta elements on component unmount
 		return () => {
 		  document.head.removeChild(metaOgTitle);
 		  document.head.removeChild(metaOgDescription);
 		  document.head.removeChild(metaOgImage);
+
+		  document.head.removeChild(metaXImage);
+		  document.head.removeChild(metaXTitle);
 		};
 	}, [news]);
 
@@ -140,6 +155,18 @@ const BlogDetails = () => {
 		    </div>
 			}
 		  </div>
+
+		  	{/* Add dynamic Open Graph meta tags */}
+			{/* <Helmet>
+				<meta property="og:title" content={news? news.news_title : 'Default Title'} />
+				<meta property="og:description" content={news? news.news_description : 'Default Description'} />
+				<meta property="og:image" content={news?.news_cover} />
+				<meta property="og:url" content={currentUrl} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:title" content={news?.news_title} />
+				<meta name="twitter:description" content={news?.news_description} />
+				<meta name="twitter:image" content={news?.news_cover} />
+			</Helmet> */}
 		</div>
     )
   }
