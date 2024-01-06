@@ -70,6 +70,7 @@ const BlogDetails = () => {
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
 			<MetaTags>
+				<title>Department of Transport (DoT)</title>
 				<meta property="og:title" content='testttttttt' />
 				<meta property="og:description" content="Some description." />
 				<meta property="og:image" content="https://oasapi.iddriver.com/media_file/file/?f=static/upload/2023/10/files-Ela9PQNDiq.png" />
