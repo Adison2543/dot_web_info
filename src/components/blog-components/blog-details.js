@@ -54,14 +54,27 @@ const BlogDetails = () => {
 		return () => abortController.abort();
 	}, []);
 
+	const meta = {
+		title: 'Some Meta Title',
+		description: 'I am a description, and I can create multiple tags',
+		canonical: 'http://example.com/path/to/page',
+		meta: {
+			charset: 'utf-8',
+			name: {
+				keywords: 'react,meta,document,html,tags'
+			}
+		}
+	}
+
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
-			<MetaTags>
+			{/* <MetaTags>
 				<title>Page 1</title>
 				<meta name="description" content="Some description." />
 				<meta property="og:title" content="MyApp" />
 				<meta property="og:image" content="https://oasapi.iddriver.com/media_file/file/?f=static/upload/2023/10/files-Ela9PQNDiq.png" />
-			</MetaTags>
+			</MetaTags> */}
+			<DocumentMeta {...meta} />
 			{/* Add dynamic Open Graph meta tags */}
 			{/* <Helmet>
 				<meta property="og:title" content='testttttttt' />
