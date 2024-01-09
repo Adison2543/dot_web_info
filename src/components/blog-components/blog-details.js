@@ -6,8 +6,7 @@ import axios from 'axios';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
-import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
-import { FacebookProvider, Like, Comments  } from 'react-facebook';
+import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -54,58 +53,70 @@ const BlogDetails = () => {
 	}, []);
 
     return (
-		<div className="blog-area pd-top-120 pd-bottom-120">
-			<div className="container">
-				{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
-				:
-				<div className="row">
-					<div className="col-lg-8">
-						<div className="blog-details-page-content">
-							<div className="single-blog-inner">
-								<div className='d-flex justify-content-end py-2 gap-2'>
-									<FacebookShareButton
-										url={currentUrl}
-										quote={news?.news_title}
-										hashtag="#DOTSmartApp"
+		<>
+			<Helmet>
+				<meta property="og:title" content='DOT Smart App' />
+				<meta property="og:description" content='Department of Transport' />
+				<meta property="og:image" content="%PUBLIC_URL%/assets/img/banner/b1.jpg" />
+				<meta property="og:url" content='{currentUrl}' />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:title" content='DOT Smart App' />
+				<meta name="twitter:description" content='Department of Transport' />
+				<meta name="twitter:image" content='%PUBLIC_URL%/assets/img/banner/b1.webp' />
+			</Helmet>
+			<div className="blog-area pd-top-120 pd-bottom-120">
+				<div className="container">
+					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
+					:
+					<div className="row">
+						<div className="col-lg-8">
+							<div className="blog-details-page-content">
+								<div className="single-blog-inner">
+									<div className='d-flex justify-content-end py-2 gap-2'>
+										<FacebookShareButton
+											url={currentUrl}
+											quote={news?.news_title}
+											hashtag="#DOTSmartApp"
+										>
+											<FacebookIcon size={32} round />
+										</FacebookShareButton>
+
+										<FacebookShareCount url={currentUrl} />
+
+										<TwitterShareButton
+											url={currentUrl}
+											quote={news?.news_title}
+											hashtag="#DOTSmartApp"
+										>
+											<TwitterIcon size={32} round />
+										</TwitterShareButton>
+									</div>
+									<div className="thumb"
+										style={{
+											maxHeight: '450px',
+											overflow: 'hidden'
+										}}
 									>
-										<FacebookIcon size={32} round />
-									</FacebookShareButton>
-									<TwitterShareButton
-										url={currentUrl}
-										quote={news?.news_title}
-										hashtag="#DOTSmartApp"
-									>
-										<TwitterIcon size={32} round />
-									</TwitterShareButton>
-									<FacebookShareCount url={currentUrl}>
-										{(shareCount) => <span className="myShareCountWrapper">{shareCount}</span>}
-									</FacebookShareCount>
-								</div>
-								<div className="thumb"
-									style={{
-										maxHeight: '450px',
-										overflow: 'hidden'
-									}}
-								>
-									<img src={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
-										className='w-100' alt="img" />
-								</div>
-								<div className="details">
-									<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li>
-										<li><i className="fa fa-calendar-check-o" />{gatFDate(news?.udp_date ? news.udp_date : news.crt_date)}</li>
-									</ul>
-									<h3 className="title">{news?.news_title}</h3>
-									<p>{news?.news_description}</p>
+										<img src={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+											className='w-100' alt="img" />
+									</div>
+									<div className="details">
+										<ul className="blog-meta">
+											<li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li>
+											<li><i className="fa fa-calendar-check-o" />{gatFDate(news?.udp_date ? news.udp_date : news.crt_date)}</li>
+										</ul>
+										<h3 className="title">{news?.news_title}</h3>
+										<p>{news?.news_description}</p>
+									</div>
 								</div>
 							</div>
 						</div>
+					<Sidebar id={news?.news_type? news.news_type : 0} tran={t}/>
 					</div>
-				<Sidebar id={news?.news_type? news.news_type : 0} tran={t}/>
+					}
 				</div>
-				}
 			</div>
-		</div>
+		</>
     )
   }
 
