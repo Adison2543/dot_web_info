@@ -54,7 +54,7 @@ const BlogDetails = () => {
 	}, [news_id]);
 
 	useEffect(() => {
-		document.querySelector('meta[property="og:title"]').setAttribute('content', news ? news.news_title : 'Unknown');
+		document.querySelector('meta[property="og:title"]').setAttribute('content', 'Unknown');
 	}, [news])
 
     return (
