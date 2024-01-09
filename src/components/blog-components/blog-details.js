@@ -5,7 +5,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet';
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 import MetaTags from 'react-meta-tags';
 
@@ -66,14 +65,11 @@ const BlogDetails = () => {
     return (
 		<>
 			<div className="blog-area pd-top-120 pd-bottom-120">
-				{/* <Helmet debug={true}>
-					<title>{news ? news.news_title : 'Unknown'}</title>
-					<meta property="og:title" content={news ? news.news_title || 'Unknown' : 'Unknown'} />
-				</Helmet> */}
 				<MetaTags>
+					<title>DoT Smart App - {news?.news_title}</title>
 					<meta name="description" content="Some description." />
 					<meta property="og:title" content="MyApp" />
-					<meta property="og:image" content="path/to/image.jpg" />
+					<meta property="og:image" content={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} />
 				</MetaTags>
 				<div className="container">
 					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
