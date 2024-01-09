@@ -81,8 +81,6 @@ const BlogDetails = () => {
 											<FacebookIcon size={32} round />
 										</FacebookShareButton>
 
-										<FacebookShareCount url={currentUrl} />
-
 										<TwitterShareButton
 											url={currentUrl}
 											quote={news?.news_title}
