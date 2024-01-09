@@ -58,11 +58,7 @@ const BlogDetails = () => {
 				<meta property="og:title" content='DOT Smart App' />
 				<meta property="og:description" content='Department of Transport' />
 				<meta property="og:image" content="%PUBLIC_URL%/assets/img/banner/b1.jpg" />
-				<meta property="og:url" content='{currentUrl}' />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content='DOT Smart App' />
-				<meta name="twitter:description" content='Department of Transport' />
-				<meta name="twitter:image" content='%PUBLIC_URL%/assets/img/banner/b1.webp' />
+				<meta property="og:url" content={currentUrl} />
 			</Helmet>
 			<div className="blog-area pd-top-120 pd-bottom-120">
 				<div className="container">
