@@ -7,6 +7,7 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
+import MetaTags from 'react-meta-tags';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -51,19 +52,29 @@ const BlogDetails = () => {
 		fetchNews();
 		
 		return () => abortController.abort();
-	}, [news_id]);
+	}, []);
 
 	useEffect(() => {
-		document.querySelector('meta[property="og:title"]').setAttribute('content', 'Unknown');
-	}, [news])
+		if (news) {
+			const ogTitleMetaTag = document.querySelector('meta[property="og:title"]');
+			if (ogTitleMetaTag) {
+				ogTitleMetaTag.setAttribute('content', news.news_title || 'Unknown');
+			}
+		}
+	}, [news]);	
 
     return (
 		<>
-			<Helmet prioritizeSeoTags>
-				<title>{news? news.news_title : 'Unknows'}</title>
-				<meta property="og:title" content='DOT Smart App' />
-			</Helmet>
 			<div className="blog-area pd-top-120 pd-bottom-120">
+				{/* <Helmet debug={true}>
+					<title>{news ? news.news_title : 'Unknown'}</title>
+					<meta property="og:title" content={news ? news.news_title || 'Unknown' : 'Unknown'} />
+				</Helmet> */}
+				<MetaTags>
+					<meta name="description" content="Some description." />
+					<meta property="og:title" content="MyApp" />
+					<meta property="og:image" content="path/to/image.jpg" />
+				</MetaTags>
 				<div className="container">
 					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 					:
