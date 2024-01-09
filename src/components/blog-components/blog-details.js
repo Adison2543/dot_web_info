@@ -7,6 +7,7 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 import MetaTags from 'react-meta-tags';
+import { FacebookProvider, ShareButton } from 'react-facebook';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -79,6 +80,11 @@ const BlogDetails = () => {
 							<div className="blog-details-page-content">
 								<div className="single-blog-inner">
 									<div className='d-flex justify-content-end py-2 gap-2'>
+									<FacebookProvider appId="123456789">
+										<ShareButton href="http://www.facebook.com" className="my-classname">
+											Share
+										</ShareButton>
+									</FacebookProvider>
 										<FacebookShareButton
 											url={currentUrl}
 											hashtag="#DOTSmartApp"
