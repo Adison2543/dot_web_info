@@ -49,8 +49,13 @@ const BlogDetails = () => {
 		}
 
 		fetchNews();
+		
 		return () => abortController.abort();
 	}, [news_id]);
+
+	useEffect(() => {
+		document.querySelector('meta[property="og:title"]').setAttribute('content', news ? news.news_title : 'Unknown');
+	}, [news])
 
     return (
 		<>
