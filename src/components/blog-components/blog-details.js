@@ -7,7 +7,6 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 import MetaTags from 'react-meta-tags';
-import { FacebookProvider, ShareButton } from 'react-facebook';
 
 const BlogDetails = () => {
 	const {t} = useTranslation();
@@ -66,12 +65,12 @@ const BlogDetails = () => {
     return (
 		<>
 			<div className="blog-area pd-top-120 pd-bottom-120">
-				<MetaTags>
-					<title>DoT Smart App - {news?.news_title}</title>
+				{/* <MetaTags>
+					<title>DoT Smart App - {news.news_title}</title>
 					<meta name="description" content="Some description." />
 					<meta property="og:title" content="MyApp" />
-					<meta property="og:image" content={news?.news_cover ? `https://oasapi.iddriver.com/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} />
-				</MetaTags>
+					<meta property="og:image" content="path/to/image.jpg" />
+				</MetaTags> */}
 				<div className="container">
 					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 					:
@@ -80,11 +79,6 @@ const BlogDetails = () => {
 							<div className="blog-details-page-content">
 								<div className="single-blog-inner">
 									<div className='d-flex justify-content-end py-2 gap-2'>
-									<FacebookProvider appId="272083875604499">
-										<ShareButton href={currentUrl} className="my-classname">
-											Share
-										</ShareButton>
-									</FacebookProvider>
 										<FacebookShareButton
 											url={currentUrl}
 											hashtag="#DOTSmartApp"
