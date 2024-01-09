@@ -80,7 +80,7 @@ const BlogDetails = () => {
 							<div className="blog-details-page-content">
 								<div className="single-blog-inner">
 									<div className='d-flex justify-content-end py-2 gap-2'>
-									<FacebookProvider appId="123456789">
+									<FacebookProvider appId="272083875604499">
 										<ShareButton href="http://www.facebook.com" className="my-classname">
 											Share
 										</ShareButton>
