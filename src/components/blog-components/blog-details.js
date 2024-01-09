@@ -72,7 +72,6 @@ const BlogDetails = () => {
 									<div className='d-flex justify-content-end py-2 gap-2'>
 										<FacebookShareButton
 											url={currentUrl}
-											quote={news?.news_title}
 											hashtag="#DOTSmartApp"
 										>
 											<FacebookIcon size={32} round />
