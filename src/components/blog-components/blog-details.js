@@ -55,11 +55,7 @@ const BlogDetails = () => {
     return (
 		<>
 			<Helmet prioritizeSeoTags>
-				{/* <meta property="og:title" content='DOT Smart App' />
-				<meta property="og:description" content='Department of Transport' />
-				<meta property="og:image" content={process.env.PUBLIC_URL+"assets/img/banner/b1.jpg"} />
-				<meta property="og:url" content={currentUrl} /> */}
-				<title>{news? news.news_title : 'Department of Transport (DoT)'}</title>
+				<title>{news? news.news_title : 'Unknows'}</title>
 				<meta property="og:title" content='DOT Smart App' />
 			</Helmet>
 			<div className="blog-area pd-top-120 pd-bottom-120">
