@@ -24,7 +24,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import menu_en from './trans/en/trans.json'
 import menu_th from './trans/th/trans.json'
 import menu_lo from './trans/lo/trans.json'
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 i18n
   .use(LanguageDetector)
@@ -49,29 +49,35 @@ i18n
 
 const Root = () => {
         return(
-                <HashRouter basename="/">
-	                <div>
-	                <Switch>
-                        <Route exact path="/" component={HomeV1} />
-                        <Route path="/home-v2" component={HomeV2} />
-                        <Route path="/home-v3" component={HomeV3} />
-                        <Route path="/course" component={Course} />
-                        <Route path="/course-details/:course_id/:course_name" component={CourseDetails} />
-                        <Route path="/about" component={About} />
-                        <Route path="/event" component={Event} />
-                        <Route path="/event-details" component={EventDetails} />
-                        <Route path="/instructor" component={Instructor} />
-                        <Route path="/instructor-details" component={InstructorDetails} />
-                        <Route path="/pricing" component={Pricing} />
-                        <Route path="/gallery" component={Gallery} />
-                        <Route path="/sign-in" component={SignIn} />
-                        <Route path="/sign-up" component={SignUp} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/blog" component={Blog} />
-                        <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
-	                </Switch>
-	                </div>
-                </HashRouter>
+          <HelmetProvider>
+            <Helmet>
+              <title>Hello World</title>
+              <meta property="og:title" content="DoT Smart App" />
+            </Helmet>
+            <HashRouter basename="/">
+              <div>
+              <Switch>
+                    <Route exact path="/" component={HomeV1} />
+                    <Route path="/home-v2" component={HomeV2} />
+                    <Route path="/home-v3" component={HomeV3} />
+                    <Route path="/course" component={Course} />
+                    <Route path="/course-details/:course_id/:course_name" component={CourseDetails} />
+                    <Route path="/about" component={About} />
+                    <Route path="/event" component={Event} />
+                    <Route path="/event-details" component={EventDetails} />
+                    <Route path="/instructor" component={Instructor} />
+                    <Route path="/instructor-details" component={InstructorDetails} />
+                    <Route path="/pricing" component={Pricing} />
+                    <Route path="/gallery" component={Gallery} />
+                    <Route path="/sign-in" component={SignIn} />
+                    <Route path="/sign-up" component={SignUp} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/blog" component={Blog} />
+                    <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
+              </Switch>
+              </div>
+            </HashRouter>
+          </HelmetProvider>
         )
 }
 
@@ -83,7 +89,8 @@ export default Root;
 // </I18nextProvider>,
 // document.getElementById('edumint'));
 ReactDOM.hydrate(
-<I18nextProvider i18n={i18n}>
-<Root />
-</I18nextProvider>,
-document.getElementById('edumint'));
+  <I18nextProvider i18n={i18n}>
+    <Root />
+  </I18nextProvider>,
+  document.getElementById('edumint')
+);
