@@ -77,7 +77,12 @@ const Root = () => {
 
 export default Root;
 
-ReactDOM.render(
+// ReactDOM.render(
+// <I18nextProvider i18n={i18n}>
+// <Root />
+// </I18nextProvider>,
+// document.getElementById('edumint'));
+ReactDOM.hydrate(
 <I18nextProvider i18n={i18n}>
 <Root />
 </I18nextProvider>,

@@ -65,12 +65,12 @@ const BlogDetails = () => {
     return (
 		<>
 			<div className="blog-area pd-top-120 pd-bottom-120">
-				{/* <MetaTags>
+				<MetaTags>
 					<title>DoT Smart App - {news.news_title}</title>
 					<meta name="description" content="Some description." />
 					<meta property="og:title" content="MyApp" />
-					<meta property="og:image" content="path/to/image.jpg" />
-				</MetaTags> */}
+					{/* <meta property="og:image" content="path/to/image.jpg" /> */}
+				</MetaTags>
 				<div className="container">
 					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div>
 					:
