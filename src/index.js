@@ -24,7 +24,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import menu_en from './trans/en/trans.json'
 import menu_th from './trans/th/trans.json'
 import menu_lo from './trans/lo/trans.json'
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 i18n
   .use(LanguageDetector)
@@ -49,11 +48,6 @@ i18n
 
 const Root = () => {
         return(
-          <HelmetProvider>
-            <Helmet>
-              <title>Hello World</title>
-              <meta property="og:title" content="DoT Smart App" />
-            </Helmet>
             <HashRouter basename="/">
               <div>
               <Switch>
@@ -77,7 +71,6 @@ const Root = () => {
               </Switch>
               </div>
             </HashRouter>
-          </HelmetProvider>
         )
 }
 
