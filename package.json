@@ -20,6 +20,7 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "^16.14.0",
     "react-fade-in": "^2.0.1",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^13.2.2",
     "react-loading": "^2.0.3",
     "react-meta-tags": "^1.0.1",
