@@ -29,7 +29,7 @@ const ContactPage = ({tran}) => {
 			              </div>
 			              <div className="media-body align-self-center">
 			                <h5>{tran('email')}</h5>
-			                <p>name@website.com</p><br/>
+			                <p>depttransportlaos@gmail.com</p><br/>
 			              </div>
 			            </div>
 			          </div>
