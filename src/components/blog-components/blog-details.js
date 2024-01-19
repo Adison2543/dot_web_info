@@ -54,55 +54,6 @@ const BlogDetails = () => {
 		return () => abortController.abort();
 	}, []);
 
-	// Dynamically set OG tags in the document head
-	useEffect(() => {
-		const ogTitle = news?.news_title || 'Default Title';
-		const ogDescription = news?.news_description || 'Default Description';
-		const ogImage = news?.news_cover || 'default-image-url';
-	
-		document.title = ogTitle;
-	
-		// Create meta elements for OG tags
-		const metaOgTitle = document.createElement('meta');
-		metaOgTitle.setAttribute('property', 'og:title');
-		metaOgTitle.content = ogTitle;
-	
-		const metaOgDescription = document.createElement('meta');
-		metaOgDescription.setAttribute('property', 'og:description');
-		metaOgDescription.content = ogDescription;
-	
-		const metaOgImage = document.createElement('meta');
-		metaOgImage.setAttribute('property', 'og:image');
-		metaOgImage.content = ogImage;
-
-		// Create meta elements for X tags
-		const metaXImage = document.createElement('meta');
-		metaXImage.setAttribute('name', 'twitter:image');
-		metaXImage.content = ogImage;
-
-		const metaXTitle = document.createElement('meta');
-		metaXTitle.setAttribute('name', 'twitter:title');
-		metaXTitle.content = ogTitle;
-	
-		// Append meta elements to the head
-		document.head.appendChild(metaOgTitle);
-		document.head.appendChild(metaOgDescription);
-		document.head.appendChild(metaOgImage);
-
-		document.head.appendChild(metaXImage);
-		document.head.appendChild(metaXTitle);
-	
-		// Clean up by removing added meta elements on component unmount
-		return () => {
-		  document.head.removeChild(metaOgTitle);
-		  document.head.removeChild(metaOgDescription);
-		  document.head.removeChild(metaOgImage);
-
-		  document.head.removeChild(metaXImage);
-		  document.head.removeChild(metaXTitle);
-		};
-	}, [news]);
-
     return (
 		<div className="blog-area pd-top-120 pd-bottom-120">
 		  <div className="container">
@@ -147,6 +98,14 @@ const BlogDetails = () => {
 		              </ul>
 		              <h3 className="title">{news?.news_title}</h3>
 		              <p>{news?.news_description}</p>
+					  <div>
+							{news?.images_list?.map((img_link) => (
+								<div key={img_link.ni_id} className='my-2'>
+									<img src={`https://dot-api.mpwt.gov.la/media_file/file/?f=${img_link.ni_path_file}`} className='w-100' alt="img" /> 
+								</div>
+							))}
+						</div>
+
 		            </div>
 		          </div>
 		        </div>
