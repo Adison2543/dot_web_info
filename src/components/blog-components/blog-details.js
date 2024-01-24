@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
 import { FacebookProvider, Like, Comments  } from 'react-facebook';
 
@@ -95,6 +95,7 @@ const BlogDetails = () => {
 		              <ul className="blog-meta">
 		                <li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li>
 		                <li><i className="fa fa-calendar-check-o" />{gatFDate(news?.udp_date ? news.udp_date : news.crt_date)}</li>
+						<li><i className="fa fa-eye" />{news?.news_view}</li>
 		              </ul>
 		              <h3 className="title">{news?.news_title}</h3>
 		              <p>{news?.news_description}</p>
