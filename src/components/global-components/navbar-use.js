@@ -44,10 +44,10 @@ const Navbar = () => {
                   <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="">
-                    <Link to="#news" smooth="true">{t('news')}</Link>
+                    <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
-                  <Link to="#course" smooth="true">{t('course')}</Link>
+                  <Link to="/course" smooth="true">{t('course')}</Link>
                 </li>
                 <li className="">
                   <Link to="#activity" smooth="true">{t('activity')}</Link>
@@ -62,7 +62,9 @@ const Navbar = () => {
                     </select>
                   </div>
                 </li>
-                <li><Link className="nav-right-part-mobile btn btn-base" to="/">{t('signup')}</Link></li>
+                <li>
+                  <a className="btn btn-base nav-right-part-mobile" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
+                </li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
@@ -78,9 +80,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <a className="btn btn-base" href="https://dot-learning.mpwt.link/" target='_blank'>{t('signup')}</a>
-
-              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
+              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" target='_blank'>{t('signup')}</a>
             </div>
           </div>
         </nav>

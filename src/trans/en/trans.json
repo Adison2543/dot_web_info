@@ -66,5 +66,7 @@
     "phone" : "Our Phone", 
     "email" : "Our Email",
     "address" : "Our Address",
-    "writeus": "Write Us a Message"
+    "writeus": "Write Us a Message",
+
+    "enroll" : "Enroll"
 }

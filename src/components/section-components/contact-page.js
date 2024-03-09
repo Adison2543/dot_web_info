@@ -22,43 +22,46 @@ const ContactPage = ({tran}) => {
 			          </div>
 			        </div>
 			        <div className="col-lg-4">
-			          <div className="contact-list-inner">
-			            <div className="media">
-			              <div className="media-left">
-			                <img src={publicUrl+"assets/img/icon/18.png"} alt="img" />
-			              </div>
-			              <div className="media-body align-self-center">
-			                <h5>{tran('email')}</h5>
-			                <p>depttransportlaos@gmail.com</p><br/>
-			              </div>
-			            </div>
-			          </div>
+						<a rel="noopener noreferrer" target="_BLANK" href="mailto:depttransportlaos@gmail.com" title="Email">
+							<div className="contact-list-inner">
+								<div className="media">
+									<div className="media-left">
+										<img src={publicUrl+"assets/img/icon/18.png"} alt="img" />
+									</div>
+									<div className="media-body align-self-center">
+										<h5>{tran('email')}</h5>
+										<p>depttransportlaos@gmail.com</p><br/>
+									</div>
+								</div>
+							</div>
+                        </a>
 			        </div>
 			        <div className="col-lg-4">
-			          <div className="contact-list-inner">
-			            <div className="media">
-			              <div className="media-left">
-			                <img src={publicUrl+"assets/img/icon/16.png"} alt="img" />
-			              </div>
-			              <div className="media-body align-self-center">
-			                <h5>{tran('address')}</h5>
-			                <p>Lanxang Avenue, Vientiane Capital , Lao PDR</p>
-			              </div>
-			            </div>
-			          </div>
+						<a href='https://maps.app.goo.gl/2nj8DHrwzPgVDbdA6' target='_BLANK'>
+							<div className="contact-list-inner">
+								<div className="media">
+								<div className="media-left">
+									<img src={publicUrl+"assets/img/icon/16.png"} alt="img" />
+								</div>
+								<div className="media-body align-self-center">
+									<h5>{tran('address')}</h5>
+									<p>Lanxang Avenue, Vientiane Capital , Lao PDR</p>
+								</div>
+								</div>
+							</div>
+					  	</a>
 			        </div>
 			      </div>
 			    </div>
 			  </div>
 			  {/* counter area start */}
-			  <div className="counter-area pd-bottom-120">
+			  {/* <div className="counter-area pd-bottom-120">
 			    <div className="container">
 			      <div className="row">
 			        <div className="col-lg-4">
 			          <div className="section-title mb-0">
 			            <h6 className="sub-title right-line">Get in touch</h6>
 			            <h2 className="title">{tran('writeus')}</h2>
-			            {/* <p className="content pb-3">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, </p> */}
 			            <ul className="social-media style-base pt-3">
 			              <li>
 			                <i className="fa fa-facebook" aria-hidden="true" />
@@ -81,16 +84,6 @@ const ContactPage = ({tran}) => {
 			        <div className="col-lg-8 mt-5 mt-lg-0">
 			          <form className="contact-form-inner  mt-5 mt-md-0">
 			            <div className="row">
-			              {/* <div className="col-lg-6">
-			                <div className="single-input-inner style-bg-border">
-			                  <input type="text" placeholder="First Name" />
-			                </div>
-			              </div>
-			              <div className="col-lg-6">
-			                <div className="single-input-inner style-bg-border">
-			                  <input type="text" placeholder="Last Name" />
-			                </div>
-			              </div> */}
 			              <div className="col-6">
 			                <div className="single-input-inner style-bg-border">
 			                  <input type="text" placeholder="Email" />
@@ -114,7 +107,7 @@ const ContactPage = ({tran}) => {
 			        </div>
 			      </div>
 			    </div>
-			  </div>
+			  </div> */}
 			  {/* counter area end */}
 			  {/* contact area start */}
 			  <div className="contact-g-map">

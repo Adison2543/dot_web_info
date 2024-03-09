@@ -7,7 +7,6 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
-import { FacebookProvider, Like, Comments  } from 'react-facebook';
 
 
 const BlogDetails = () => {
