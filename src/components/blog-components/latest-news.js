@@ -90,51 +90,57 @@ const LatestNews = () => {
 							<ul className="single-blog-list-wrap mb-5 mb-lg-0 type-1">
 								{news[2] && 
 								<li>
-									<div className="media single-blog-list-inner">
-									<div className="media-left date">
-										<span>{gatMonth(news[2]?.udp_date ? news[2].udp_date : Date())}</span><br/>
-										{gatDay(news[2]?.udp_date ? news[2].udp_date : Date())}
-									</div>
-									<div className="media-body details">
-										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[2]?.news_id}/${news[2]?.news_friendly}`}>{news[2]?.news_title ? news[2]?.news_title : "-"}</Link></h5>
-									</div>
-									</div>
-								</li> }
-								{news[3] &&
-								<li>
-									<div className="media single-blog-list-inner">
-									<div className="media-left date">
-										<span>{gatMonth(news[3]?.udp_date ? news[3].udp_date : Date())}</span><br/>
-										{gatDay(news[3]?.udp_date ? news[3].udp_date : Date())}
-									</div>
-									<div className="media-body details">
-										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[3]?.news_id}/${news[3]?.news_friendly}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
-									</div>
-									</div>
-								</li>  }
-								{news[4] &&
-								<li>
-									<div className="media single-blog-list-inner">
+									<Link to={`/blog-details/${news[2]?.news_id}/${news[2]?.news_friendly}`}>
+										<div className="media single-blog-list-inner">
 										<div className="media-left date">
-											<span>{gatMonth(news[4]?.udp_date ? news[4].udp_date : Date())}</span><br/>
-											{gatDay(news[4]?.udp_date ? news[4].udp_date : Date())}
+											<span>{gatMonth(news[2]?.udp_date ? news[2].udp_date : Date())}</span><br/>
+											{gatDay(news[2]?.udp_date ? news[2].udp_date : Date())}
 										</div>
 										<div className="media-body details">
 											<ul className="blog-meta">
-											<li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li>
-											<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											{/* <li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li> */}
+											<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[4]?.news_id}/${news[4]?.news_friendly}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
+											<h5 className='newstitle'>{news[2]?.news_title ? news[2]?.news_title : "-"}</h5>
 										</div>
-									</div>
+										</div>
+									</Link>
+								</li> }
+								{news[3] &&
+								<li>
+									<Link to={`/blog-details/${news[3]?.news_id}/${news[3]?.news_friendly}`}>
+										<div className="media single-blog-list-inner">
+										<div className="media-left date">
+											<span>{gatMonth(news[3]?.udp_date ? news[3].udp_date : Date())}</span><br/>
+											{gatDay(news[3]?.udp_date ? news[3].udp_date : Date())}
+										</div>
+										<div className="media-body details">
+											<ul className="blog-meta">
+											{/* <li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li> */}
+											<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul>
+											<h5 className='newstitle'>{news[3]?.news_title ? news[3].news_title : "-"}</h5>
+										</div>
+										</div>
+									</Link>
+								</li>  }
+								{news[4] &&
+								<li>
+									<Link to={`/blog-details/${news[4]?.news_id}/${news[4]?.news_friendly}`}>
+										<div className="media single-blog-list-inner">
+											<div className="media-left date">
+												<span>{gatMonth(news[4]?.udp_date ? news[4].udp_date : Date())}</span><br/>
+												{gatDay(news[4]?.udp_date ? news[4].udp_date : Date())}
+											</div>
+											<div className="media-body details">
+												<ul className="blog-meta">
+												{/* <li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li> */}
+												<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+												</ul>
+												<h5 className='newstitle'>{news[4]?.news_title ? news[4].news_title : "-"}</h5>
+											</div>
+										</div>
+									</Link>
 								</li> }
 							</ul>
 						</div> }
@@ -142,37 +148,41 @@ const LatestNews = () => {
 							<div className="row justify-content-center">
 								{news[0] && 
 								<div className="col-md-6">
-									<div className="single-blog-inner type-1">
-									<div className="thumb">
-										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
-										<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
-									</div>
-									<div className="details">
-										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-										</ul>
-										<h5 className='newstitle' ><Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
-									</div>
-									</div>
+									<Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>
+										<div className="single-blog-inner type-1">
+										<div className="thumb">
+											<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250}  alt="img" />
+											<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
+										</div>
+										<div className="details">
+											<ul className="blog-meta">
+											{/* <li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li> */}
+											<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul>
+											<h5 className='newstitle' ><Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
+											<Link className="read-more-text" to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+										</div>
+										</div>
+									</Link>
 								</div> }
 								{news[1] &&
 								<div className="col-md-6">
-									<div className="single-blog-inner type-1">
-									<div className="thumb">
-										<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
-										<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
-									</div>
-									<div className="details">
-										<ul className="blog-meta">
-										<li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li>
-										<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-										</ul>
-										<h5 className='newstitle'><Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
-										<Link className="read-more-text" to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
-									</div>
-									</div>
+									<Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>
+										<div className="single-blog-inner type-1">
+										<div className="thumb">
+											<img src={"https://oasapi.iddriver.com/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} alt="img" />
+											<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
+										</div>
+										<div className="details">
+											<ul className="blog-meta">
+											{/* <li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li> */}
+											<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul>
+											<h5 className='newstitle'><Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
+											<Link className="read-more-text" to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+										</div>
+										</div>
+									</Link>
 								</div> }
 							</div>
 						</div>

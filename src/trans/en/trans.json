@@ -62,5 +62,7 @@
     "september": "SEPTEMBER",
     "october": "OCTOBER",
     "november": "NOVEMBER",
-    "december": "DECEMBER"
+    "december": "DECEMBER",
+
+    "enroll" : "Enroll"
 }

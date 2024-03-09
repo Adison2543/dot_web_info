@@ -86,24 +86,27 @@ const CourseDetails = ({tran}) => {
 							<div className="course-details-content">
 								<h4 className="title">{tran('overview')}</h4>
 								<p>{course?.course_description}</p>
-								<div id="accordion" className="accordion-area mt-4">
-								{Array.isArray(lesson) && lesson.map((item, index) => (
-									<div className="card single-faq-inner style-no-border" key={index}>
-										<div className="card-header" id={`ff-${index}`}>
-										<h5 className="mb-0">
-											<button className="btn-link collapsed" data-toggle="collapse" data-target={`#f-${index}`} aria-expanded="true" aria-controls={`f-${index}`}>
-											{index + 1}.  {item.cs_name}
-											<i className="fa fa-eye" />
-											</button>
-										</h5>
+								<div id="accordion" className="accordion-area mt-4 position-relative">
+									{Array.isArray(lesson) && lesson.slice(0, 5).map((item, index) => (
+										<div className="card single-faq-inner style-no-border" key={index}>
+											<div className="card-header" id={`ff-${index}`}>
+											<h5 className="mb-0">
+												<button className="btn-link collapsed" data-toggle="collapse" data-target={`#f-${index}`} aria-expanded="true" aria-controls={`f-${index}`}>
+												{index + 1}.  {item.cs_name}
+												<i className="fa fa-eye" />
+												</button>
+											</h5>
+											</div>
+											<div id={`f-${index}`} className="collapse" aria-labelledby={`ff-${index}`} data-parent="#accordion">
+											<div className="card-body">
+												{item.cs_description}
+											</div>
+											</div>
 										</div>
-										<div id={`f-${index}`} className="collapse" aria-labelledby={`ff-${index}`} data-parent="#accordion">
-										<div className="card-body">
-											{item.cs_description}
-										</div>
-										</div>
+									))}
+									<div className='d-flex justify-content-center position-absolute bottom-0 w-100 h-50' style={{ backgroundImage: 'linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,255,255,1))' }}>
+										<a href='http://course.iddriver.com/course' target='_BLANK' className='align-self-end'><button className='seemoreBtn'><span>{tran('enroll')}</span></button></a>
 									</div>
-								))}
 								</div>
 							</div>
 							</div>

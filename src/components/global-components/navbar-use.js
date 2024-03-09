@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li className="">
                   <Link to="#activity" smooth="true">{t('activity')}</Link>
                 </li>
-                <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
+                <li><Link to="/contact" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
@@ -62,7 +62,12 @@ const Navbar = () => {
                     </select>
                   </div>
                 </li>
-                <li><Link className="nav-right-part-mobile btn btn-base" to="/">{t('signup')}</Link></li>
+                <li>
+                  {/* <Link className="nav-right-part-mobile btn btn-base" to="http://course.iddriver.com/">{t('signup')}</Link> */}
+                  <a className="nav-right-part-mobile btn btn-base" href="http://course.iddriver.com/" target="_blank" rel="noopener noreferrer">
+                    {t('signup')}
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
@@ -78,7 +83,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <a className="btn btn-base" href="http://course.iddriver.com/" target='_blank'>{t('signup')}</a>
+              {/* <a className="btn btn-base" href="http://course.iddriver.com/" target='_blank'>{t('signup')}</a> */}
+              <a className="btn btn-base" href="http://course.iddriver.com/" target="_blank" rel="noopener noreferrer">
+                {t('signup')}
+              </a>
 
               {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
