@@ -13,8 +13,6 @@ class Navbar extends Component {
 
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let imgattr = 'logo'
-        let anchor = '#'
         return (
         	<div className="navbar-area">
             {/* navbar top start */}
