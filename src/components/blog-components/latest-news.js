@@ -97,7 +97,7 @@ const LatestNews = () => {
 											{/* <li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li> */}
 											<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[2]?.news_id}/${news[2]?.news_friendly}`}>{news[2]?.news_title ? news[2]?.news_title : "-"}</Link></h5>
+											<h5 className='newstitle'>{news[2]?.news_title ? news[2]?.news_title : "-"}</h5>
 										</div>
 										</div>
 									</Link>
@@ -115,7 +115,7 @@ const LatestNews = () => {
 											{/* <li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li> */}
 											<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[3]?.news_id}/${news[3]?.news_friendly}`}>{news[3]?.news_title ? news[3].news_title : "-"}</Link></h5>
+											<h5 className='newstitle'>{news[3]?.news_title ? news[3].news_title : "-"}</h5>
 										</div>
 										</div>
 									</Link>
@@ -133,7 +133,7 @@ const LatestNews = () => {
 												{/* <li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li> */}
 												<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 												</ul>
-												<h5 className='newstitle'><Link to={`/blog-details/${news[4]?.news_id}/${news[4]?.news_friendly}`}>{news[4]?.news_title ? news[4].news_title : "-"}</Link></h5>
+												<h5 className='newstitle'>{news[4]?.news_title ? news[4].news_title : "-"}</h5>
 											</div>
 										</div>
 									</Link>
@@ -155,8 +155,8 @@ const LatestNews = () => {
 											{/* <li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li> */}
 											<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle' ><Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{news[0]?.news_title ? news[0].news_title : "-"}</Link></h5>
-											<Link className="read-more-text" to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+											<h5 className='newstitle' >{news[0]?.news_title ? news[0].news_title : "-"}</h5>
+											{t('readmore')}<i className="fa fa-angle-right" />
 										</div>
 										</div>
 									</Link>
@@ -174,8 +174,8 @@ const LatestNews = () => {
 											{/* <li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li> */}
 											<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
 											</ul>
-											<h5 className='newstitle'><Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{news[1]?.news_title ? news[1].news_title : "-"}</Link></h5>
-											<Link className="read-more-text" to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>{t('readmore')}<i className="fa fa-angle-right" /></Link>
+											<h5 className='newstitle'>{news[1]?.news_title ? news[1].news_title : "-"}</h5>
+											{t('readmore')}<i className="fa fa-angle-right" />
 										</div>
 										</div>
 									</Link>

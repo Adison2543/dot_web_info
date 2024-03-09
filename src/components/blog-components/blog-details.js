@@ -6,7 +6,7 @@ import axios from 'axios';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
-import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon, XIcon } from 'react-share';
+import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 
 
 const BlogDetails = () => {

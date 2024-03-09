@@ -5,8 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Page_header = ({headertitle, subheader}) => {
 
 		const {t} = useTranslation();
-        let HeaderTitle = headertitle;
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        let HeaderTitle = headertitle; 
         let Subheader = subheader ? subheader : HeaderTitle
 
         return (

@@ -34,8 +34,7 @@ const Navbar = () => {
               <Link to="/"><img src={publicUrl+"assets/img/logoPWT02.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
-              <a className="btn btn-base" href="/">{t('signup')}</a>
-              {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
+              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
@@ -79,7 +78,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" target='_blank'>{t('signup')}</a>
+              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
             </div>
           </div>
         </nav>

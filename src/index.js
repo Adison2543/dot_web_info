@@ -22,9 +22,9 @@ import Policy from './components/policy';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import menu_en from './trans/en/trans.json'
-import menu_th from './trans/th/trans.json'
-import menu_lo from './trans/lo/trans.json'
+import menu_en from './trans/en/trans.json';
+// import menu_th from './trans/th/trans.json'
+import menu_lo from './trans/lo/trans.json';
 
 
 i18n

@@ -8,7 +8,6 @@ import HowToWork from './section-components/how-to-work';
 import Testimonial from './section-components/testimonial-v2';
 import LatestPost from './blog-components/latest-news';
 import Footer from './global-components/footer-v2';
-import Client from './section-components/client-v2';
 import { Suspense } from 'react';
 import Loading from 'react-loading';
 import { useTranslation } from 'react-i18next';

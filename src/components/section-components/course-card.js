@@ -17,7 +17,7 @@ const CourseCard = ({ course, tran }) => {
           <div className="single-course-inner">
             <div className="thumb text-center">
               {/* <img src={course.course_cover} alt="img" height="200px" /> */}
-              <img src={`https://dot-api.mpwt.gov.la/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} />
+              <img src={`https://dot-api.mpwt.gov.la/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} alt=""/>
             </div>
             <div className="details">
               <div className="details-inner">
@@ -26,7 +26,7 @@ const CourseCard = ({ course, tran }) => {
                   <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
                 </div>
                 <h6>
-                  <Link to={`/course-details/${course.course_id}/${course.course_name}`}>{course.course_name}</Link>
+                  {course.course_name}
                 </h6>
               </div>
               <div className="emt-course-meta">
