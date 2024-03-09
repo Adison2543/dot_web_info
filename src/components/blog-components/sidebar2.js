@@ -5,7 +5,6 @@ import '../css/sidebar.css'
 
 
 const Sidebar = ({id, tran}) => {
-    console.log("id: ", id)
 
     return (
           <div className="col-lg-4 col-12" >

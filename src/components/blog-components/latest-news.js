@@ -52,7 +52,7 @@ const LatestNews = () => {
 					setNews(fetchNews1.data.data);
 				}	
 			} catch (error) {
-				console.log("Fetch error: ", error)
+				console.log("Fetch error: ")
 			}
 			
 		}
@@ -64,11 +64,7 @@ const LatestNews = () => {
 			// Cancel any ongoing tasks or subscriptions here
 		};
 	}, []);
-	if (news && news.length > 0) {
-		console.log("newsData: " + JSON.stringify(news[0]));
-	  } else {
-		console.log("news.data is undefined or empty.");
-	  }
+	
     return (
     	<>
 			<div className="blog-area pd-top-80 pd-bottom-90 go-top" id="news">

@@ -25,12 +25,11 @@ const CourseFilter = () => {
 			})
 			.then(response => response.json())
 			.then(result => {
-				console.log("res: " + JSON.stringify(result.data));
 				setCourse(result.data);
 			})
-			.catch(error => console.log('error', error));
+			.catch(error => console.log('error'));
 		} catch (error) {
-			console.log("Fetch Error: ", error);
+			console.log("Fetch Error: ");
 		}
 	}, []);
 

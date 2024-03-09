@@ -53,8 +53,6 @@ const CourseDetails = ({tran}) => {
 		fetchCourse();
 		return () => abortController.abort();
 	}, []);
-	console.log("course: ",course)
-	console.log("Lesson: ",lesson)
 
 
 	const gatFDate = (dateData) => {

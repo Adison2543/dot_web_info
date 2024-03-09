@@ -11,7 +11,6 @@ const Navbaruse2 = () => {
       },[])
 
       const changeLanguage = (e) => {
-        console.log("ChangeLanguage: ",e.target.value);
         i18n.changeLanguage(e.target.value);
       };
       const getlange = () => {

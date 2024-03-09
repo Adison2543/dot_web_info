@@ -44,8 +44,6 @@ const CoursePage = ({tran}) => {
 			fetchCourse();
 			return () => abortController.abort();
 		}, [page, searchdata]);
-		console.log("courses: ", courses);
-		console.log("Data: ", courses.data);
 
 		const prevPage = () => {
 			setPage((page) => page - 1)
