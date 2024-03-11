@@ -29,7 +29,7 @@ const singleblog = ({news, tran}) => {
             </div>
             <div className="details">
                 <ul className="blog-meta">
-                    <li><i className="fa fa-user" /> {news.user_update ? news.user_update : news.user_create}</li>
+                    {/* <li><i className="fa fa-user" /> {news.user_update ? news.user_update : news.user_create}</li> */}
                     <li><i className="fa fa-calendar-check-o" /> {gatFDate(news.udp_date ? news.udp_date : news.crt_date)}</li>
                 </ul>
                 <h3 className="title"><Link to={`/blog-details/${news.news_id}/${news.news_friendly}`}>{news.news_title ? news.news_title : "..."}</Link></h3>
