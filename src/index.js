@@ -50,7 +50,7 @@ i18n
 
 const Root = () => {
         return(
-                <Router basename="/">
+                <HashRouter basename="/">
 	                <div>
 	                <Switch>
                         <Route exact path="/" component={HomeV1} />
@@ -73,7 +73,7 @@ const Root = () => {
                         <Route path="/policy" component={Policy} />
 	                </Switch>
 	                </div>
-                </Router>
+                </HashRouter>
         )
 }
 
