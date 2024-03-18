@@ -3,6 +3,12 @@
     border-radius: 10px;
     box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, .5);
     backdrop-filter: blur(5px); */
+
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+
 }
 .shape-backg {
     position: absolute;
@@ -13,10 +19,16 @@
     width: 600px;
 }
 .btnContainer {
-    padding-left: 12%;
+    /* padding-left: 12%; */
+    display: flex;
+    justify-content: center;
 }
 
-@media screen and (max-width: 992px) {
+.main-title {
+    color: var(--main-color);
+}
+
+/* @media screen and (max-width: 992px) {
     .shape-backg {
         position: absolute;
         top: -120px;
@@ -60,8 +72,7 @@
     .banner-title {
         background-color: rgba(255, 255, 255, .5);
         border-radius: 10px;
-        /* box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, .5); */
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
     }
-}
+} */

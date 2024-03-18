@@ -41,11 +41,20 @@ const Navbar = () => {
                 <li className=" current-menu-item">
                   <Link to="/">{t('home')}</Link>
                 </li>
+                <li className="menu-item-has-children">
+			            <Link to="">Information</Link>
+			            <ul className="sub-menu">
+				            <li><Link to="/about-the-project">About the project</Link></li>
+	                  <li><Link to="">Department of Transport</Link></li>
+	                  <li><Link to="">DoT Smart App</Link></li>
+	                  <li><Link to="">Online Courses</Link></li>
+			            </ul>
+			          </li>
                 <li className="">
-                    <Link to="/blog" smooth="true">{t('news')}</Link>
+                  <Link to="/course" smooth="true">License Procedure</Link>
                 </li>
                 <li className="">
-                  <Link to="/course" smooth="true">{t('course')}</Link>
+                    <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
                   <Link to="#activity" smooth="true">{t('activity')}</Link>
