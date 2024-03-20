@@ -56,9 +56,6 @@ const Navbar = () => {
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
-                <li className="">
-                  <Link to="#activity" smooth="true">{t('activity')}</Link>
-                </li>
                 <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
