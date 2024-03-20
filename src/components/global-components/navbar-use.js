@@ -84,8 +84,13 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
+              <Link className="signin-btn" to="/sign-in">Sign In</Link>
               <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
             </div>
+            {/* <div className="nav-right-part nav-right-part-desktop">
+              <Link className="signin-btn" to="/sign-in">Sign In</Link>
+              <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
+            </div> */}
           </div>
         </nav>
       </div>
