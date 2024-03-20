@@ -9,7 +9,7 @@ const about_this_project = () => {
         <Navbar />
         <PageHeader headertitle={'About the Project'}  />
 
-        <div className="contact-list pd-top-120 pd-bottom-90">
+        <div className="contact-list pd-top-100">
             <div className="container">
                 <div className="row justify-content-center mb-3">
                     <div class="col-12 col-md-2 fw-bold">Project:</div>
