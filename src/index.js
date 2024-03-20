@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 import HomeV1 from './components/home-v1';
 import AboutThisProject from './components/abou-this-project';
-import AboutApp from './components/about-app';
-import AboutDoT from './components/about-dot';
-import licenseProcedure from './components/license-procedure';
 import HomeV2 from './components/home-v2';
 import HomeV3 from './components/home-v3';
 import Course from './components/course';
@@ -76,9 +73,6 @@ const Root = () => {
                         <Route path="/blog-details/:news_id/:news_title" component={BlogDetails} />
                         <Route path="/policy" component={Policy} />
                         <Route path="/about-the-project" component={AboutThisProject} />
-                        <Route path="/about-app" component={AboutApp} />
-                        <Route path="/about-dot" component={AboutDoT} />
-                        <Route path="/license-procedure" component={licenseProcedure} />
 	                </Switch>
 	                </div>
                 </HashRouter>

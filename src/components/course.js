@@ -2,10 +2,9 @@ import React from 'react';
 import Navbar from './global-components/navbar-use2';
 import PageHeader from './global-components/page-header';
 import Course from './section-components/course-page';
-import Footer from './global-components/footer-use';
+import Footer from './global-components/footer';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import Testimonial from './section-components/testimonial-use';
 
 const AboutPage = () => {
     const {t} = useTranslation();
@@ -17,7 +16,6 @@ const AboutPage = () => {
         <Navbar />
         <PageHeader headertitle={t('course')}  />
         <Course tran={t}/>
-        <Testimonial />
         <Footer />
     </div>
 }

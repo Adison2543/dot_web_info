@@ -15,10 +15,10 @@ const Banner = ({tran}) => {
 			      </div>
 			      <div className="col-lg-7 order-lg-1 align-self-center">
 			        <div className="fadeL banner-inner text-center text-lg-left mt-5 mt-lg-0 p-4 banner-title" >
-						<img src={publicUrl+"assets/img/banner/1.png"} alt="img" className='shape-backg'></img>
-			          <h6 className="b-animate-1 ">Ministry of Public Works and Transport</h6>
-			          <h1 className="b-animate-2 title text-center">ກະຊວງໂຍທາທິການ <br/> ແລະ ຂົນສົ່ງ</h1>
-			          {/* <p className="b-animate-2 fs-4 text-center">Under the project immprovement of driving license system in <span className='fw-bold main-title'>Lao PDR, Department of Transport</span> has jointly developed a <b>Mobile App</b> and <b>Online Course</b></p> */}
+						{/* <img src={publicUrl+"assets/img/banner/1.png"} alt="img" className='shape-backg'></img> */}
+			          {/* <h6 className="b-animate-1 ">Ministry of Public Works and Transport</h6> */}
+			          {/* <h1 className="b-animate-2 title text-center">ກະຊວງໂຍທາທິການ <br/> ແລະ ຂົນສົ່ງ</h1> */}
+			          <p className="b-animate-2 fs-4 text-center">Under the project immprovement of driving license system in <span className='fw-bold main-title'>Lao PDR, Department of Transport</span> has jointly developed a <b>Mobile App</b> and <b>Online Course</b></p>
 			          <div className='btnContainer'>
 						{/* <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/">Get A Quote</Link> */}
 						<a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="https://dot-learning.mpwt.gov.la/course" target='_blank'>Download DoT Smart App</a>

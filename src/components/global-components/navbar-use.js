@@ -45,19 +45,19 @@ const Navbar = () => {
 			            <Link to="">Information</Link>
 			            <ul className="sub-menu">
 				            <li><Link to="/about-the-project">About the project</Link></li>
-	                  <li><Link to="/about-dot">Department of Transport</Link></li>
-	                  <li><Link to="/about-app">DoT Smart App</Link></li>
-	                  <li><Link to="/course">Online Courses</Link></li>
+	                  <li><Link to="">Department of Transport</Link></li>
+	                  <li><Link to="">DoT Smart App</Link></li>
+	                  <li><Link to="">Online Courses</Link></li>
 			            </ul>
 			          </li>
                 <li className="">
-                  <Link to="/license-procedure" smooth="true">License Procedure</Link>
+                  <Link to="/course" smooth="true">License Procedure</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
-                  <Link to="" smooth="true">{t('activity')}</Link>
+                  <Link to="#activity" smooth="true">{t('activity')}</Link>
                 </li>
                 <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>

@@ -37,29 +37,19 @@ const Navbaruse2 = () => {
               {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
-            <ul className="navbar-nav menu-open">
+              <ul className="navbar-nav menu-open">
                 <li className=" current-menu-item">
-                  <Link to="/">{t('home')}</Link>
-                </li>
-                <li className="menu-item-has-children">
-			            <Link to="">Information</Link>
-			            <ul className="sub-menu">
-				            <li><Link to="/about-the-project">About the project</Link></li>
-	                  <li><Link to="/about-dot">Department of Transport</Link></li>
-	                  <li><Link to="/about-app">DoT Smart App</Link></li>
-	                  <li><Link to="/course">Online Courses</Link></li>
-			            </ul>
-			          </li>
-                <li className="">
-                  <Link to="/license-procedure" smooth="true">License Procedure</Link>
+                    <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
                 <li className="">
-                  <Link to="" smooth="true">{t('activity')}</Link>
+                    <Link to="/course" smooth="true">{t('course')}</Link>
                 </li>
-                <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
+                <li className="">
+                    <Link to="/contact-us" smooth="true">{t('contact')}</Link>
+                </li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
@@ -69,9 +59,7 @@ const Navbaruse2 = () => {
                     </select>
                   </div>
                 </li>
-                <li>
-                  <a className="btn btn-base nav-right-part-mobile" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
-                </li>
+                <li><Link className="nav-right-part-mobile btn btn-base" to="/">{t('signup')}</Link></li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
