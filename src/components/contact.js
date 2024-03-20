@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './global-components/navbar-use2';
 import PageHeader from './global-components/page-header';
 import ContactPage from './section-components/contact-page';
-import Footer from './global-components/footer';
+import Footer from './global-components/footer-use';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {

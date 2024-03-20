@@ -67,6 +67,8 @@ const CourseDetails = ({tran}) => {
 		return `${day} ${month}, ${year}`;
 	};
 
+	console.log(lesson);
+
     return  <div className="course-single-area pd-top-120 pd-bottom-90">
 			  <div className="container">
 			  	{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div> :

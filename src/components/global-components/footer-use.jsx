@@ -42,7 +42,7 @@ const Footer_v1 = () => {
                                             </li>
 										<li><i className="fa fa-envelope" /> depttransportlaos@gmail.com</li>
 										<li><i className="fa fa-phone" /> 856-21 412xxx</li>
-										<li><i class="fa fa-facebook-square"></i> <a href="" className='text-primary'>Department of Transport Laos</a></li>
+										<li><i className="fa fa-facebook-square"></i> <a href="" className='text-primary'>Department of Transport Laos</a></li>
 									</ul>
 								</div>
 							</div>

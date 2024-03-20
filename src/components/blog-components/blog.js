@@ -48,6 +48,7 @@ const Blog = () => {
 			fetchCourse();
 			return () => abortController.abort();
 		}, [page,cata, searchdata]);
+
 		// Paginate
 		const prevPage = () => {
 			setPage((page) => page - 1)

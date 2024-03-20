@@ -37,7 +37,7 @@ const Navbar = () => {
               <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
-              <ul className="navbar-nav menu-open ps-lg-1">
+              <ul className="navbar-nav menu-open">
                 <li className=" current-menu-item">
                   <Link to="/">{t('home')}</Link>
                 </li>
@@ -56,6 +56,9 @@ const Navbar = () => {
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
+                <li className="">
+                  <Link to="" smooth="true">{t('activity')}</Link>
+                </li>
                 <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
@@ -72,9 +75,9 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              {/* <div style={{display: "inline-block"}}>
+              <div style={{display: "inline-block"}}>
                 <i className="bi bi-globe"></i>
-              </div> */}
+              </div>
               <div style={{display: "inline-block"}}>
                 <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
                   <option value="lo" >ລາວ</option>
@@ -84,13 +87,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <Link className="btn btn-success text-white" to="/about-app">Download App</Link>
               <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
             </div>
-            {/* <div className="nav-right-part nav-right-part-desktop">
-              <Link className="signin-btn" to="/sign-in">Sign In</Link>
-              <Link className="btn btn-base" to="/sign-up">Sign Up</Link>
-            </div> */}
           </div>
         </nav>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CourseCard = ({ course, tran }) => {
-
+  
   const gatFDate = (dateData) => {
 		const date = new Date(dateData);
 		const day = date.getDate();

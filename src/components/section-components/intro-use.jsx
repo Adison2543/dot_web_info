@@ -10,8 +10,8 @@ const Intro = ({tran}) => {
                     <div className="row no-gutters p-3">
                         <h3 className='text-white'>Features</h3>
                     </div>
-                    <div class="row px-5 text-center">
-                        <div class="col-sm-6 col-md-4">
+                    <div className="row px-5 text-center">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
@@ -22,7 +22,7 @@ const Intro = ({tran}) => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
@@ -33,7 +33,7 @@ const Intro = ({tran}) => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
@@ -44,7 +44,7 @@ const Intro = ({tran}) => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
@@ -55,7 +55,7 @@ const Intro = ({tran}) => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
@@ -66,7 +66,7 @@ const Intro = ({tran}) => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
                                     <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />

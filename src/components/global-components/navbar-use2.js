@@ -37,19 +37,26 @@ const Navbaruse2 = () => {
               {/* <a className="search-bar" href=""><i className="fa fa-search" /></a> */}
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
-              <ul className="navbar-nav menu-open">
+            <ul className="navbar-nav menu-open ps-1">
                 <li className=" current-menu-item">
-                    <Link to="/">{t('home')}</Link>
+                  <Link to="/">{t('home')}</Link>
+                </li>
+                <li className="menu-item-has-children">
+			            <Link to="">Information</Link>
+			            <ul className="sub-menu">
+				            <li><Link to="/about-the-project">About the project</Link></li>
+	                  <li><Link to="/about-dot">Department of Transport</Link></li>
+	                  <li><Link to="/about-app">DoT Smart App</Link></li>
+	                  <li><Link to="/course">Online Courses</Link></li>
+			            </ul>
+			          </li>
+                <li className="">
+                  <Link to="/license-procedure" smooth="true">License Procedure</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
                 </li>
-                <li className="">
-                    <Link to="/course" smooth="true">{t('course')}</Link>
-                </li>
-                <li className="">
-                    <Link to="/contact-us" smooth="true">{t('contact')}</Link>
-                </li>
+                <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
                     <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
@@ -59,13 +66,15 @@ const Navbaruse2 = () => {
                     </select>
                   </div>
                 </li>
-                <li><Link className="nav-right-part-mobile btn btn-base" to="/">{t('signup')}</Link></li>
+                <li>
+                  <a className="btn btn-base nav-right-part-mobile" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
+                </li>
               </ul>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <div style={{display: "inline-block"}}>
+              {/* <div style={{display: "inline-block"}}>
                 <i className="bi bi-globe"></i>
-              </div>
+              </div> */}
               <div style={{display: "inline-block"}}>
                 <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
                   <option value="lo" >ລາວ</option>
@@ -75,6 +84,7 @@ const Navbaruse2 = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
+              <Link className="btn btn-success text-white" to="/about-app">Download App</Link>
               <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
             </div>
           </div>
