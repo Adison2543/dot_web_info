@@ -19,7 +19,7 @@ const about_app = () => {
                         <div className='d-flex align-items-center flex-wrap'>
                             <p className='mb-0 fs-5 text-nowrap'>Download Now:</p>
                             <div className='d-flex flex-nowrap'>
-                                <a href="https://play.google.com/store/apps/details?id=link.mpwt.dotsmart" target='_BLANK'><img className='mx-2' src={publicUrl + "assets/img/googleplay.png"} width={'200px'} alt="img" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=link.mpwt.dotsmart&hl=en-TH" target='_BLANK'><img className='mx-2' src={publicUrl + "assets/img/googleplay.png"} width={'200px'} alt="img" /></a>
                                 <a className="d-flex" href="https://play.google.com/store/apps/details?id=link.mpwt.dotsmart"><img className='mx-2 align-self-center' src={publicUrl + "assets/img/appstore.svg"} width={'160px'} alt="img" /></a>
                             </div>
                         </div>
