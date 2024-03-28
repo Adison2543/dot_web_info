@@ -27,8 +27,8 @@ const Footer_v1 = () => {
                                     <hr />
                                     <h6 className="">Sponsored and Supported by:</h6>
                                     <div className='d-flex gap-2'>
-                                        <img src={publicUrl + "assets/img/partners/ursf2.jpg"} width={'110px'} alt="img" />
-                                        <img src={publicUrl + "assets/img/partners/escap.png"} width={'130px'} alt="img" style={{ objectFit: 'contain' }} />
+                                        <img src={publicUrl + "assets/img/partners/ursf2.webp"} width={'110px'} alt="img" />
+                                        <img src={publicUrl + "assets/img/partners/escap.webp"} width={'130px'} alt="img" style={{ objectFit: 'contain' }} />
                                     </div>
 								</div>
 							</div>
