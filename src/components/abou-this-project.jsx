@@ -30,8 +30,8 @@ const about_this_project = () => {
                 <div className="row justify-content-center mt-4">
                     <div className="col-12 col-md-2 fw-bold">Sponsored and Supported by:</div>
                     <div className="col-12 col-md-8">
-                        <img className='mx-2' src={publicUrl + "assets/img/partners/ursf2.jpg"} width={'110px'} alt="img" />
-                        <img className='mx-2' src={publicUrl + "assets/img/partners/escap.png"} width={'130px'} alt="img" style={{ objectFit: 'contain' }} />
+                        <img className='mx-2' src={publicUrl + "assets/img/partners/ursf2.webp"} width={'110px'} alt="img" />
+                        <img className='mx-2' src={publicUrl + "assets/img/partners/escap.webp"} width={'130px'} alt="img" style={{ objectFit: 'contain' }} />
                     </div>
                 </div>
 

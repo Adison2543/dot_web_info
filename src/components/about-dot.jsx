@@ -17,7 +17,7 @@ const about_this_project = () => {
                 </div>
                 <div className="row">
                     <p className='fw-bold fs-5'>ໂຄງຮ່າງການຈັດຕັ້ງ</p>
-                    <img className='mx-2' src={publicUrl + "assets/img/aboutdot.png"} alt="img" />
+                    <img className='mx-2' src={publicUrl + "assets/img/aboutdot.webp"} alt="img" />
                     <p>Last update: 01/03/2024</p>
                 </div>
 

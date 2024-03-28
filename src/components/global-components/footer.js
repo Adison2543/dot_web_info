@@ -91,7 +91,7 @@ const Footer_v1 = () => {
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-4 col-sm-2 col-md-4 align-self-center">
-								<a href="index.html"><img src={publicUrl + "assets/img/LogoPWT.png"} width={'130px'} alt="img" /></a>
+								<a href="index.html"><img src={publicUrl + "assets/img/LogoPWT.webp"} width={'130px'} alt="img" /></a>
 							</div>
 							{/* <div className="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
 								<ul className="social-media mt-md-0 mt-3">

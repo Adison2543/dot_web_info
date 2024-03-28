@@ -23,7 +23,7 @@ const Footer_v1 = () => {
                             <div className="col-lg-4 col-md-6">
 								<div className="widget widget_nav_menu">
 									<h6 className="">ກົມຂົນສົ່ງ, ກະຊວງ​ໂຍທາທິການແລະ​ຂົນສົ່ງ</h6>
-									<img src={publicUrl + "assets/img/LogoPWT.png"} width={'130px'} alt="img" />
+									<img src={publicUrl + "assets/img/LogoPWT.webp"} width={'130px'} alt="img" />
                                     <hr />
                                     <h6 className="">Sponsored and Supported by:</h6>
                                     <div className='d-flex gap-2'>

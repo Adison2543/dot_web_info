@@ -13,7 +13,7 @@ const about_app = () => {
             <div className="container">
                 <div className="row mb-4">
                     <div className='col'>
-                        <img className='mx-2' src={publicUrl + "assets/img/dotapplogo.png"} width={'80px'} alt="img" />
+                        <img className='mx-2' src={publicUrl + "assets/img/dotapplogo.webp"} width={'80px'} alt="img" />
                     </div>
                     <div className='col'>
                         <div className='d-flex align-items-center flex-wrap'>
@@ -31,7 +31,7 @@ const about_app = () => {
                 </div>
                 <div className="row">
                     <div className="col-12 col-sm-6 col-md-4 px-4 mb-3">
-                        <img className='mx-2' src={publicUrl + "assets/img/phoneapp.png"} alt="img" />
+                        <img className='mx-2' src={publicUrl + "assets/img/phoneapp.webp"} alt="img" />
                     </div>
                     <div className="col-12 col-sm-6 col-md-8">
                         <p className='fw-bold fs-5'>Features</p>
