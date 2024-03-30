@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CourseCard from './course-card';
 import { useTranslation } from 'react-i18next';
+import { API_BASE_URL } from '../../apiConfig';
 
 const CourseFilter = () => {
 	const [courses, setCourse] = useState([]);
@@ -13,7 +14,7 @@ const CourseFilter = () => {
 		myHeaders.append("Authorization", "ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p");
 
 		try {
-			const data = fetch("https://dot-api.mpwt.gov.la/course/list", {
+			const data = fetch(`${API_BASE_URL}/course/list`, {
 				method: 'POST',
 				headers: myHeaders,
 				body: JSON.stringify({

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Pagination } from 'react-bootstrap';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 const Blog = () => {
 		const {t} = useTranslation();
@@ -24,7 +25,7 @@ const Blog = () => {
 			const fetchCourse = async () => {
 				try {
 					setLoading(true);
-					let fetchNews1 = await axios.post(`https://dot-api.mpwt.gov.la/news/list?news_type=${cata}`, 
+					let fetchNews1 = await axios.post(`${API_BASE_URL}/news/list?news_type=${cata}`, 
 						{
 							signal: abortController.signal,
 							page: page,
@@ -32,10 +33,7 @@ const Blog = () => {
 							search: searchdata
 
 						}, {
-							headers: { 
-								'Content-Type': 'application/json', 
-								'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
-							}
+							headers: API_HEADERS
 					});
 					setNews(fetchNews1.data);
 				} catch (error) {

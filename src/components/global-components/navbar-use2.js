@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { LINK_LEARNING } from '../../apiConfig';
 
 const Navbaruse2 = () => {
       const {t, i18n } = useTranslation();
@@ -67,7 +68,7 @@ const Navbaruse2 = () => {
                   </div>
                 </li>
                 <li>
-                  <a className="btn btn-base nav-right-part-mobile" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
+                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING}>{t('signup')}</a>
                 </li>
               </ul>
             </div>
@@ -85,7 +86,7 @@ const Navbaruse2 = () => {
             </div>
             <div className="nav-right-part nav-right-part-desktop">
               <Link className="btn btn-success text-white" to="/about-app">Download App</Link>
-              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
+              <a className="btn btn-base" href={LINK_LEARNING} >{t('signup')}</a>
             </div>
           </div>
         </nav>

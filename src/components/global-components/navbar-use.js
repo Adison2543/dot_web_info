@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { HashLink as Link} from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
-import '../css/navbar.css'
+import '../css/navbar.css';
+import { LINK_LEARNING } from '../../apiConfig';
 
 const Navbar = () => {
     const {t, i18n } = useTranslation();
@@ -34,7 +35,7 @@ const Navbar = () => {
               <Link to="/"><img src={publicUrl+"assets/img/logoPWT02.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
-              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
+              <a className="btn btn-base" href={LINK_LEARNING}>{t('signup')}</a>
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
               <ul className="navbar-nav menu-open ps-lg-1">
@@ -67,7 +68,7 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li>
-                  <a className="btn btn-base nav-right-part-mobile" href="https://dot-learning.mpwt.gov.la/">{t('signup')}</a>
+                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING}>{t('signup')}</a>
                 </li>
               </ul>
             </div>
@@ -85,7 +86,7 @@ const Navbar = () => {
             </div>
             <div className="nav-right-part nav-right-part-desktop">
               <Link className="btn btn-success text-white" to="/about-app">Download App</Link>
-              <a className="btn btn-base" href="https://dot-learning.mpwt.gov.la/" >{t('signup')}</a>
+              <a className="btn btn-base" href={LINK_LEARNING} >{t('signup')}</a>
             </div>
             {/* <div className="nav-right-part nav-right-part-desktop">
               <Link className="signin-btn" to="/sign-in">Sign In</Link>

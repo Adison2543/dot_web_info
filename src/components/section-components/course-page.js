@@ -3,7 +3,7 @@ import axios from 'axios';
 import CourseCard from './course-card2';
 import { Pagination } from 'react-bootstrap';
 import ReactLoading from 'react-loading';
-
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 
 
@@ -20,7 +20,7 @@ const CoursePage = ({tran}) => {
 			const fetchCourse = async () => {
 				try {
 					setLoading(true);
-					let fetchCourses = await axios.post(`https://dot-api.mpwt.gov.la/course/list`, 
+					let fetchCourses = await axios.post(`${API_BASE_URL}/course/list`, 
 						{
 							signal: abortController.signal,
 							page: page,
@@ -28,10 +28,7 @@ const CoursePage = ({tran}) => {
 							search: searchdata
 
 						}, {
-							headers: { 
-								'Content-Type': 'application/json', 
-								'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
-							}
+							headers: API_HEADERS
 					})
 					setCourse(fetchCourses.data);
 				} catch (error) {

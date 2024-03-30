@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 const CourseCard = ({ course, tran }) => {
 
@@ -17,7 +18,7 @@ const CourseCard = ({ course, tran }) => {
           <div className="single-course-inner">
             <div className="thumb text-center">
               {/* <img src={course.course_cover} alt="img" height="200px" /> */}
-              <img src={`https://dot-api.mpwt.gov.la/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} alt=""/>
+              <img src={`${API_BASE_URL}/media_file/file/?f=${course?.course_cover}`} style={{objectFit: 'cover'}} width={370} height={200} alt=""/>
             </div>
             <div className="details">
               <div className="details-inner">

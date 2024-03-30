@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 const LatestNews = () => {
 	const [news, setNews] = useState([])
@@ -40,7 +41,7 @@ const LatestNews = () => {
 
 
 	async function fetchData() {
-		const res = await fetch("https://dot-api.mpwt.gov.la/news/list?news_type=2", {
+		const res = await fetch(`${API_BASE_URL}/news/list?news_type=2`, {
 			method: 'POST',
 			headers: myHeaders,
 			body: raw,

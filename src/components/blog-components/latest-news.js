@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 const LatestNews = () => {
 	const [news, setNews] = useState([]);
@@ -36,17 +37,14 @@ const LatestNews = () => {
 		let isMounted = true;
 		async function fetchData() {
 			try {
-				let fetchNews1 = await axios.post(`https://dot-api.mpwt.gov.la/news/list?news_type=1`, 
+				let fetchNews1 = await axios.post(`${API_BASE_URL}/news/list?news_type=1`, 
 					{
 						page: 1,
 						per_page: 5,
 						search: ''
 
 					}, {
-						headers: { 
-							'Content-Type': 'application/json', 
-							'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
-						}
+						headers: API_HEADERS
 				});
 				if (isMounted) {
 					setNews(fetchNews1.data.data);
@@ -147,7 +145,7 @@ const LatestNews = () => {
 									<Link to={`/blog-details/${news[0]?.news_id}/${news[0]?.news_friendly}`}>
 										<div className="single-blog-inner type-1">
 										<div className="thumb">
-											<img src={"https://dot-api.mpwt.gov.la/media_file/file/?f=" + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} />
+											<img src={`${API_BASE_URL}/media_file/file/?f=` + news[0]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} />
 											<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
 										</div>
 										<div className="details">
@@ -166,7 +164,7 @@ const LatestNews = () => {
 									<Link to={`/blog-details/${news[1]?.news_id}/${news[1]?.news_friendly}`}>
 										<div className="single-blog-inner type-1">
 										<div className="thumb">
-											<img src={"https://dot-api.mpwt.gov.la/media_file/file/?f=" + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} />
+											<img src={`${API_BASE_URL}/media_file/file/?f=` + news[1]?.news_cover} style={{objectFit: 'cover'}} width={370} height={250} />
 											<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
 										</div>
 										<div className="details">

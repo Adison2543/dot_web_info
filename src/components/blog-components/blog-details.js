@@ -7,6 +7,7 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
+import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
 
 
 const BlogDetails = () => {
@@ -34,12 +35,9 @@ const BlogDetails = () => {
 		const fetchNews = async () => {
 			try {
 				setLoading(true);
-				let fetchNews1 = await axios.get(`https://dot-api.mpwt.gov.la/news/get/${news_id}`, 
+				let fetchNews1 = await axios.get(`${API_BASE_URL}/news/get/${news_id}`, 
 					{
-						headers: { 
-							'Content-Type': 'application/json', 
-							'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
-						}
+						headers: API_HEADERS
 				});
 				setNews(fetchNews1.data);
 			} catch (error) {
@@ -87,7 +85,7 @@ const BlogDetails = () => {
 							overflow: 'hidden'
 						}}
 					>
-		              <img src={news?.news_cover ? `https://dot-api.mpwt.gov.la/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
+		              <img src={news?.news_cover ? `${API_BASE_URL}/media_file/file/?f=${news?.news_cover}` : process.env.PUBLIC_URL +"/assets/img/logoPWT.png"} 
 					  	className='w-100' alt="img" />
 		            </div>
 		            <div className="details">
@@ -101,7 +99,7 @@ const BlogDetails = () => {
 					  <div>
 							{news?.images_list?.map((img_link) => (
 								<div key={img_link.ni_id} className='my-2'>
-									<img src={`https://dot-api.mpwt.gov.la/media_file/file/?f=${img_link.ni_path_file}`} className='w-100' alt="img" /> 
+									<img src={`${API_BASE_URL}/media_file/file/?f=${img_link.ni_path_file}`} className='w-100' alt="img" /> 
 								</div>
 							))}
 						</div>
