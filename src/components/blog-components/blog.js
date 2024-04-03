@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Pagination } from 'react-bootstrap';
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
-import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
+import { API_BASE_URL, API_HEADERS } from '../../appConfig';
 
 const Blog = () => {
 		const {t} = useTranslation();
@@ -82,6 +82,7 @@ const Blog = () => {
 		  <div className="container">
 		  	{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div> :
 				<div className="row">
+					<Sidebar setType={setType} type={cata} tran={t} letSearch={letSearch}/>
 					<div className="col-lg-8">
 						{news?.data?.map((item) => (
 							<SingleBlog key={item.news_id} news={item} tran={t}/>
@@ -94,7 +95,6 @@ const Blog = () => {
 						</Pagination>
 						: <></> }
 					</div>
-					<Sidebar setType={setType} type={cata} tran={t} letSearch={letSearch}/>
 				</div>
 			}
 		  </div>

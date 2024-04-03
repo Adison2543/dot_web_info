@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CourseCard from './course-card';
 import { useTranslation } from 'react-i18next';
-import { API_BASE_URL } from '../../apiConfig';
+import { API_BASE_URL } from '../../appConfig';
 
 const CourseFilter = () => {
 	const [courses, setCourse] = useState([]);

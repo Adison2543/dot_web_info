@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { HashLink as Link} from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 import '../css/navbar.css';
-import { LINK_LEARNING } from '../../apiConfig';
+import { LINK_LEARNING } from '../../appConfig';
 
 const Navbar = () => {
     const {t, i18n } = useTranslation();
@@ -43,7 +43,7 @@ const Navbar = () => {
                   <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="menu-item-has-children">
-			            <Link to="">Information</Link>
+			            <Link to="#">Information</Link>
 			            <ul className="sub-menu">
 				            <li><Link to="/about-the-project">About the project</Link></li>
 	                  <li><Link to="/about-dot">Department of Transport</Link></li>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { API_BASE_URL } from '../../apiConfig';
+import { API_BASE_URL } from '../../appConfig';
 
 const CourseCard = ({ course, tran }) => {
   

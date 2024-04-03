@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
-import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
+import { API_BASE_URL, API_HEADERS } from '../../appConfig';
 
 const CourseDetails = ({tran}) => {
 	const {course_id} = useParams();

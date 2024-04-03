@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "../css/newsLast.css";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
+import { API_BASE_URL, API_HEADERS } from '../../appConfig';
 
 const LatestNews = () => {
 	const [news, setNews] = useState([]);

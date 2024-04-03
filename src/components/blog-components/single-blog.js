@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
+import { API_BASE_URL, API_HEADERS } from '../../appConfig';
 
 const singleblog = ({news, tran}) => {
     

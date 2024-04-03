@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { LINK_LEARNING } from '../../apiConfig';
+import { LINK_LEARNING } from '../../appConfig';
 
 const Navbaruse2 = () => {
       const {t, i18n } = useTranslation();
@@ -43,7 +43,7 @@ const Navbaruse2 = () => {
                   <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="menu-item-has-children">
-			            <Link to="">Information</Link>
+			            <Link to="#">Information</Link>
 			            <ul className="sub-menu">
 				            <li><Link to="/about-the-project">About the project</Link></li>
 	                  <li><Link to="/about-dot">Department of Transport</Link></li>

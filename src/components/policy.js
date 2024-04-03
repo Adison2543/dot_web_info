@@ -3,6 +3,7 @@ import Navbar from "./global-components/navbar-use2";
 import PageHeader from "./global-components/page-header";
 import Footer from "./global-components/footer-use";
 
+
 const Policy = () => {
   return (
     <div>

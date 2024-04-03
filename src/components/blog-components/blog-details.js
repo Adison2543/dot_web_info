@@ -7,7 +7,7 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
-import { API_BASE_URL, API_HEADERS } from '../../apiConfig';
+import { API_BASE_URL, API_HEADERS } from '../../appConfig';
 
 
 const BlogDetails = () => {

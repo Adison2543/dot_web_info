@@ -4,6 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
 import { useTranslation } from 'react-i18next';
+import { LINK_LEARNING } from '../../appConfig';
 
 const TestimonialV2 = () => {
 
@@ -16,7 +17,7 @@ const TestimonialV2 = () => {
                 <div className="col-xl-10 col-lg-10 col-md-11">
                     <div className="text-center">
                         <p className="fs-5 sub-title">You can access to all the courses and features after you sign up with the system</p>
-                        <a className="btn btn-base b-animate-3" href="" target='_blank'>Sign Up Now</a>
+                        <a className="btn btn-base b-animate-3" href={LINK_LEARNING} target='_blank'>Sign Up Now</a>
                     </div>
                 </div>
             </div>
