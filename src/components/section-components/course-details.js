@@ -30,8 +30,6 @@ const CourseDetails = ({tran}) => {
 		fetchCondition();
 	}, [])
 
-	console.log(condition);
-
 	useEffect(() => {
 
 		let abortController = new AbortController();

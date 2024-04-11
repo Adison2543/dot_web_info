@@ -22,10 +22,10 @@ const CourseCard = ({ course, tran }) => {
             </div>
             <div className="details">
               <div className="details-inner">
-                <div className="emt-user">
+                {/* <div className="emt-user">
                   <i className="fa fa-user me-2" />
                   <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
-                </div>
+                </div> */}
                 <h6>
                   {course.course_name}
                 </h6>
@@ -33,14 +33,14 @@ const CourseCard = ({ course, tran }) => {
               <div className="emt-course-meta">
                 <div className="row">
                   <div className="col-6">
-                    <div className="rating">
-                      {tran('lastupdate')}: {gatFDate(course.udp_date)}
+                    <div className="price text-start">
+                    {tran('coursecode')}: <span>{course.course_code}</span>
                     </div>
                   </div>
                   <div className="col-6">
-                    <div className="price text-right">
-                    {tran('coursecode')}: <span>{course.course_code}</span>
-                    </div>
+                    {/* <div className="rating">
+                      {tran('lastupdate')}: {gatFDate(course.udp_date)}
+                    </div> */}
                   </div>
                 </div>
               </div>

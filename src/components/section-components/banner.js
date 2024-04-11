@@ -26,7 +26,7 @@ const Banner = ({tran}) => {
 						<Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/about-app">Download DoT Smart App</Link>
 						{/* <a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="https://dot-learning.mpwt.gov.la/course" target='_blank'>Download DoT Smart App</a> */}
 						{/* <Link className="btn btn-border-black b-animate-3" to="/">Read More</Link> */}
-						<a className="btn btn-border-black b-animate-3" href={LINK_LEARNING + "exam"} target='_blank'>Read more About project</a>
+						<Link className="btn btn-border-black b-animate-3" to='/about-the-project'>Read more About project</Link>
 					  </div>
 			        </div>
 			      </div>

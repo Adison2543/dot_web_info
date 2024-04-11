@@ -6,4 +6,4 @@ export const API_HEADERS = {
   'Content-Type': 'application/json',
   'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
 };
-export const LINK_LEARNING = 'http://course.iddriver.com/login';
+export const LINK_LEARNING = 'http://course.iddriver.com';
