@@ -40,7 +40,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/22.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>Online learning Course</p>
@@ -51,7 +51,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/33.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>Practice Theory Test</p>
@@ -62,7 +62,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/66.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>News Update</p>
@@ -73,7 +73,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/44.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>Appointment for Exam</p>
@@ -84,7 +84,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/55.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>View Exam results</p>
@@ -95,7 +95,7 @@ const about_app = () => {
                             <div className="col-sm-12 col-md-6 col-lg-4">
                                 <div className="single-intro-inner text-center">
                                     <div className="thumb">
-                                        <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                        <img src={publicUrl+"assets/img/featureIcon/11.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                     </div>
                                     <div className="details">
                                         <p className='px-2 fw-bold'>Notify of Expiry</p>

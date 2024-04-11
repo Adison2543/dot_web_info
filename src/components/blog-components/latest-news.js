@@ -91,10 +91,10 @@ const LatestNews = () => {
 											{gatDay(news[2]?.udp_date ? news[2].udp_date : Date())}
 										</div>
 										<div className="media-body details">
-											<ul className="blog-meta">
-											{/* <li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li> */}
+											{/* <ul className="blog-meta">
+											<li><i className="fa fa-user" /> {t('by')} {news[2]?.user_update ? news[2]?.user_update : "-"}</li>
 											<li><i className="fa fa-folder-open-o" />{news[2]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-											</ul>
+											</ul> */}
 											<h5 className='newstitle'>{news[2]?.news_title ? news[2]?.news_title : "-"}</h5>
 										</div>
 										</div>
@@ -109,10 +109,10 @@ const LatestNews = () => {
 											{gatDay(news[3]?.udp_date ? news[3].udp_date : Date())}
 										</div>
 										<div className="media-body details">
-											<ul className="blog-meta">
-											{/* <li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li> */}
-											<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-											</ul>
+											{/* <ul className="blog-meta">
+												<li><i className="fa fa-user" /> {t('by')} {news[3]?.user_update ? news[3].user_update : "-"}</li>
+												<li><i className="fa fa-folder-open-o" />{news[3]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul> */}
 											<h5 className='newstitle'>{news[3]?.news_title ? news[3].news_title : "-"}</h5>
 										</div>
 										</div>
@@ -127,10 +127,10 @@ const LatestNews = () => {
 												{gatDay(news[4]?.udp_date ? news[4].udp_date : Date())}
 											</div>
 											<div className="media-body details">
-												<ul className="blog-meta">
-												{/* <li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li> */}
-												<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-												</ul>
+												{/* <ul className="blog-meta">
+													<li><i className="fa fa-user" /> {t('by')} {news[4]?.user_update ? news[4].user_update : "-"}</li>
+													<li><i className="fa fa-folder-open-o" />{news[4]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+												</ul> */}
 												<h5 className='newstitle'>{news[4]?.news_title ? news[4].news_title : "-"}</h5>
 											</div>
 										</div>
@@ -149,10 +149,10 @@ const LatestNews = () => {
 											<span className="date">{gatFDate(news[0]?.udp_date ? news[0].udp_date : Date())}</span>
 										</div>
 										<div className="details">
-											<ul className="blog-meta">
-											{/* <li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li> */}
-											<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-											</ul>
+											{/* <ul className="blog-meta">
+												<li><i className="fa fa-user" /> {t('by')} {news[0]?.user_update ? news[0].user_update : "-"}</li>
+												<li><i className="fa fa-folder-open-o" />{news[0]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul> */}
 											<h5 className='newstitle' >{news[0]?.news_title ? news[0].news_title : "-"}</h5>
 											{t('readmore')}<i className="fa fa-angle-right" />
 										</div>
@@ -168,10 +168,10 @@ const LatestNews = () => {
 											<span className="date">{gatFDate(news[1]?.udp_date ? news[1].udp_date : Date())}</span>
 										</div>
 										<div className="details">
-											<ul className="blog-meta">
-											{/* <li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li> */}
-											<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
-											</ul>
+											{/* <ul className="blog-meta">
+												<li><i className="fa fa-user" /> {t('by')} {news[1]?.user_update ? news[1].user_update : "-"}</li>
+												<li><i className="fa fa-folder-open-o" />{news[1]?.news_type === 1 ? t('dot') : t('mpw')}</li>
+											</ul> */}
 											<h5 className='newstitle'>{news[1]?.news_title ? news[1].news_title : "-"}</h5>
 											{t('readmore')}<i className="fa fa-angle-right" />
 										</div>

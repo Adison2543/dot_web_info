@@ -14,10 +14,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/22.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>Online learning Course</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>Online learning Course</h5>
                                     <p>At your own time and place, learn about traffic rule, sign, road safety, driving techniques, ethics, Maintenance ...etc</p>
                                 </div>
                             </div>
@@ -25,10 +25,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/33.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>Practice Theory Test</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>Practice Theory Test</h5>
                                     <p>Try doing a theory test to familiarize the test questions and format for your selected license type</p>
                                 </div>
                             </div>
@@ -36,10 +36,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/66.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>News Update</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>News Update</h5>
                                     <p>Got news update and announcement about driving license and activities from Department of Transport</p>
                                 </div>
                             </div>
@@ -47,10 +47,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/44.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>Appointment for Exam</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>Appointment for Exam</h5>
                                     <p>Select your convenient time to take the driving license exam after your have fulfill all requirements</p>
                                 </div>
                             </div>
@@ -58,10 +58,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/55.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>View Exam results</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>View Exam results</h5>
                                     <p>Check your driving license exam result after you have taken the exam and see your Driving license on the App!</p>
                                 </div>
                             </div>
@@ -69,10 +69,10 @@ const Intro = ({tran}) => {
                         <div className="col-sm-6 col-md-4">
                             <div className="single-intro-inner style-white text-center">
                                 <div className="thumb">
-                                    <img src={publicUrl+"assets/img/intro/1.png"} alt="img" />
+                                    <img src={publicUrl+"assets/img/featureIcon/11.png"} style={{ width:'90px', height:'90px' }} alt="img" />
                                 </div>
                                 <div className="details">
-                                    <h5 className='px-2 fw-bold'>Notify of Expiry</h5>
+                                    <h5 className='px-2 mt-1 fw-bold'>Notify of Expiry</h5>
                                     <p>Get notified when your driving license is abbout expire</p>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link to="/"><img src={publicUrl+"assets/img/logoPWT02.png"} alt="img" width={'140px'} /></Link>
             </div>
             <div className="nav-right-part nav-right-part-mobile">
-              <a className="btn btn-base" href={LINK_LEARNING}>{t('signup')}</a>
+              <a className="btn btn-base" href={LINK_LEARNING + '/login'}>{t('signup')}</a>
             </div>
             <div className="collapse navbar-collapse go-top" id="edumint_main_menu">
               <ul className="navbar-nav menu-open">
@@ -71,7 +71,7 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li>
-                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING}>{t('signup')}</a>
+                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING + '/login'}>{t('signup')}</a>
                 </li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <a className="btn btn-base" href={LINK_LEARNING} >{t('signup')}</a>
+              <a className="btn btn-base" href={LINK_LEARNING + '/login'} >{t('signup')}</a>
             </div>
           </div>
         </nav>

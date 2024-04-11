@@ -17,7 +17,7 @@ const TestimonialV2 = () => {
                 <div className="col-xl-10 col-lg-10 col-md-11">
                     <div className="text-center">
                         <p className="fs-5 sub-title">You can access to all the courses and features after you sign up with the system</p>
-                        <a className="btn btn-base b-animate-3" href={LINK_LEARNING} target='_blank'>Sign Up Now</a>
+                        <a className="btn btn-base b-animate-3" href={LINK_LEARNING + '/register'} target='_blank'>Sign Up Now</a>
                     </div>
                 </div>
             </div>
