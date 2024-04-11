@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
 import { FacebookShareButton, FacebookShareCount, TwitterShareButton, FacebookIcon, TwitterIcon } from 'react-share';
 import { API_BASE_URL, API_HEADERS } from '../../appConfig';
+import ReactPlayer from 'react-player/youtube'
 
 
 const BlogDetails = () => {
@@ -96,6 +97,9 @@ const BlogDetails = () => {
 		              </ul>
 		              <h3 className="title">{news?.news_title}</h3>
 		              <p>{news?.news_description}</p>
+						{news?.news_video ? 
+							<div><ReactPlayer className="w-100" url={news?.news_video} controls volume={0.3} /></div> : ''
+						}
 					  <div>
 							{news?.images_list?.map((img_link) => (
 								<div key={img_link.ni_id} className='my-2'>

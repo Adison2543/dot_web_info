@@ -52,7 +52,7 @@ const Navbar = () => {
 			            </ul>
 			          </li>
                 <li className="">
-                  <Link to="/license-procedure" smooth="true">{t('license_proc')}</Link>
+                  <Link to="/license-procedure" smooth="true">{t('online_course')}</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
