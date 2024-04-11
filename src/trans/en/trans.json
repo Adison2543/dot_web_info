@@ -71,6 +71,7 @@
 
     "info_menu" : "Information",
     "about_proj" : "About the project",
+    "about_dot": "Department of Transport",
     "about_app": "DoT Smart App",
     "online_course" : "Online Courses",
     "license_proc" : "License Procedure",
@@ -114,9 +115,10 @@
     "signup_title": "You can access to all the courses and features after you sign up with the system",
     "signup_btn": "Sign Up Now",
     "footer_dot": "",
-    "addr": "Department of Transport, Lane Xang Avenue, Xatsettha district, Vientiane Capital, Lao PDR",
+    "addr": "Department of Transport, Lane Xang Avenue, Xaysettha district, Vientiane Capital, Lao PDR",
     "openmap": "Open Location on map",
-    "banner": "Under the project immprovement of driving license system in Lao PDR, Department of Transport has jointly developed a Mobile App and Online Course",
-    "readm": "Read more About project"
+    "banner": "Under the project Improvement of driving license system in Lao PDR, the Department of Transport together with development partners have jointly developed a Mobile App and Online Course for convenient to the public",
+    "readm": "Read more About project",
+    "dotsmartapp": "DoT Smart App"
 
 }

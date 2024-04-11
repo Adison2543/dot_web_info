@@ -20,13 +20,13 @@ const Banner = ({tran}) => {
 						{/* <img src={publicUrl+"assets/img/banner/1.png"} alt="img" className='shape-backg'></img>
 			          <h6 className="b-animate-1 ">Ministry of Public Works and Transport</h6>
 			          <h1 className="b-animate-2 title text-center">ກະຊວງໂຍທາທິການ <br/> ແລະ ຂົນສົ່ງ</h1> */}
-			          <p className="b-animate-2 fs-4 text-center">Under the project immprovement of driving license system in <span className='fw-bold main-title'>Lao PDR, Department of Transport</span> has jointly developed a <b>Mobile App</b> and <b>Online Course</b></p>
+			          <p className="b-animate-2 fs-4 text-center">{tran("banner")} </p>
 			          <div className='btnContainer flex-wrap gap-2 gap-md-0'>
 						{/* <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/">Get A Quote</Link> */}
-						<Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/about-app">Download DoT Smart App</Link>
+						<Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/about-app">{tran("dotsmartapp")}</Link>
 						{/* <a className="btn btn-base b-animate-3 mr-sm-3 mr-2" href="https://dot-learning.mpwt.gov.la/course" target='_blank'>Download DoT Smart App</a> */}
 						{/* <Link className="btn btn-border-black b-animate-3" to="/">Read More</Link> */}
-						<a className="btn btn-border-black b-animate-3" href={LINK_LEARNING + "exam"} target='_blank'>Read more About project</a>
+						<a className="btn btn-border-black b-animate-3" href={LINK_LEARNING + "exam"} target='_blank'>{tran("readm")}</a>
 					  </div>
 			        </div>
 			      </div>

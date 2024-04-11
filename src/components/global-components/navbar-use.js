@@ -43,16 +43,16 @@ const Navbar = () => {
                   <Link to="/">{t('home')}</Link>
                 </li>
                 <li className="menu-item-has-children">
-			            <Link to="#">Information</Link>
+			            <Link to="#">{t('info_menu')}</Link>
 			            <ul className="sub-menu">
-				            <li><Link to="/about-the-project">About the project</Link></li>
-	                  <li><Link to="/about-dot">Department of Transport</Link></li>
-	                  <li><Link to="/about-app">DoT Smart App</Link></li>
-	                  <li><Link to="/course">Online Courses</Link></li>
+				            <li><Link to="/about-the-project">{t('about_proj')}</Link></li>
+	                  <li><Link to="/about-dot">{t('about_dot')}</Link></li>
+	                  <li><Link to="/about-app">{t('about_app')}</Link></li>
+	                  <li><Link to="/course">{t('online_course')}</Link></li>
 			            </ul>
 			          </li>
                 <li className="">
-                  <Link to="/license-procedure" smooth="true">License Procedure</Link>
+                  <Link to="/license-procedure" smooth="true">{t('license_proc')}</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
