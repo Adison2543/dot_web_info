@@ -13,7 +13,7 @@ const CourseDetails = ({tran}) => {
 
 	const fetchCondition = async () => {
 		try {
-			const res = await axios.get(`${API_BASE_URL}/course/condition/list/?course_id=1`, {
+			const res = await axios.get(`${API_BASE_URL}/course/condition/list/?course_id=${course_id}`, {
 							headers: API_HEADERS
 						});
 
@@ -29,7 +29,7 @@ const CourseDetails = ({tran}) => {
 	useEffect(() => {
 		fetchCondition();
 	}, [])
-
+	console.log('Condition : ' + JSON.stringify(condition));
 	useEffect(() => {
 
 		let abortController = new AbortController();
