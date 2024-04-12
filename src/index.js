@@ -32,7 +32,7 @@ import menu_lo from './trans/lo/trans.json';
 
 
 i18n
-  .use(LanguageDetector)
+  // .use(LanguageDetector)
   .init({
     resources: {
       en: {
