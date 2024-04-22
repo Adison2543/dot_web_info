@@ -2,8 +2,11 @@ import React from 'react';
 import Navbar from './global-components/navbar-use2';
 import PageHeader from './global-components/page-header';
 import Footer from './global-components/footer-use';
+import { useTranslation } from 'react-i18next';
 
-const about_this_project = () => {
+
+const LicenseProcedure = () => {
+    const {t} = useTranslation();
     let publicUrl = process.env.PUBLIC_URL + '/'
     return <div>
         <Navbar />
@@ -39,7 +42,7 @@ const about_this_project = () => {
                     <p>ຄຳແນະນຳ  ກ່ຽວກັບການຈັດຕັ້ງປະຕິບັດຂໍ້ຕົກລົງ ວ່າດ້ວຍ ການຄຸ້ມຄອງໃບຂັບຂີ່ຍານພາຫະນະຂົນສົ່ງທາງບົກ <span><a href="" className='text-primary'>Download</a></span></p>
                     <p>ຂັ້ນຕອນ ແລະ ຄຳແນະນຳ  ຂອງການສອບເສັງ, ໂດຍກອງຄຸ້ມຄອງພາຫະນະແລະການຂັບຂີ່ນະຄອນຫຼວງ <span><a href="" className='text-primary'>Download</a></span></p>
                 </div>
-                <p>Last update: 01/03/2024</p>
+                <p>{t('last_update')}: 01/03/2024</p>
                 <hr className='mt-5 border border-dark' />
             </div>
         </div>
@@ -48,5 +51,5 @@ const about_this_project = () => {
     </div>
 }
 
-export default about_this_project
+export default LicenseProcedure
 
