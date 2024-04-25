@@ -72,7 +72,7 @@ const CoursePage = ({tran}) => {
 			);
 		}
 
-    return <div className="blog-area pd-top-120 pd-bottom-120">
+    return <div className="blog-area pd-top-60 pd-bottom-60">
 				<div className="container">
 					{loading ? <div className='w-100 d-flex justify-content-center align-items-center'><ReactLoading type='bars' color="var(--main-color)" height={200} width={100} /></div> :
 						<div className="row">

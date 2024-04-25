@@ -12,10 +12,11 @@ const AboutPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    let publicUrl = process.env.PUBLIC_URL + '/';
 
     return <div>
         <Navbar />
-        <PageHeader headertitle={t('course')}  />
+        <PageHeader headertitle={t('online_course')}  />
         <Course tran={t}/>
         <Testimonial />
         <Footer />

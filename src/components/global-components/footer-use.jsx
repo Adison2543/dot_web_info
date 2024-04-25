@@ -34,12 +34,12 @@ const Footer_v1 = () => {
 							</div>
 							<div className="col-lg-4 col-md-6">
 								<div className="widget widget_contact">
-									<h4 className="widget-title">{t('foot_contact')}</h4>
 									<ul className="details">
 										<li>
-                                            <p><i className="fa fa-map-marker" />{t('foot_address')}</p>
+                                            <i className="fa fa-map-marker" />{t('foot_address')}
+											<br/>
                                             <a href='https://goo.gl/maps/jaLiar7ATJGSsCSa7' target='_BLANK' rel="noopener noreferrer" className='text-primary'>{t('foot_open_map')}</a>
-                                            </li>
+                                        </li>
 										<li><i className="fa fa-envelope" /> depttransportlaos@gmail.com</li>
 										<li><i className="fa fa-phone" /> +856-21 412270</li>
 										<li><i className="fa fa-facebook-square"></i> <a href="" className='text-primary'>ກົມຂົນສົ່ງ ກຊ ຍທຂ</a></li>
@@ -51,13 +51,13 @@ const Footer_v1 = () => {
 									<h4 className="widget-title">{t('foot_links')}</h4>
 									<ul>
 										<li>
-											<a href="" className='text-primary'>{t('lnk_mpwt')}</a>
+											<a href="https://www.mpwt.gov.la" target="_blank" className='text-primary'>{t('lnk_mpwt')}</a>
 										</li>
 										<li>
-											<a href="" className='text-primary'>{t('lnk_vientiane_vrdl')}</a>
+											<a href="http://vdvclao.com/" target="_blank" className='text-primary'>{t('lnk_vientiane_vrdl')}</a>
 										</li>
 										<li>
-											<a href="" className='text-primary'>{t('lnk_relate_gov_web')}</a>
+											<a href="" target="_blank" className='text-primary'>{t('lnk_relate_gov_web')}</a>
 										</li>
 										<li>
                                             <Link to="/policy" smooth="true" className='text-primary'>{t('lnk_term_policy')}</Link>

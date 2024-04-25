@@ -20,7 +20,10 @@ const Banner = ({tran}) => {
 						{/* <img src={publicUrl+"assets/img/banner/1.png"} alt="img" className='shape-backg'></img>
 			          <h6 className="b-animate-1 ">Ministry of Public Works and Transport</h6>
 			          <h1 className="b-animate-2 title text-center">ກະຊວງໂຍທາທິການ <br/> ແລະ ຂົນສົ່ງ</h1> */}
-			          <p className="b-animate-2 fs-4 text-center">{tran("banner")} </p>
+			          {tran('cur_lang')=='lo' ?
+					  	<p className="b-animate-2 fs-5 ">ພາຍໃຕ້ໂຄງການ <b>ປັບປຸງລະບົບອອກໃບຂັບຂີ່ໃນ ສປປ ລາວ</b>, <span className="highlight">ກົມຂົນສົ່ງ</span> ໄດ້ມີການຮ່ວມມືກັບຄູ່ຮ່ວມພັດທະນາ ແລະ ແລະນັກພັດທະນາໂປແກມ ເພື່ອສ້າງ ເວັບ ແລະ ແອັບມືຖື ພ້ອມທັງຫຼັກສູດການຮຽນອອນໄລນ໌ ເພື່ອໃຫ້ນັກຂັບຂີ່ ສະດວກໃນການຮຽນຮູ້ ແລະ ຮັບຮູ້ກ່ຽວກັບການຂັບຂີ່ປອດໄພ</p>
+					  	: <p className="b-animate-2 fs-5 ">Under the project <b>Improvement of driving license system in Lao PDR</b>, <span className="highlight">Department of Transport</span> together with development partners have jointly developed a Web / Mobile App and Online Courses for improving road safety awareness and knowledge of all drivers </p>
+					  }
 			          <div className='btnContainer flex-wrap gap-2 gap-md-0'>
 						{/* <Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/">Get A Quote</Link> */}
 						<Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/about-app">{tran("dotsmartapp")}</Link>

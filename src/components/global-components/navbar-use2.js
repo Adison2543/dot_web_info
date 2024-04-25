@@ -52,7 +52,7 @@ const Navbaruse2 = () => {
 			            </ul>
 			          </li>
                 <li className="">
-                  <Link to="/license-procedure" smooth="true">{t('online_course')}</Link>
+                  <Link to="/license-procedure" smooth="true">{t('license_proc')}</Link>
                 </li>
                 <li className="">
                     <Link to="/blog" smooth="true">{t('news')}</Link>
@@ -60,7 +60,7 @@ const Navbaruse2 = () => {
                 <li><Link to="/contact-us" smooth="true">{t('contact')}</Link></li>
                 <li>
                   <div className="nav-right-part-mobile">
-                    <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
+                    <select className="form-select" value={getlange()}  onChange={changeLanguage} aria-label="Default select">
                       <option value="lo" >ລາວ</option>
                       {/* <option value="th">ไทย</option> */}
                       <option value="en">English</option>
@@ -68,7 +68,10 @@ const Navbaruse2 = () => {
                   </div>
                 </li>
                 <li>
-                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING + '/login'}>{t('signup')}</a>
+                  <Link className="btn btn-success nav-right-part-mobile" to="/about-app">{t('downloadapp')}</Link>
+                </li>
+                <li>
+                  <a className="btn btn-base nav-right-part-mobile" href={LINK_LEARNING + '/login'}>{t('signin')}</a>
                 </li>
               </ul>
             </div>
@@ -77,7 +80,7 @@ const Navbaruse2 = () => {
                 <i className="bi bi-globe"></i>
               </div> */}
               <div style={{display: "inline-block"}}>
-                <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select example">
+                <select className="" id='lang_select' value={getlange()}  onChange={changeLanguage} aria-label="Default select">
                   <option value="lo" >ລາວ</option>
                   {/* <option value="th" >ไทย </option> */}
                   <option value="en">English</option>
@@ -85,8 +88,8 @@ const Navbaruse2 = () => {
               </div>
             </div>
             <div className="nav-right-part nav-right-part-desktop">
-              <Link className="btn btn-success text-white" to="/about-app">Download App</Link>
-              <a className="btn btn-base" href={LINK_LEARNING + '/login'} >{t('signup')}</a>
+              <Link className="btn btn-success " to="/about-app">{t('downloadapp')}</Link>
+              <a className="btn btn-base" href={LINK_LEARNING + '/login'} >{t('signin')}</a>
             </div>
           </div>
         </nav>

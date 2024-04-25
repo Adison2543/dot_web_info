@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import Navbar from './global-components/navbar-use';
+import Navbar from './global-components/navbar-use2';
 // import Banner from './section-components/banner';
 import Intro from './section-components/intro-use';
 // import CourseFilter from './section-components/course-filter';

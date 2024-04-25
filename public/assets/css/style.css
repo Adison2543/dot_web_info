@@ -1013,7 +1013,7 @@ ul {
 }
 
 .breadcrumb-area .page-title {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--heading-color);
@@ -2878,6 +2878,9 @@ ul {
 
 .banner-inner .title {
   margin-bottom: 32px;
+}
+.banner-inner .highlight{
+  color: var(--main-color);
 }
 
 .banner-inner.style-white .sub-title {
@@ -4988,4 +4991,8 @@ ul {
 
 .footer-area-2 .footer-bottom .widget_nav_menu ul li a:hover {
   color: #1DC295;
+}
+
+.color-red{
+  color:#F14D5D;
 }

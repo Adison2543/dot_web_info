@@ -2,22 +2,132 @@ import React from "react";
 import Navbar from "./global-components/navbar-use2";
 import PageHeader from "./global-components/page-header";
 import Footer from "./global-components/footer-use";
+import { useTranslation } from 'react-i18next';
 
 
 const Policy = () => {
-  return (
+  const {t} = useTranslation();
+  if(t("cur_lang")=='lo'){
+    return (
+      <div>
+        <Navbar />
+        <PageHeader headertitle={t('lnk_term_policy')} />
+  
+        <div className="contact-list">
+          <div className="container">
+            <div className="p-4">
+              <strong>ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</strong>
+              <p className="px-3">
+                ກົມຂົນສົ່ງ, ກະຊວງໂຍທາທີການແລະຂົນສົ່ງ ສປປ ລາວ, ໄດ້ສ້າງ ເວັບໄຊທ໌ ແລະ ແອັບ DoT Smart App ນີ້ໃຫ້ເປັນແອັບຟຣີ. 
+                ບໍລິການນີ້ແມ່ນເຮັດຂື້ນມາໃຫ້ທ່ານໄດ້ໃຊ້ງານໄດ້ໂດຍບໍ່ເສຍຄ່າ ເຊິ່ງຈະໃຊ້ໄດ້ຕາມຄວາມສາມາດທີ່ມັນມີເທົ່ານັ້ນ. 
+                ເວັບໜ້ານີ້ໃຊ້ສຳລັບແຈ້ງບອກຜູ້ທີ່ເຂົ້າມາເບິ່ງ ແລະ ເຂົ້າມາໃຊ້ ເວັບແລະແອັບຂອງພວກເຮົາ ກ່ຽວກັບນະໂຍບາຍໃນການເກັບຂໍ້ມູນ, ການນຳໃຊ້ຂໍ້ມູນ, ແລະ ການເປີດເຜີຍຂໍ້ມູນ ທີ່ເປັນຂໍ້ມູນສ່ວນຕົວ
+                ຂອງຜູ້ທີ່ເລືອກທີ່ຈະໃຊ້ບໍລິການຂອງພວກເຮົາແລ້ວ. ຖ້າທ່ານເລືອກທີ່ຈະໃຊ້ບໍລິການຂອງພວກເຮົາ, ນັ້ນໝາຍຄວາມວ່າ ທ່ານໄດ້ຕົກລົງໃນການເກັບຂໍ້ມູນ, ນຳໃຊ້ຂໍ້ມູນ ແລະ ເປີດເຜີຍຂໍ້ມູນ ທີ່ໄດ້ຂຽນໄວ້ໃນນະໂຍບາຍນີ້.
+                ຂໍ້ມູນສ່ວນຕົວ ທີ່ພວກເຮົາເກັບນີ້ ແມ່ນໃຊ້ສຳລັບກັນໃຫ້ບໍລິການແກ່ທ່ານ ແລະ ປັບປຸງການບໍລິການຂອງເຮົາໃຫ້ດີຂື້ນ. 
+                ພວກເຮົາຈະບໍ່ເປີດເຜີຍຂໍ້ມູນສ່ວນຕົວ ໃຫ້ບຸກຄົນທີສາມໂດຍບໍ່ຈຳເປັນ ແລະ ນອກເໜືອຈາກທີ່ໄດ້ລະບຸໄວ້ໃນນະໂຍບາຍຄວາມເປັນສ່ວນຕົວນີ້. 
+                ຄຳສັບທີ່ໃຊ້ໃນນະໂຍບາຍຄວາມເປັນສ່ວນຕົວນີ້ ຈະມີຄວາມໝາຍອັນດຽວກັນກັບ ຄຳສັບທີ່ໃຊ້ໃນ ເງືອນໄຂການນຳໃຊ້ຂອງ ເວັບ ຫຼື ແອັບ DoT Smart App
+                ນອກຈາກວ່າມັນຈະຖືກນິຍາມຕື່ມໃນນະໂຍບາຍນີ້.
+              </p>
+  
+              <p><strong>ການເກັບກຳ ແລະ ການນຳໃຊ້ ຂໍ້ມູນ</strong></p>
+  
+              <p className="px-3">
+                ເພື່ອໃຫ້ສາມາດນຳໃຊ້ໄດ້ສະດວກ ແລະ ມີປະສົບການທີ່ດີຂື້ນ, ໃນຕອນທີ່ທ່ານໃຊ້ບໍລິການຂອງພວກເຮົາ, ພວກເຮົາອາດຈະໃຫ້ທ່ານປ້ອນຂໍ້ມູນທີ່ເປັນສ່ວນຕົວ
+                ທີ່ສາມາດຢັ້ງຢືນວ່າເປັນຕົວທ່ານແທ້, ເຊິ່ງອາດຈະລວມມີ ຊື່, ນາມສະກຸນ, ເບີໂທ, ອີເມລ, ເລກປະຈຳຕົວ. ເຊິ່ງເຮົາຈະເກັບຮັກສາຂໍ້ມູນສຳຄັນດັ່ງກ່າວໄວ້ ຕາມທີ່ໄດ້ອະທິບາຍໄວ້ໃນນະໂຍບາຍຄວາມເປັນສ່ວນຕົວນີ້.
+              </p>
+  
+              <p><strong>ຂໍ້ມູນ Log</strong></p>
+  
+              <p className="px-3">
+                ພວກເຮົາຂໍແຈ້ງໄວ້ວ່າ ໃນຂະນະທີ່ທ່ານນຳໃຊ້ບໍລິການຂອງພວກເຮົາ, ໂດຍສະເພາະເວລາເກີດມີບັນຫາຂອງລະບົບ ຕົວຢ່າງ ເປັນ Error ໃນເວັບ ຫຼື ແອັບ, 
+                ພວກເຮົາຈະໄດ້ເກັບຂໍ້ມູນຂອງເຄື່ອງ ຫຼື ຂອງມືຖື (ຜ່ານບໍລິການຂອງຜູ້ໃຫ້ບໍລິການທີສາມ) ເຊິ່ງເອີ້ນວ່າ ຂໍ້ມູນLog. ຂໍ້ມູນLog ນີ້ ອາດຈະລວມມີຂໍ້ມູນເຊັ່ນ: ທີ່ຢູ່ IP ຂອງເຄື່ອງຂອງທ່ານ, ຊື່ເຄື່ອງ, 
+                ລະບົບປະຕິບັດການທີ່ໃຊ້, ການຕັ້ງຄ່າຂອງແອັບໃນຂະນະໃຊ້ງານ, ວັນ ເວລາ ທີ່ທ່ານໃຊ້, ແລະ ຂໍ້ມູນສະຖິຕິອື່ນໆ.
+              </p>
+  
+              <p><strong>ການໃຊ້ Cookies</strong></p>
+  
+              <p className="px-3">
+                Cookies ເປັນໄຟລ໌ຂໍ້ມູນນ້ອຍໆ ທີ່ໃຊ້ໃນການຈຳແນກຕົວຕົນຂອງເຄື່ອງຫຼືຜູ້ໃຊ້ ໂດຍບໍ່ຈຳເປັນຕ້ອງຮູ້ຕົວຈິງ. 
+                ມັນຖືກໃຊ້ໃນ ເວັບ browser ຂອງທ່ານ ຈາກເວັບທີ່ທ່ານເຂົ້າເບິ່ງ ແລະ ເກັບໄວ້ໃນຄວາມຈຳຂອງເຄື່ອງຂອງທ່ານ. ບໍລິການຂອງພວກເຮົາກໍ່ໄດ້ນຳໃຊ້ມັນເຊັນກັນ, ນອກນີ້ມັນຍັງອາດຈະຖືກນຳໃຊ້ໂດຍ
+                code ແລະ libraries ທີ່ເຮົາຕໍ່ຫາ, ເຊິ່ງອາດຖືກໃຊ້ໃນການເກັບຂໍ້ມູນ ແລະ ປັບປຸງບໍລິການຂອງເຂົາເຈົ້າ.
+                ທ່ານສາມາດເລືອກໄດ້ທີ່ຈະຍ້ອມຮັບ ຫຼື ປະຕິເສດ cookies ໃນຕອນທີ່ມັນຖືກສົ່ງໄປຫາເຄື່ອງຂອງທ່ານ. 
+                ຖ້າທ່ານປະຕິເສດ cookies ຂອງພວກເຮົາ, ບາງພາກສ່ວນຂອງເວັບ ຫຼື ແອັບ ອາດຈະເຮັດວຽກບໍ່ໄດ້ຕາມທີ່ຄາດໝາຍ.
+              </p>
+  
+              <p><strong>ຜູ້ໃຫ້ບໍລິການເສີມ</strong></p>
+  
+              <p className="px-3">
+                ພວກເຮົາອາດຈະໃຊ້ບໍລິການຂອງບຸກຄົນທີສາມ ຫຼື ບໍລິສັດອື່ນ ເພື່ອໃຫ້ບໍລິການ, ຍ້ອນເຫດຜົນຕໍ່ໄປນີ້:
+                <ul>
+                  <li>ເພື່ອອຳນວຍຄວາມສະດວກໃຫ້ບໍລິການຂອງພວກເຮົາ;</li>
+                  <li>ເພື່ອໃຫ້ເຂົາເຈົ້າບໍລິການບາງພາກສ່ວນແທນພວກເຮົາ;</li>
+                  <li>ເພື່ອເຮັດວຽກອັນສະເພາະເຈາະຈົງໃດໜຶ່ງກ່ຽວກັບບໍລິການຂອງພວກເຮົາ; ຫຼື</li>
+                  <li>ເພື່ອຊ່ວຍພວກເຮົາວິເຄາະ ການນຳໃຊ້ບໍລິການຂອງພວກເຮົາ.</li>
+                </ul>
+                ພວກເຮົາຂໍ້ແຈ້ງໄວ້ວ່າ ບໍລິການຂອງບຸກຄົນທີສາມທີ່ເຮົາໃຊ້ ກໍ່ສາມາດເຂົ້າເຖິງຂໍ້ມູນສ່ວນຕົວຂອງທ່ານເຊັ່ນກັນ, 
+                ເຫດຜົນຫຼັກແມ່ນຍ້ອນ ມັນຕ້ອງໄດ້ເຮັດວຽກກ່ຽວຂໍ້ມູນນັ້ນ ແທນພວກເຮົາ, ແຕ່ພວກເຂົາກໍ່ມີຂໍ້ບັງຄັບ ບໍ່ເປີດເຜີຍ ແລະ 
+                ນຳໃຊ້ໄດ້ສຳລັບຈຸດປະສົງສະເພາະເທົ່ານັ້ນ.
+              </p>
+              
+              <p><strong>ຄວາມປອດໄພ</strong></p>
+  
+              <p className="px-3">
+                ພວກເຮົາໃຫ້ຄວາມສຳຄັນໃນຄວາມເຊື່ອໃຈທີ່ທ່ານໃຫ້ຂໍ້ມູນສ່ວນຕົວແກ່ພວກເຮົາ, ພວກເຮົາຈະເກັບຮັກສາມັນໄວ້ເປັນຢ່າງດີ. 
+                ແຕ່ແນວໃດກໍ່ຕາມ ໃນໂລກອິນເຕີນັດ ຍັງບໍ່ມີວິທີໃດທີ່ສາມາດ ສົ່ງ-ຮັບ ແລະ ເກັບຮັກສາ ຂໍ້ມູນໄວ້ໄດ້ດີ  100%, 
+                ສະນັ້ນພວກເຮົາຈຶ່ງບໍ່ສາມາດກະລັນຕີຄວາມປອດໄພໄດ້ 100%.
+              </p>
+  
+              <p>
+                <strong>ລິງຄ໌ເຊື່ອມຕໍ່ໄປເວັບອື່ນ</strong>
+              </p>
+  
+              <p className="px-3">
+                ການບໍລິການນີ້ ອາດຈະມີລິງຄ໌ເຊື່ອມຕໍ່ອອກໄປເວັບອື່ນໆ, ຖ້າທ່ານກົດລິງຄ໌ຂອງເວັບອື່ນ ທ່ານກໍ່ຈະຖືກເປີດໄປເວັບນັ້ນໆ, 
+                ກະລຸນາຮັບຮູ້ໄວ້ວ່າເວັບອື່ນໆແມ່ນຢູ່ນອກເໜືອຈາກທີ່ເຮົາຈັດການໄດ້, ສະນັ້ນທ່ານຄວນຈະເຂົ້າໃຈກ່ຽວກັບ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງເຂົາເຈົ້າເຊັ່ນກັນ.
+                ພວກເຮົາບໍ່ສາມາດຄວບຄຸມ ແລະ ບໍ່ສາມາດຮັບຜິດຊອບຜົນທີ່ເກີດຈາກການນຳໃຊ້ ເນື້ອຫາ ຫຼື ເວັບໄຊທ໌ ຫຼື ບໍລິການ ຂອງເວັບບຸກຄົນທີສາມອື່ນໆ.
+              </p>
+  
+              <p>
+                <strong>ຄວາມເປັນສ່ວນຕົວຂອງເດັກນ້ອຍ</strong>
+              </p>
+  
+              <p className="px-3">
+                  ພວກເຮົາບໍ່ສາມາດຮູ້ໄດ້ວ່າ ຂໍ້ມູນສ່ວນຕົວທີ່ເກັບນັ້ນເປັນຂອງເດັກນ້ອຍຫຼື ບໍ, ພວກເຮົາແນະນຳບໍ່ໃຫ້ຜູ້ທີ່ເປັນເດັກນ້ອຍ ສະໜອງຂໍ້ມູນສ່ວນຕົວໃດໆທີ່ໃຫ້ແກ່ແອັບ ຫຼື ບໍລິການ. 
+                  ພໍ່ ແມ່ນ ຫຼື ຜູ້ປົກຄອງ ຕ້ອງຊ່ວຍເບິ່ງແຍງ ແລະ ລະວັງ ການນຳໃຊ້ອິນເຕີເນັດຂອງເດັກນ້ອຍ ແລະ ບໍ່ໃຫ້ເຂົາເຈົ້າປ້ອນຂໍ້ມູນສ່ວນຕົວເຂົ້າ ແອັບ ຫຼື ບໍລິການໃດໆໃນອິນເຕີເນັດ ໂດຍພະລະການ.
+                  ຖ້າທ່ານເຫັນວ່າ ລູກຂອງທ່ານໄດ້ປ້ອນຂໍ້ມູນສ່ວນຕົວເຂົ້າ ແອັບ ຫຼື ເວັບຂອງພວກເຮົາ, ທ່ານສາມາດຕິດຕໍ່ພວກເຮົາໃຫ້ ປັບປຸງ ຫຼື ລຶບອອກ.
+                  ຢ່າງນ້ອຍຕ້ອງອາຍຸ 15 ປີ ຈຶ່ງຖືວ່າສາມາດປ້ອນຂໍ້ມູນສ່ວນຕົວໄດ້ເອງ.
+                </p>
+  
+              <p>
+                <strong>ການປ່ຽນແປງ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວນີ້</strong>
+              </p>
+  
+              <p className="px-3">
+                ພວກເຮົາອາດມີການດັດແກ້ ປັບປຸງ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງເຮົາ ໃນແຕ່ລະໄລຍະ. ສະນັ້ນ ຈິ່ງແນະນຳໃຫ້ທ່ານຮັບຮູ້ ແລະ ເຂົ້າມາອ່ານໜ້ານີ້ເປັນແຕ່ລະໄລຍະ, 
+                ພວກເຮົາຈະອັບເດດ ແລະ ແຈ້ງລາຍລະອຽດໃນໜ້າ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ນີ້.
+              </p>
+            </div>
+            <hr className='mt-5 border border-dark' />
+          </div>
+        </div>
+  
+        <Footer />
+      </div>
+    );
+  }
+  else
+    return (
     <div>
       <Navbar />
-      <PageHeader headertitle={"Terms and Privacy Policy"} />
+      <PageHeader headertitle={t('lnk_term_policy')} />
 
       <div className="contact-list">
         <div className="container">
           <div className="p-4">
             <strong>Privacy Policy</strong>
             <p className="px-3">
-              Department of Transport, Lao PDR built the DoT Smart App app as a
-              Free app. This SERVICE is provided by Department of Transport, Lao
-              PDR at no cost and is intended for use as is. This page is used to inform visitors regarding our policies with
+              Department of Transport, Ministry of Public Works and Transport Lao PDR, has built this website and the DoT Smart App as a
+              Free app. This SERVICE is provided by Department of Transport, Lao PDR at no cost and is intended for use as is. 
+              This page is used to inform visitors regarding our policies with
               the collection, use, and disclosure of Personal Information if
               anyone decided to use our Service. If you choose to use our Service, then you agree to the collection
               and use of information in relation to this policy. The Personal
@@ -121,10 +231,8 @@ const Policy = () => {
                 without their permission. If you have reason to believe that a
                 child has provided personally identifiable information to us
                 through the Application and/or Services, please contact us. You
-                must also be at least 16 years of age to consent to the
-                processing of your personally identifiable information in your
-                country (in some countries we may allow your parent or guardian
-                to do so on your behalf).
+                must also be at least 15 years of age to consent to the
+                processing of your personally identifiable information. This app is intended to use in Laos only.
               </p>
 
             <p>
