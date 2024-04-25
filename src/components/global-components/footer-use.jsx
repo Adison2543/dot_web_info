@@ -42,7 +42,7 @@ const Footer_v1 = () => {
                                         </li>
 										<li><i className="fa fa-envelope" /> depttransportlaos@gmail.com</li>
 										<li><i className="fa fa-phone" /> +856-21 412270</li>
-										<li><i className="fa fa-facebook-square"></i> <a href="" className='text-primary'>ກົມຂົນສົ່ງ ກຊ ຍທຂ</a></li>
+										<li><i className="fa fa-facebook-square"></i> <a href="https://www.facebook.com/profile.php?id=61557172274093" className='text-primary'>ກົມຂົນສົ່ງ ກຊ ຍທຂ</a></li>
 									</ul>
 								</div>
 							</div>
