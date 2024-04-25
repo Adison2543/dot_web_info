@@ -91,7 +91,7 @@ const BlogDetails = () => {
 		            </div>
 		            <div className="details">
 		              <ul className="blog-meta">
-		                <li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li>
+		                {/* <li><i className="fa fa-user" /> {t('by')} {news?.user_update? news?.user_update : news?.user_create}</li> */}
 		                <li><i className="fa fa-calendar-check-o" />{gatFDate(news?.udp_date ? news.udp_date : news.crt_date)}</li>
 						<li><i className="fa fa-eye" />{news?.news_view}</li>
 		              </ul>
