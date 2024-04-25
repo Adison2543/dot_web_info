@@ -94,12 +94,15 @@ const CourseDetails = ({tran}) => {
 						<div className="col-12 col-md-8 mt-3 mt-md-0">
 							<div className="course-course-detaila-inner">
 								<div className="details-inner">
-									<h4 className="title"><a href="course-details.html">{course?.course_name}</a></h4>
+									<h4 className="title">{course?.course_name}</h4>
+									<h5 className="">{course?.course_remark_a}</h5>
+									
 								</div>
 								<div className="tab-content" id="myTabContent">
 									<div className="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 										<div className="course-details-content">
-											<p>{course?.course_description}</p>
+											<p style={{whiteSpace: "pre-wrap"}}>{course?.course_description}</p>
+
 											<table className="table table-borderless">
 												<thead>
 													<tr>
