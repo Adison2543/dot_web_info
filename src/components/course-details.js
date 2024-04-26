@@ -19,8 +19,9 @@ const AboutPage = () => {
     return <div>
         <Navbar />
         <PageHeader headertitle={t('coursedetail')}  />
-        <div className="container"> 
-            <Link to="/course" smooth="true" className='text-primary'>{t('online_course')}</Link>
+        <div className="container"  style={{"padding-top": "8px"}}> 
+
+            <Link to="/course" smooth="true" className='btn btn-base b-animate-3'>{t('back_to')} {t('online_course')}</Link>
         </div>
        
         

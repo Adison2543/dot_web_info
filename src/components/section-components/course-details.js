@@ -106,16 +106,16 @@ const CourseDetails = ({tran}) => {
 											<table className="table table-borderless">
 												<thead>
 													<tr>
-														<th>ໝວດວິຊາ</th>
-														<th className='text-center'>ຈຳນວນບົດຮຽນ</th>
-														<th className='text-center'>ຈຳນວນ ຄຳຖາມເສັງ</th>
+														<th>{tran('lesson_subject')}</th>
+														{/* <th className='text-center'>ຈຳນວນບົດຮຽນ</th> */}
+														<th className='text-center'>{tran('num_question')}</th>
 													</tr>
 												</thead>
 												<tbody>
 													{condition?.data?.map((data, index) => (
 														<tr key={index}>
 															<td>{data.cg_name}</td>
-															<td className='text-center'>{data.cc_value_a}</td>
+															{/* <td className='text-center'>{data.cc_value_a}</td> */}
 															<td className='text-center'>{data.cc_value_b}</td>
 														</tr>
 													))}
@@ -124,7 +124,7 @@ const CourseDetails = ({tran}) => {
 														<tfoot>
 															<tr className='text-center'>
 																<td></td>
-																<td>{condition.sum_val_a}</td>
+																{/* <td>{condition.sum_val_a}</td> */}
 																<td>{condition.sum_val_b}</td>
 															</tr>
 														</tfoot>

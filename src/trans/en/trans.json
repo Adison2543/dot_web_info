@@ -157,7 +157,10 @@
     "foot_copyright": "Copyright @ Department of Transport, Ministry of Public Works and Transport, Lao PDR",
     "developed_by": "Developed by",
     
-    
+    "lesson_subject" : "Subject",
+    "num_question" : "# of Exam question",
+    "back_to" : "Back to",
+
     "": ""
 
 }
