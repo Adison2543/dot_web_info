@@ -10,6 +10,8 @@ import HomeV2 from './components/home-v2';
 import HomeV3 from './components/home-v3';
 import Course from './components/course';
 import CourseDetails from './components/course-details';
+import CourseNew from './components/course-new';
+import CourseNewDetails from './components/course-new-details';
 import About from './components/about';
 import Event from './components/event';
 import EventDetails from './components/event-details';
@@ -62,6 +64,8 @@ const Root = () => {
                         <Route path="/home-v3" component={HomeV3} />
                         <Route path="/course" component={Course} />
                         <Route path="/course-details/:course_id/:course_name" component={CourseDetails} />
+                        <Route path="/course-new" component={CourseNew} />
+                        <Route path="/course-new-details/:course_code" component={CourseNewDetails} />
                         <Route path="/about" component={About} />
                         <Route path="/event" component={Event} />
                         <Route path="/event-details" component={EventDetails} />

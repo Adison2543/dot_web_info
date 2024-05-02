@@ -47,9 +47,8 @@ const Navbaruse2 = () => {
 			            <ul className="sub-menu">
 				            <li><Link to="/about-the-project">{t('about_proj')}</Link></li>
 	                  <li><Link to="/about-dot">{t('about_dot')}</Link></li>
-                    <li><Link to="/about-app">{t('about_app')}</Link></li>
-                    <li><Link to="/course">{t('current_course')}</Link></li>
-			              <li><Link to="/course-new">{t('new_course')}</Link></li>
+	                  <li><Link to="/about-app">{t('about_app')}</Link></li>
+	                  <li><Link to="/course">{t('online_course')}</Link></li>
 			            </ul>
 			          </li>
                 <li className="">

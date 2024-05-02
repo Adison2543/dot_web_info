@@ -16,7 +16,7 @@ const AboutPage = () => {
 
     return <div>
         <Navbar />
-        <PageHeader headertitle={t('online_course')}  />
+        <PageHeader headertitle={t('current_course')}  />
         <Course tran={t}/>
         <Testimonial />
         <Footer />

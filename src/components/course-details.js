@@ -21,7 +21,7 @@ const AboutPage = () => {
         <PageHeader headertitle={t('coursedetail')}  />
         <div className="container"  style={{"padding-top": "8px"}}> 
 
-            <Link to="/course" smooth="true" className='btn btn-base b-animate-3'>{t('back_to')} {t('online_course')}</Link>
+            <Link to="/course" smooth="true" className='btn btn-base b-animate-3'><span className='fa fa-chevron-left'/> {t('back_to')} {t('online_course')}</Link>
         </div>
        
         

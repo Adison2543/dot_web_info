@@ -27,7 +27,7 @@ const CourseCard = ({ course, tran }) => {
                   <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
                 </div> */}
                 <h6>
-                  {course.course_name}
+                  {tran('cur_lang')=="lo" ? course.course_name : course.course_remark_a}
                 </h6>
               </div>
               <div className="emt-course-meta">
