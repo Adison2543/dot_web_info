@@ -27,7 +27,8 @@ const CoursePage = ({tran}) => {
 							signal: abortController.signal,
 							page: page,
 							per_page: 15,
-							search: searchdata
+							search: searchdata,
+							active_include: [1]
 
 						}, {
 							headers: API_HEADERS

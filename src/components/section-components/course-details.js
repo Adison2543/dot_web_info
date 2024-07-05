@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 import { API_BASE_URL, API_HEADERS } from '../../appConfig';
+import { useTranslation } from 'react-i18next';
 
 const CourseDetails = ({tran}) => {
 	const {course_id} = useParams();
@@ -10,6 +11,13 @@ const CourseDetails = ({tran}) => {
 	const [loading, setLoading] = useState(false);
 	const [lesson, setLesson] = useState({});
 	const [condition, setCondition] = useState([]);
+	const { i18n } = useTranslation();
+  	const [currentLang, setCurrentLang] = useState(i18n.language);
+	const [sumQuestion, setSumQuestion] = useState(0);
+
+	useEffect(() => {
+		setCurrentLang(i18n.language);
+	}, [i18n.language]);
 
 	const fetchCondition = async () => {
 		try {
@@ -41,7 +49,8 @@ const CourseDetails = ({tran}) => {
 						signal: abortController.signal,
 						page: 1,
 						per_page: 100,
-						search: ""
+						search: "",
+						active_include: [1]
 
 					}, {
 						headers: API_HEADERS
@@ -69,18 +78,22 @@ const CourseDetails = ({tran}) => {
 		return () => abortController.abort();
 	}, []);
 
+	const sumQuest = () => {
+		return condition.reduce((acc, current) => acc + current.total_question, 0);
+	}
 
-	const gatFDate = (dateData) => {
-		const date = new Date(dateData);
-		const monthNames = [
-			"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
-			"JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
-		];
-		const day = date.getDate();
-		const month = monthNames[date.getMonth()];
-		const year = date.getFullYear();
-		return `${day} ${month}, ${year}`;
-	};
+
+	// const gatFDate = (dateData) => {
+	// 	const date = new Date(dateData);
+	// 	const monthNames = [
+	// 		"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+	// 		"JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+	// 	];
+	// 	const day = date.getDate();
+	// 	const month = monthNames[date.getMonth()];
+	// 	const year = date.getFullYear();
+	// 	return `${day} ${month}, ${year}`;
+	// };
 
     return  <div className="course-single-area pd-top-60 pd-bottom-60">
 			  <div className="container">
@@ -94,7 +107,7 @@ const CourseDetails = ({tran}) => {
 						<div className="col-12 col-md-8 mt-3 mt-md-0">
 							<div className="course-course-detaila-inner">
 								<div className="details-inner">
-									<h4 className="title">{course?.course_name}</h4>
+									<h4 className="title">{currentLang == 'lo' ? course?.course_name_lo : course?.course_name_eng}</h4>
 									<h5 className="">{course?.course_remark_a}</h5>
 									
 								</div>
@@ -112,11 +125,11 @@ const CourseDetails = ({tran}) => {
 													</tr>
 												</thead>
 												<tbody>
-													{condition?.data?.map((data, index) => (
+													{condition?.map((data, index) => (
 														<tr key={index}>
-															<td>{data.cg_name}</td>
+															<td>{currentLang == 'lo' ? data.cg_name_lo : data.cg_name_eng}</td>
 															{/* <td className='text-center'>{data.cc_value_a}</td> */}
-															<td className='text-center'>{data.cc_value_b}</td>
+															<td className='text-center'>{data.total_question}</td>
 														</tr>
 													))}
 												</tbody>
@@ -125,7 +138,7 @@ const CourseDetails = ({tran}) => {
 															<tr className='text-center'>
 																<td></td>
 																{/* <td>{condition.sum_val_a}</td> */}
-																<td>{condition.sum_val_b}</td>
+																<td>{sumQuest()}</td>
 															</tr>
 														</tfoot>
 													: ''}

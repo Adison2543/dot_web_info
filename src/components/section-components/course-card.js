@@ -1,20 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL, API_HEADERS } from '../../appConfig';
+import { useTranslation } from 'react-i18next';
 
 const CourseCard = ({ course, tran }) => {
+  const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
 
-  const gatFDate = (dateData) => {
-		const date = new Date(dateData);
-		const day = date.getDate();
-		const month = date.getMonth();
-		const year = date.getFullYear();
-		return `${day}/${month}/${year - 2000}`;
-	};
+  useEffect(() => {
+    setCurrentLang(i18n.language);
+  }, [i18n.language]);
+
+  // const gatFDate = (dateData) => {
+	// 	const date = new Date(dateData);
+	// 	const day = date.getDate();
+	// 	const month = date.getMonth();
+	// 	const year = date.getFullYear();
+	// 	return `${day}/${month}/${year - 2000}`;
+	// };
+
   return (
     <>
       <div className="col-lg-4 col-md-6">
-        <Link to={`/course-details/${course.course_id}/${course.course_name}`}>
+        <Link to={`/course-details/${course.course_id}/${currentLang == 'lo' ? course.course_name_lo : course.course_name_eng}`}>
           <div className="single-course-inner">
             <div className="thumb text-center">
               {/* <img src={course.course_cover} alt="img" height="200px" /> */}
@@ -27,7 +35,7 @@ const CourseCard = ({ course, tran }) => {
                   <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
                 </div> */}
                 <h6>
-                  {course.course_name}
+                  {currentLang == 'lo' ? course.course_name_lo : course.course_name_eng}
                 </h6>
               </div>
               <div className="emt-course-meta">

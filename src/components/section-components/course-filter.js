@@ -20,7 +20,8 @@ const CourseFilter = () => {
 				body: JSON.stringify({
 					"page": 1,
 					"per_page": 6,
-					"search": ""
+					"search": "",
+					"active_include": [1],
 				}),
 				redirect: 'follow'
 			})

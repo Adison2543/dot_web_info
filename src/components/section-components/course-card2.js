@@ -1,20 +1,20 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL } from '../../appConfig';
+import { useTranslation } from 'react-i18next';
 
 const CourseCard = ({ course, tran }) => {
-  
-  const gatFDate = (dateData) => {
-		const date = new Date(dateData);
-		const day = date.getDate();
-		const month = date.getMonth();
-		const year = date.getFullYear();
-		return `${day}/${month}/${year - 2000}`;
-	};
+  const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
+
+  useEffect(() => {
+		setCurrentLang(i18n.language);
+	}, [i18n.language]);
+  console.log(course);
   return (
     <>
       <div className="col-md-6">
-        <Link to={`/course-details/${course.course_id}/${course.course_name}`}>
+        <Link to={`/course-details/${course.course_id}/${currentLang == 'lo' ? course.course_name_lo : course.course_name_eng}`}>
           <div className="single-course-inner">
             <div className="thumb text-center">
               {/* <img src={course.course_cover} alt="img" height="200px" /> */}
@@ -26,8 +26,11 @@ const CourseCard = ({ course, tran }) => {
                   <i className="fa fa-user me-2" />
                   <span className="align-self-center">{course.user_update ? course.user_update : course.user_create}</span>
                 </div> */}
-                <h6>
+                {/* <h6>
                   {tran('cur_lang')=="lo" ? course.course_name : course.course_remark_a}
+                </h6> */}
+                <h6>
+                  {currentLang == 'lo' ? course.course_name_lo : course.course_name_eng}
                 </h6>
               </div>
               <div className="emt-course-meta">
