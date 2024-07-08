@@ -13,9 +13,9 @@ Back --> https://dot-admin.mpwt.gov.la
 Web Info --> https://dot-smart.mpwt.gov.la
 
 */
-export const API_BASE_URL = 'https://dot-api.mpwt.gov.la';
+export const API_BASE_URL = 'https://oasapi.iddriver.com';
 export const API_HEADERS = {
   'Content-Type': 'application/json',
   'Authorization': 'ZeBuphebrltl3uthIFraspubroST80Atr9tHuw5bODowi26p'
 };
-export const LINK_LEARNING = 'https://dot-learning.mpwt.gov.la';
+export const LINK_LEARNING = 'https://oas.iddriver.com';
