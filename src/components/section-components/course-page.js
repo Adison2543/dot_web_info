@@ -95,10 +95,11 @@ const CoursePage = ({tran}) => {
 							
 							<div className="col-lg-8 order-lg-12">
 								<div className="row go-top">
-									{courses?.data?.filter(citem=> curCourses.includes(citem.course_code)).map((item) => (
-										
-											<CourseCard key={item.course_id} course={item} tran={tran}></CourseCard>
-										
+									{/* {courses?.data?.filter(citem => curCourses.includes(citem.course_code)).map((item) => (
+										<CourseCard key={item.course_id} course={item} tran={tran}></CourseCard>
+									))} */}
+									{courses?.data?.map((item) => (
+										<CourseCard key={item.course_id} course={item} tran={tran}></CourseCard>
 									))}
 								</div>
 								<Pagination>
