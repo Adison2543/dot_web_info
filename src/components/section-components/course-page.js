@@ -108,8 +108,6 @@ const CoursePage = ({tran}) => {
 									<Pagination.Next disabled={page === courses?.total_page ? true : false} onClick={nextPage}/>
 								</Pagination>
 							</div>
-
-							
 						</div>	
 					}
 				</div>

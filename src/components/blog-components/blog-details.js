@@ -41,6 +41,7 @@ const BlogDetails = () => {
 						headers: API_HEADERS
 				});
 				setNews(fetchNews1.data);
+				console.log(fetchNews1.data)
 			} catch (error) {
 				console.error('POST Error:', error);
 			} finally {
@@ -96,7 +97,7 @@ const BlogDetails = () => {
 						<li><i className="fa fa-eye" />{news?.news_view}</li>
 		              </ul>
 		              <h3 className="title">{news?.news_title}</h3>
-		              <p>{news?.news_description}</p>
+		              <p style={{whiteSpace:'pre-wrap'}}>{news?.news_description}</p>
 						{news?.news_video ? 
 							<div><ReactPlayer className="w-100" url={news?.news_video} controls volume={0.3} /></div> : ''
 						}
